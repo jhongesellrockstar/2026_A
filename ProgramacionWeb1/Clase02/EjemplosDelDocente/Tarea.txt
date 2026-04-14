@@ -1,0 +1,16 @@
+Control + }
+revisar etiquetas de formato y etiquetas de cita
+https://www.w3schools.com/html/html_styles.asp
+html:5 --> crea el formato en VSC para crear el template base de html.
+html css
+css selectors
+
+https://www.w3schools.com/html/html_comments.asp
+https://www.w3schools.com/html/html_styles.asp
+https://www.w3schools.com/html/html_styles.asp
+https://www.w3schools.com/html/html_css.asp
+https://www.w3schools.com/html/html_colors.asp
+https://www.w3schools.com/html/html_links.asp
+https://www.w3schools.com/html/html_images.asp
+https://www.w3schools.com/html/html_favicon.asp
+https://www.w3schools.com/html/html_tables.asp
