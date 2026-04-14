@@ -3,28 +3,141 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página básica de práctica</title>
+  <title>BioInclusivo | Programación Web 1 - Clase 02</title>
+
+  <!-- Favicon solicitado para que se renderice en la pestaña del navegador -->
+  <link rel="icon" type="image/x-icon" href="image1.ico">
+
+  <style>
+    /* CSS interno visto en clase */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f2f9ff;
+      color: #1f2d3d;
+      line-height: 1.5;
+    }
+
+    header {
+      background-color: #0a4d8c;
+      color: #ffffff;
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 20px auto;
+      padding: 0 16px 24px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #c9dff3;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .resaltado {
+      color: #0a4d8c;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th,
+    td {
+      border: 1px solid #8fb6d9;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #dceeff;
+    }
+
+    a {
+      color: #0052a5;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #e8f3ff;
+      color: #163a5a;
+      padding: 12px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Mi primera página web</h1>
-  <h2>Tema: tecnología y aprendizaje</h2>
+  <!-- Comentario HTML: esta página aplica lo trabajado en la Clase 02 -->
+  <header>
+    <h1>BioInclusivo</h1>
+    <h2>Ingeniería biomédica al servicio de la vida</h2>
+    <p style="margin: 0;">Proyecto académico de <strong>Programación Web 1 - Clase 02</strong></p>
+  </header>
 
-  <p>
-    <i>Lorem ipsum</i> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-  </p>
+  <main>
+    <section class="card">
+      <h3>¿De qué trata esta web?</h3>
+      <p>
+        Esta página demuestra el uso de etiquetas de <span class="resaltado">comentarios, estilos, CSS, colores,
+        enlaces, imágenes, favicon y tablas</span>, siguiendo los ejemplos vistos en clase.
+      </p>
+      <p>
+        Mi objetivo es crear un espacio para compartir proyectos de tecnología en salud y software inclusivo,
+        enfocados en soluciones reales para pacientes, estudiantes y profesionales.
+      </p>
+    </section>
 
-  <p>
-    Este es un hipervínculo en texto (azul y subrayado):
-    <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">Aprender HTML en W3Schools</a>
-  </p>
+    <section class="card">
+      <h3>Enlaces de referencia</h3>
+      <p>
+        Revisa los temas en:
+        <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">W3Schools HTML</a>
+        y
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.
+      </p>
+      <p>Hipervínculo en imagen (logo local):</p>
+      <a href="https://www.w3schools.com/html/html_images.asp" target="_blank" rel="noopener noreferrer">
+        <img src="image1.png" alt="Logo de BioInclusivo" width="120">
+      </a>
+    </section>
 
-  <p>Hipervínculo en imagen:</p>
-  <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
-      alt="Logo HTML5"
-      width="140">
-  </a>
+    <section class="card">
+      <h3>Proyectos que me gustaría publicar</h3>
+      <table>
+        <tr>
+          <th>Proyecto</th>
+          <th>Área</th>
+          <th>Impacto inclusivo</th>
+        </tr>
+        <tr>
+          <td>App de seguimiento de terapia física</td>
+          <td>Rehabilitación</td>
+          <td>Monitoreo remoto para pacientes con movilidad reducida</td>
+        </tr>
+        <tr>
+          <td>Recordatorio inteligente de medicación</td>
+          <td>Salud digital</td>
+          <td>Apoyo a adultos mayores y personas con discapacidad visual</td>
+        </tr>
+        <tr>
+          <td>Panel web para prótesis de bajo costo</td>
+          <td>Ingeniería biomédica</td>
+          <td>Mejora la personalización de dispositivos asistivos</td>
+        </tr>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    Hecho para demostrar lo aprendido en Clase 02 de Programación Web 1.
+  </footer>
 </body>
 </html>
