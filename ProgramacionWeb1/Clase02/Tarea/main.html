@@ -3,28 +3,150 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página básica de práctica</title>
+  <title>BioInclusivo Perú | Programación Web 1 - Clase 02</title>
+
+  <!-- Favicon solicitado para que se renderice en la pestaña del navegador -->
+  <link rel="icon" type="image/x-icon" href="image1.ico">
+
+  <style>
+    /* CSS interno visto en clase */
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background-color: #f2f9ff;
+      color: #1f2d3d;
+      line-height: 1.5;
+    }
+
+    header {
+      background-color: #0a4d8c;
+      color: #ffffff;
+      text-align: center;
+      padding: 24px 16px;
+    }
+
+    main {
+      max-width: 980px;
+      margin: 20px auto;
+      padding: 0 16px 24px;
+    }
+
+    .card {
+      background-color: #ffffff;
+      border: 1px solid #c9dff3;
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+
+    .resaltado {
+      color: #0a4d8c;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+    }
+
+    th,
+    td {
+      border: 1px solid #8fb6d9;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #dceeff;
+    }
+
+    a {
+      color: #0052a5;
+    }
+
+    footer {
+      text-align: center;
+      background-color: #e8f3ff;
+      color: #163a5a;
+      padding: 12px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <h1>Mi primera página web</h1>
-  <h2>Tema: tecnología y aprendizaje</h2>
+  <!-- Comentario HTML: esta página aplica lo trabajado en la Clase 02 -->
+  <header>
+    <h1>BioInclusivo Perú</h1>
+    <h2>Más de 8 años impulsando ingeniería al servicio de la vida</h2>
+    <p style="margin: 0;">Proyecto académico de <strong>Programación Web 1 - Clase 02</strong></p>
+  </header>
 
-  <p>
-    <i>Lorem ipsum</i> dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
-    labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
-  </p>
+  <main>
+    <section class="card">
+      <h3>¿Quiénes somos?</h3>
+      <p>
+        Somos una empresa peruana con trayectoria en el mercado nacional, enfocada en crear soluciones de salud con
+        alto impacto social. En BioInclusivo Perú combinamos tecnología, diseño y atención personalizada para mejorar
+        la calidad de vida de nuestros usuarios.
+      </p>
+      <p>
+        Esta página demuestra el uso de <span class="resaltado">comentarios, estilos, CSS, colores, enlaces,
+        imágenes, favicon y tablas</span>, aplicando los temas vistos en clase.
+      </p>
+    </section>
 
-  <p>
-    Este es un hipervínculo en texto (azul y subrayado):
-    <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">Aprender HTML en W3Schools</a>
-  </p>
+    <section class="card">
+      <h3>Nuestras soluciones inclusivas</h3>
+      <p>
+        Desarrollamos productos y servicios para hospitales, clínicas, centros de rehabilitación y pacientes:
+      </p>
+      <table>
+        <tr>
+          <th>Servicio / Producto</th>
+          <th>Descripción</th>
+          <th>Beneficio principal</th>
+        </tr>
+        <tr>
+          <td>Prótesis personalizadas</td>
+          <td>Diseño y fabricación con ajuste anatómico para cada paciente.</td>
+          <td>Mayor autonomía y reintegración a actividades diarias.</td>
+        </tr>
+        <tr>
+          <td>Órtesis funcionales</td>
+          <td>Soporte biomecánico para recuperación y prevención de lesiones.</td>
+          <td>Reducción del dolor y mejora de movilidad.</td>
+        </tr>
+        <tr>
+          <td>Vehículos inclusivos</td>
+          <td>Adaptación de movilidad asistida para uso urbano y clínico.</td>
+          <td>Transporte seguro para personas con discapacidad.</td>
+        </tr>
+        <tr>
+          <td>Mantenimiento de equipos médicos</td>
+          <td>Diagnóstico, calibración y mantenimiento preventivo/correctivo.</td>
+          <td>Continuidad operativa y seguridad en atención de pacientes.</td>
+        </tr>
+      </table>
+    </section>
 
-  <p>Hipervínculo en imagen:</p>
-  <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">
-    <img
-      src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg"
-      alt="Logo HTML5"
-      width="140">
-  </a>
+    <section class="card">
+      <h3>Conoce más</h3>
+      <p>
+        Explora recursos de aprendizaje en
+        <a href="https://www.w3schools.com/html/" target="_blank" rel="noopener noreferrer">W3Schools HTML</a>
+        y
+        <a href="https://developer.mozilla.org/es/docs/Web/HTML" target="_blank" rel="noopener noreferrer">MDN Web Docs</a>.
+      </p>
+      <p>Haz clic en nuestra imagen de referencia:</p>
+      <a href="https://www.w3schools.com/html/html_images.asp" target="_blank" rel="noopener noreferrer">
+        <img src="image1.png" alt="Imagen representativa de BioInclusivo Perú" width="120">
+      </a>
+    </section>
+  </main>
+
+  <footer>
+    BioInclusivo Perú | Innovación biomédica e inclusión para todo el país.
+  </footer>
 </body>
 </html>
