@@ -1,0 +1,28 @@
+Archivos de imagen referenciados en el código (debes crearlos manualmente en /src):
+
+1) favicon.ico
+   - Uso: ícono de pestaña del navegador (favicon) en todas las páginas.
+
+2) hero_estudio_abogados_lima.jpg
+   - Uso: imagen principal (hero) de la portada en main.html.
+
+3) equipo_vitella_reunion.png
+   - Uso: galería en main.html (reunión del equipo legal).
+
+4) derecho_penal_audiencia.jpg
+   - Uso: galería en main.html y sección especialidades.html.
+
+5) propiedad_intelectual_marca.jpg
+   - Uso: galería en main.html (área de propiedad intelectual).
+
+6) derecho_ambiental_cumplimiento.png
+   - Uso: sección de especialidades.html (derecho ambiental).
+
+7) familia_acuerdo_mediacion.jpg
+   - Uso: sección de especialidades.html (derecho de familia).
+
+8) bancario_finanzas_contrato.png
+   - Uso: portada de servicios.html.
+
+9) mapa_oficina_san_isidro.png
+   - Uso: página contacto.html (ubicación referencial).
