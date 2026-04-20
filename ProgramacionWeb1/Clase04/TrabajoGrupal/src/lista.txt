@@ -1,7 +1,3 @@
-Guía de generación de imágenes con IA (ChatGPT Plus) para Vitella S.A.C.
-Ruta destino de todos los archivos: ProgramacionWeb1/Clase04/TrabajoGrupal/src/
-
-=====================================================================
 1) ARCHIVO: favicon.ico
 USO EN EL SITIO:
 - Ícono de pestaña del navegador (favicon) para todas las páginas.
@@ -13,7 +9,6 @@ PROMPT INDIVIDUAL (para generar base visual):
 NOTA:
 - Si la IA genera PNG, conviértelo luego a .ico.
 
-=====================================================================
 2) ARCHIVO: hero_estudio_abogados_lima.jpg
 USO EN EL SITIO:
 - Imagen principal (hero) en main.html.
@@ -24,7 +19,6 @@ FORMATO Y TAMAÑO RECOMENDADO:
 PROMPT INDIVIDUAL:
 "Fotografía corporativa realista de un estudio de abogados premium en San Isidro, Lima, Perú. Interior moderno con acabados de madera fina, vidrio y detalles dorados discretos. Equipo jurídico profesional (hombres y mujeres) vestidos formalmente, actitud segura y cordial, ambiente de confianza. Iluminación cinematográfica suave, tonos elegantes vino, marfil y dorado, estilo editorial empresarial, alta calidad, enfoque nítido, composición horizontal 16:9, sin logotipos de marcas externas, sin texto incrustado."
 
-=====================================================================
 3) ARCHIVO: equipo_vitella_reunion.png
 USO EN EL SITIO:
 - Galería en main.html (reunión del equipo legal).
@@ -35,7 +29,6 @@ FORMATO Y TAMAÑO RECOMENDADO:
 PROMPT INDIVIDUAL:
 "Escena realista de reunión estratégica en estudio jurídico, abogados senior y asociados revisando expedientes y laptop en mesa de juntas. Expresiones concentradas, documentos ordenados, oficina moderna con estética legal corporativa. Paleta sobria (vino oscuro, gris antracita, beige elegante), iluminación natural de oficina, estilo fotográfico profesional, encuadre horizontal 4:3, alta definición, sin texto ni marcas de agua."
 
-=====================================================================
 4) ARCHIVO: derecho_penal_audiencia.jpg
 USO EN EL SITIO:
 - Galería en main.html y sección especialidades.html.
@@ -46,7 +39,6 @@ FORMATO Y TAMAÑO RECOMENDADO:
 PROMPT INDIVIDUAL:
 "Imagen conceptual realista de audiencia penal en sala judicial moderna de Perú, abogados defensores preparados, carpetas legales y códigos en mesa, atmósfera seria y profesional. Evitar rostros identificables de personas reales. Composición equilibrada, profundidad de campo moderada, tonos sobrios y elegantes, estilo fotoperiodístico profesional, formato horizontal 3:2, sin texto superpuesto, alta nitidez."
 
-=====================================================================
 5) ARCHIVO: propiedad_intelectual_marca.jpg
 USO EN EL SITIO:
 - Galería en main.html (área de propiedad intelectual).
@@ -57,7 +49,6 @@ FORMATO Y TAMAÑO RECOMENDADO:
 PROMPT INDIVIDUAL:
 "Fotografía conceptual de asesoría en propiedad intelectual: escritorio elegante con documentos de registro de marca, sello legal, laptop mostrando diseño de logotipo genérico, abogado señalando cláusulas importantes a cliente. Ambiente premium y moderno, iluminación suave, estilo corporativo limpio, tonos vino, dorado y marfil, composición horizontal 16:10, ultra detallada, sin texto incrustado ni marcas comerciales."
 
-=====================================================================
 6) ARCHIVO: derecho_ambiental_cumplimiento.png
 USO EN EL SITIO:
 - Sección de especialidades.html (derecho ambiental).
@@ -68,7 +59,6 @@ FORMATO Y TAMAÑO RECOMENDADO:
 PROMPT INDIVIDUAL:
 "Imagen realista de asesoría legal ambiental: abogado con casco de seguridad y carpeta técnica, acompañado de ingeniera ambiental, de fondo una planta industrial limpia con áreas verdes y paneles solares. Concepto de cumplimiento normativo y sostenibilidad empresarial. Estética profesional, luz natural, colorimetría elegante, composición cuadrada 1:1, alta definición, sin texto ni logos."
 
-=====================================================================
 7) ARCHIVO: familia_acuerdo_mediacion.jpg
 USO EN EL SITIO:
 - Sección de especialidades.html (derecho de familia).
@@ -79,7 +69,6 @@ FORMATO Y TAMAÑO RECOMENDADO:
 PROMPT INDIVIDUAL:
 "Escena de mediación familiar en despacho legal privado: abogado mediador guiando una conversación respetuosa entre dos personas adultas, ambiente cálido y profesional, lenguaje corporal tranquilo, enfoque en conciliación y empatía. Decoración sobria y elegante, iluminación suave, estilo fotográfico realista, composición horizontal 3:2, alta calidad, sin texto superpuesto."
 
-=====================================================================
 8) ARCHIVO: bancario_finanzas_contrato.png
 USO EN EL SITIO:
 - Imagen principal en servicios.html.
@@ -90,7 +79,6 @@ FORMATO Y TAMAÑO RECOMENDADO:
 PROMPT INDIVIDUAL:
 "Fotografía profesional de firma de contrato financiero entre cliente y asesor legal bancario en oficina corporativa. Documentos legales, calculadora financiera y laptop en escritorio de madera fina. Ambiente serio, transparente y confiable. Paleta sobria con acentos dorados, iluminación de estudio suave, encuadre horizontal 5:4, definición alta, sin texto ni marcas de entidades reales."
 
-=====================================================================
 9) ARCHIVO: mapa_oficina_san_isidro.png
 USO EN EL SITIO:
 - Página contacto.html (ubicación referencial).
@@ -101,9 +89,36 @@ FORMATO Y TAMAÑO RECOMENDADO:
 PROMPT INDIVIDUAL:
 "Mapa ilustrado moderno y limpio de San Isidro, Lima, Perú, con un pin elegante destacando la ubicación de un estudio de abogados (sin usar mapas reales con copyright). Estilo vectorial minimalista, calles claras, puntos de referencia genéricos, colores corporativos (vino, dorado, gris claro), composición horizontal 16:9, alta nitidez, sin logos de plataformas de mapas, sin texto largo."
 
-=====================================================================
 SUGERENCIAS GENERALES PARA TODAS LAS IMÁGENES
 - Estilo recomendado: realista/corporativo, elegante, profesional.
 - Evitar texto incrustado, marcas de agua, logos de terceros o rostros de personas famosas.
 - Mantener coherencia de color con la identidad visual del sitio: vino (#4b1f2d), dorado (#b4965a), marfil (#f8f5ef), antracita (#2d2d2d).
 - Después de generar, renombra exactamente los archivos con los nombres indicados arriba y cópialos en /src.
+Archivos de imagen referenciados en el código (debes crearlos manualmente en /src):
+
+1) favicon.ico
+   - Uso: ícono de pestaña del navegador (favicon) en todas las páginas.
+
+2) hero_estudio_abogados_lima.jpg
+   - Uso: imagen principal (hero) de la portada en main.html.
+
+3) equipo_vitella_reunion.png
+   - Uso: galería en main.html (reunión del equipo legal).
+
+4) derecho_penal_audiencia.jpg
+   - Uso: galería en main.html y sección especialidades.html.
+
+5) propiedad_intelectual_marca.jpg
+   - Uso: galería en main.html (área de propiedad intelectual).
+
+6) derecho_ambiental_cumplimiento.png
+   - Uso: sección de especialidades.html (derecho ambiental).
+
+7) familia_acuerdo_mediacion.jpg
+   - Uso: sección de especialidades.html (derecho de familia).
+
+8) bancario_finanzas_contrato.png
+   - Uso: portada de servicios.html.
+
+9) mapa_oficina_san_isidro.png
+   - Uso: página contacto.html (ubicación referencial).
