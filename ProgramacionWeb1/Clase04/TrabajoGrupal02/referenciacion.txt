@@ -1,0 +1,74 @@
+REFERENCIACIÓN Y VINCULACIÓN DEL SCRIPT/RECURSOS
+Archivo analizado: trabajogrupal.html
+
+1) VINCULACIÓN INTERNA ENTRE HTML Y CSS
+- El CSS está incrustado dentro de <style> en el <head>.
+- La vinculación se hace por:
+  a) selectores de etiqueta (body, header, footer, etc.),
+  b) selectores de clase (ejemplo: .btn, .gallery),
+  c) selectores por id (ejemplo: #mensaje-js).
+- Resultado: el contenido del body toma estilo según class e id definidos en HTML.
+
+2) VINCULACIÓN INTERNA ENTRE HTML Y JAVASCRIPT
+- El JavaScript está incrustado al final del body dentro de <script>.
+- La función mostrarMensaje() se conecta con el botón por:
+  - atributo onclick="mostrarMensaje()"
+- Dentro de la función, la referencia al DOM es:
+  - document.getElementById('mensaje-js')
+- Luego modifica:
+  - .textContent
+Esto cambia dinámicamente el texto del párrafo de estado cuando el usuario hace clic.
+
+3) VINCULACIÓN POR ANCLAS INTERNAS (NAVEGACIÓN)
+- Menú principal usa enlaces con href="#id".
+  Ejemplos:
+  - href="#inicio"
+  - href="#especialidades"
+  - href="#servicios"
+  - href="#contacto"
+  - href="#formulario"
+- Cada enlace depende de la existencia del id correspondiente en una sección.
+- El footer usa href="#top" para volver al encabezado.
+
+4) VINCULACIÓN A RECURSOS EXTERNOS DEL PROYECTO
+- Favicon:
+  - <link rel="icon" href="src/favicon.ico">
+- Imágenes:
+  - src/hero_estudio_abogados_lima.png
+  - src/equipo_vitella_reunion.png
+  - src/derecho_penal_audiencia.png
+  - src/propiedad_intelectual_marca.png
+  - src/derecho_ambiental_cumplimiento.png
+  - src/familia_acuerdo_mediacion.png
+  - src/bancario_finanzas_contrato.png
+  - src/mapa_oficina_san_isidro.png
+- Todas estas rutas son relativas al archivo trabajogrupal.html.
+
+5) VINCULACIÓN EMBEBIDA CON IFRAME
+- El <iframe> no carga una URL externa; usa srcdoc.
+- srcdoc contiene un mini HTML inline.
+- Esto significa que el contenido del iframe está referenciado dentro del mismo documento, no en otro archivo físico.
+
+6) VINCULACIÓN SEMÁNTICA Y ACCESIBILIDAD
+- aria-label="Navegación principal" mejora interpretación por lectores de pantalla.
+- alt en imágenes vincula cada recurso gráfico con una descripción textual alternativa.
+
+7) ¿CÓMO SERÍA LA REFERENCIACIÓN SI EL SCRIPT FUERA EXTERNO?
+- Actualmente es interno (<script> ... </script>).
+- Alternativa recomendada para proyectos grandes:
+  - Crear archivo, por ejemplo: js/main.js
+  - Enlazarlo con: <script src="js/main.js"></script>
+- Beneficios:
+  - Mejor organización,
+  - reutilización,
+  - mantenimiento más limpio.
+
+8) CADENA COMPLETA DE EVENTO (RESUMEN PARA EXPOSICIÓN)
+1. Usuario hace clic en “Solicitar llamada”.
+2. HTML dispara onclick="mostrarMensaje()".
+3. JS ejecuta mostrarMensaje().
+4. JS busca #mensaje-js en el DOM.
+5. JS actualiza textContent.
+6. El usuario ve el nuevo mensaje en pantalla.
+
+Esta secuencia demuestra claramente la integración de HTML + CSS + JavaScript en una sola página web estática con interacción básica.
