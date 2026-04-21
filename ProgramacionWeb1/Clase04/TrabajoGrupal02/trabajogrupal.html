@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vitella S.A.C. - Estudio de abogados en Lima, Perú.">
+  <meta name="keywords" content="abogados Lima, derecho penal, administrativo, ambiental, propiedad intelectual, bancario, familia">
+  <meta name="author" content="Vitella S.A.C.">
+  <title>Vitella S.A.C. | Estudio de Abogados en Lima</title>
+  <link rel="icon" type="image/x-icon" href="src/favicon.ico">
+  <style>
+    :root {
+      --vino: #4b1f2d;
+      --dorado: #b4965a;
+      --marfil: #f8f5ef;
+      --antracita: #2d2d2d;
+      --gris-claro: #e8e3d8;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--antracita);
+      background-color: var(--marfil);
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(130deg, var(--vino), #6a2f44);
+      color: #fff;
+      padding: 1rem 1.2rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: .8rem;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border: 1px solid rgba(255,255,255,.28);
+      padding: .4rem .7rem;
+      border-radius: .5rem;
+    }
+
+    nav a:hover,
+    .active-link {
+      background-color: var(--dorado);
+      color: #1f1f1f;
+    }
+
+    main {
+      max-width: 1180px;
+      margin: auto;
+      padding: 1rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    section {
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: .7rem;
+      padding: 1rem;
+    }
+
+    h1, h2, h3 {
+      color: var(--vino);
+      margin-top: .2rem;
+    }
+
+    .hero {
+      text-align: center;
+    }
+
+    .hero img,
+    .single-image {
+      width: min(100%, 900px);
+      border-radius: .8rem;
+      border: 3px solid var(--gris-claro);
+      display: block;
+      margin: 1rem auto;
+    }
+
+    .gallery {
+      display: grid;
+      gap: .9rem;
+      grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
+    }
+
+    .gallery figure { margin: 0; }
+
+    .gallery img {
+      width: 100%;
+      border-radius: .6rem;
+      border: 1px solid #dbc9a2;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+    }
+
+    .table-wrap { overflow-x: auto; }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      border: 1px solid #c9c2b2;
+      padding: .55rem;
+    }
+
+    th {
+      background: var(--vino);
+      color: white;
+    }
+
+    .bloque {
+      display: block;
+      background: #f5efe2;
+      border-radius: .5rem;
+      padding: .7rem;
+    }
+
+    .btn,
+    button {
+      border: none;
+      background: var(--vino);
+      color: white;
+      border-radius: .5rem;
+      padding: .65rem 1rem;
+      cursor: pointer;
+      margin-right: .5rem;
+      margin-bottom: .5rem;
+    }
+
+    .btn:hover,
+    button:hover {
+      background: #6f3147;
+    }
+
+    iframe {
+      width: 100%;
+      min-height: 300px;
+      border: 2px solid var(--dorado);
+      border-radius: .6rem;
+      background: white;
+    }
+
+    .grid-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+    }
+
+    aside {
+      background: #fff9ee;
+      border: 1px solid #e2d3b2;
+      border-radius: .6rem;
+      padding: .8rem;
+    }
+
+    input, select, textarea {
+      width: min(100%, 650px);
+      border: 1px solid #bbb;
+      border-radius: .4rem;
+      padding: .45rem;
+    }
+
+
+    .texto-destacado {
+      color: var(--vino);
+    }
+
+    .lista-centrada {
+      text-align: left;
+      display: inline-block;
+    }
+
+    .layout-container {
+      border: 2px solid var(--dorado);
+      border-radius: .7rem;
+      overflow: hidden;
+      margin-top: 1rem;
+      background: #fffdf8;
+    }
+
+    .layout-header,
+    .layout-nav,
+    .layout-footer {
+      background: var(--vino);
+      color: white;
+      padding: .8rem 1rem;
+      font-weight: 600;
+    }
+
+    .layout-nav {
+      background: #6a2f44;
+    }
+
+    .layout-main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1rem;
+      padding: 1rem;
+      background: white;
+    }
+
+    .layout-content {
+      background: #f5efe2;
+      border: 1px solid #e2d3b2;
+      border-radius: .6rem;
+      padding: 1rem;
+    }
+
+    .layout-sidebar {
+      background: #fff9ee;
+      border: 1px solid #e2d3b2;
+      border-radius: .6rem;
+      padding: 1rem;
+    }
+
+    blockquote {
+      border-left: 4px solid var(--dorado);
+      padding-left: 1rem;
+      margin-left: 0;
+      color: #5a4b3a;
+    }
+
+    #mensaje-js { margin-top: .8rem; font-weight: 600; }
+
+    footer {
+      background: #2d2d2d;
+      color: white;
+      text-align: center;
+      padding: .9rem;
+      margin-top: 1rem;
+    }
+
+    footer a { color: #f3dba8; }
+
+    @media (max-width: 860px) {
+      .grid-layout { grid-template-columns: 1fr; }
+      .layout-main { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 700px) {
+      nav ul { flex-direction: column; align-items: flex-start; }
+    }
+  </style>
+</head>
+<body>
+  <header id="top">
+    <nav aria-label="Navegación principal">
+      <ul>
+        <li><a class="active-link" href="#inicio">Inicio</a></li>
+        <li><a href="#especialidades">Especialidades</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#formulario">Formulario</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <section id="inicio" class="hero">
+      <h1>Vitella S.A.C. – Estudio de Abogados en Lima, Perú</h1>
+      <p><strong>Asesoría legal empresarial y patrimonial</strong> para personas, familias y compañías que requieren prevención de riesgos, litigio estratégico y acompañamiento cercano.</p>
+      <img src="src/hero_estudio_abogados_lima.png" alt="Equipo legal de Vitella S.A.C. en oficina corporativa de Lima">
+      <p><em>Compromiso de servicio:</em> respuestas claras, estrategia jurídica personalizada y coordinación permanente con cada cliente.</p>
+
+      <h2>Enfoque del estudio</h2>
+      <p>Tomamos como referencia la práctica de firmas peruanas consolidadas: alta especialización por áreas, trabajo multidisciplinario y actualización constante en normativa y jurisprudencia.</p>
+
+      <h2>Nuestra promesa legal</h2>
+      <h3>Defensa técnica con trato humano</h3>
+      <p class="texto-destacado">Brindamos asesoría integral en Lima y otras ciudades del Perú, con planes de acción concretos para cada etapa del caso.</p>
+      <p><b>Prevención</b>, <strong>cumplimiento</strong>, <i>negociación</i> y <mark>litigio estratégico</mark> para proteger operaciones, patrimonio y reputación.</p>
+
+      <h2>Criterio profesional</h2>
+      <blockquote>"Cada decisión legal debe alinear seguridad jurídica, objetivos del cliente y sostenibilidad en el tiempo".</blockquote>
+      <p><q>La mejor defensa empieza con una buena prevención.</q></p>
+      <p>Trabajamos con estándares de confidencialidad, ética profesional y comunicación transparente.</p>
+
+      <h2>Especialidades y modalidad de atención</h2>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Especialidad</th>
+              <th>Servicio</th>
+              <th>Modalidad</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Penal corporativo</td><td>Defensa, investigación interna y estrategia procesal</td><td>Presencial / Virtual</td></tr>
+            <tr><td>Administrativo</td><td>Descargos, recursos y contratación pública</td><td>Presencial</td></tr>
+            <tr><td>Ambiental</td><td>Cumplimiento, fiscalización y permisos</td><td>Híbrida</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Ruta de atención</h3>
+      <ol class="lista-centrada">
+        <li>Diagnóstico legal inicial y levantamiento de riesgos.</li>
+        <li>Diseño de estrategia con cronograma y responsables.</li>
+        <li>Ejecución, defensa y seguimiento con reportes periódicos.</li>
+      </ol>
+
+      <div id="bloque-v" class="bloque">Cada caso se asigna a un equipo responsable con abogado líder y seguimiento documentado.</div>
+      <p>Este proceso mejora la trazabilidad del caso y la comunicación con el cliente.</p>
+
+      <button class="btn" type="button" onclick="mostrarMensaje()">Solicitar llamada</button>
+            <p id="mensaje-js">Sin interacción todavía.</p>
+
+      <h2>Galería de trabajo legal</h2>
+      <div class="gallery">
+        <figure>
+          <img src="src/equipo_vitella_reunion.png" alt="Reunión de abogados revisando expedientes">
+          <figcaption>Reunión estratégica de equipo senior.</figcaption>
+        </figure>
+        <figure>
+          <img src="src/derecho_penal_audiencia.png" alt="Escena conceptual de audiencia penal">
+          <figcaption>Defensa penal especializada.</figcaption>
+        </figure>
+        <figure>
+          <img src="src/propiedad_intelectual_marca.png" alt="Asesoría en marcas y propiedad intelectual">
+          <figcaption>Protección de marcas y activos intangibles.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="especialidades">
+      <h1>Especialidades legales de Vitella S.A.C.</h1>
+      <p>Atendemos casos complejos para personas y empresas con metodología de diagnóstico, estrategia y ejecución.</p>
+
+      <div class="gallery">
+        <figure>
+          <img src="src/derecho_ambiental_cumplimiento.png" alt="Cumplimiento normativo ambiental">
+          <figcaption>Derecho Ambiental y gestión regulatoria.</figcaption>
+        </figure>
+        <figure>
+          <img src="src/familia_acuerdo_mediacion.png" alt="Mediación en derecho de familia">
+          <figcaption>Derecho de Familia y soluciones de conciliación.</figcaption>
+        </figure>
+        <figure>
+          <img src="src/bancario_finanzas_contrato.png" alt="Asesoría de derecho bancario y financiero">
+          <figcaption>Derecho Bancario y Financiero para operaciones empresariales.</figcaption>
+        </figure>
+      </div>
+
+      <h2>Áreas</h2>
+      <ul>
+        <li>Derecho Penal y compliance penal empresarial.</li>
+        <li>Derecho Administrativo y procedimientos sancionadores.</li>
+        <li>Derecho Ambiental y sostenibilidad regulatoria.</li>
+        <li>Propiedad Intelectual y defensa de marcas.</li>
+        <li>Derecho Bancario, contratos y financiamiento.</li>
+        <li>Derecho de Familia con enfoque de mediación.</li>
+      </ul>
+    </section>
+
+    <section id="servicios">
+      <h1>Servicios de Vitella S.A.C.</h1>
+      <p>Diseñamos soluciones legales preventivas y contenciosas para empresas y clientes particulares.</p>
+      <img class="single-image" src="src/bancario_finanzas_contrato.png" alt="Firma de contrato en asesoría de derecho bancario">
+
+      <h2>Servicios principales</h2>
+      <ul>
+        <li>Consultoría preventiva en gobierno corporativo y cumplimiento.</li>
+        <li>Patrocinio en procesos judiciales, arbitrales y administrativos.</li>
+        <li>Diseño de matrices de riesgo y protocolos de respuesta legal.</li>
+        <li>Soporte en negociación, redacción y ejecución de contratos.</li>
+      </ul>
+
+      <h2>Cómo trabajamos</h2>
+      <p>Nuestra metodología combina especialización por práctica, coordinación entre áreas y reportes periódicos para la toma de decisiones.</p>
+    </section>
+
+
+    
+    <section id="layout-explicito">
+
+      <div class="layout-container">
+        <div class="layout-header">Vitella S.A.C. | Gestión de Caso Legal</div>
+        <div class="layout-nav">Panel del cliente | Documentos | Seguimiento | Contacto directo</div>
+
+        <div class="layout-main">
+          <div class="layout-content">
+            <h3>Expediente del cliente</h3>
+            <p>Cliente: Empresa Inversiones Andinas S.A.C.</p>
+            <p>Tipo de caso: Procedimiento administrativo sancionador</p>
+            <p>Estado actual: En etapa de descargos ante la entidad reguladora.</p>
+            <p>Acción del estudio: Elaboración de estrategia de defensa, revisión de pruebas documentales y preparación de argumentos jurídicos.</p>
+          </div>
+
+          <div class="layout-sidebar">
+            <h3>Datos del abogado</h3>
+            <p>Abogado responsable: Dr. Luis Fernández</p>
+            <p>Especialidad: Derecho Administrativo</p>
+            <p>Próxima reunión: 25 de abril - 10:00 a.m.</p>
+            <p>Contacto: lfernandez@vitellasac.pe</p>
+          </div>
+        </div>
+
+        <div class="layout-footer">Vitella S.A.C. - Seguimiento legal continuo y confidencial</div>
+      </div>
+    </section>
+
+
+    <section id="contacto">
+      <h1>Contacto y ubicación</h1>
+      <p><strong>Sede de atención:</strong> Av. Javier Prado Este 1234, San Isidro, Lima, Perú.</p>
+      <p><strong>Teléfono:</strong> +51 999 888 777</p>
+      <p><strong>Email:</strong> contacto@vitellasac.pe</p>
+      <p>Atendemos consultas previa cita en modalidad presencial y virtual.</p>
+      <img class="single-image" src="src/mapa_oficina_san_isidro.png" alt="Mapa referencial de la oficina de Vitella S.A.C. en San Isidro">
+
+      <div class="grid-layout">
+        <article>
+          <h2>Vinculación académica y mentoría</h2>
+          <p>Impulsamos charlas y mentorías en universidades que promueven ética, excelencia técnica y compromiso con la sociedad.</p>
+          <iframe
+            title="Programa académico de Vitella S.A.C."
+            srcdoc="<!doctype html><html lang='es'><body style='font-family:Arial,sans-serif;background:#f8f5ef;color:#2d2d2d;padding:16px;line-height:1.5'><h3 style='color:#4b1f2d;margin:0 0 10px'>Programa de vinculación académica</h3><ul><li>Pontificia Universidad Católica del Perú (PUCP): mentoría en ética y argumentación jurídica.</li><li>Universidad Nacional Mayor de San Marcos (UNMSM): talleres de litigación y redacción legal.</li><li>Universidad de Lima: sesiones sobre compliance y gestión de riesgos.</li><li>UPC: charlas de innovación legal y tecnología aplicada al derecho.</li></ul><p style='margin-top:10px'>Estas actividades se coordinan por calendario académico y disponibilidad institucional.</p></body></html>">
+          </iframe>
+        </article>
+        <aside>
+          <h3>Contacto rápido</h3>
+          <p>San Isidro, Lima</p>
+          <p>+51 999 888 777</p>
+          <p>contacto@vitellasac.pe</p>
+        </aside>
+      </div>
+    </section>
+
+    <section id="formulario">
+      <h2>Formulario de contacto</h2>
+      <form action="#" method="post">
+        <label for="nombre">Nombre</label><br>
+        <input id="nombre" name="nombre" type="text" required><br><br>
+
+        <label for="correo">Correo</label><br>
+        <input id="correo" name="correo" type="email" required><br><br>
+
+        <label for="especialidad">Especialidad</label><br>
+        <select id="especialidad" name="especialidad">
+          <option>Derecho Penal</option>
+          <option>Derecho Administrativo</option>
+          <option>Derecho Ambiental</option>
+          <option>Propiedad Intelectual</option>
+          <option>Derecho Bancario</option>
+          <option>Derecho de Familia</option>
+        </select><br><br>
+
+        <label for="detalle">Detalle de consulta</label><br>
+        <textarea id="detalle" name="detalle" rows="4"></textarea><br><br>
+
+        <button class="btn" type="submit">Enviar</button>
+        <button class="btn" type="reset">Limpiar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Vitella S.A.C.</p>
+    <p><a href="#top">Volver al inicio</a></p>
+  </footer>
+
+  <script>
+    function mostrarMensaje() {
+      document.getElementById('mensaje-js').textContent = 'Gracias. Un asesor se comunicará contigo en breve.';
+    }
+  </script>
+</body>
+</html>

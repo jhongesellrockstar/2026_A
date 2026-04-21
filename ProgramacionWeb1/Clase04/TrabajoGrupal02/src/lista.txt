@@ -1,0 +1,92 @@
+LISTA MAESTRA DE IMÁGENES (SOLO .PNG) - VITELLA S.A.C.
+
+Indicaciones globales:
+- Formato único requerido: .png
+- Estilo visual: realista/corporativo, elegante, profesional.
+- Evitar texto incrustado, marcas de agua, logos de terceros y rostros de celebridades.
+- Mantener paleta institucional: vino (#4b1f2d), dorado (#b4965a), marfil (#f8f5ef), antracita (#2d2d2d).
+- Guardar los archivos finales dentro de /src.
+
+1) ARCHIVO: hero_estudio_abogados_lima.png
+USO: Portada principal en main.html.
+TAMAÑO: 1920x1080 (16:9).
+PROMPT:
+"Fotografía corporativa realista de un estudio de abogados premium en San Isidro, Lima, Perú. Interior moderno con madera fina, vidrio y detalles dorados discretos. Equipo jurídico profesional, actitud segura y cordial, iluminación cinematográfica suave, estilo editorial empresarial, alta definición, encuadre horizontal 16:9, sin texto ni logotipos."
+
+2) ARCHIVO: equipo_vitella_reunion.png
+USO: Galería en main.html.
+TAMAÑO: 1600x1200 (4:3).
+PROMPT:
+"Escena realista de reunión estratégica en estudio jurídico: abogados senior y asociados revisando expedientes y laptop en mesa de juntas. Expresiones concentradas, documentos ordenados, oficina moderna, paleta sobria vino-antracita-marfil, iluminación natural, fotografía profesional horizontal 4:3, alta nitidez, sin texto ni marcas de agua."
+
+3) ARCHIVO: derecho_penal_audiencia.png
+USO: Galería en main.html.
+TAMAÑO: 1800x1200 (3:2).
+PROMPT:
+"Imagen conceptual realista de audiencia penal en sala judicial moderna del Perú, abogados defensores preparados, códigos y carpetas sobre mesa, atmósfera seria y profesional, composición equilibrada, profundidad de campo moderada, tonos sobrios, formato horizontal 3:2, alta nitidez, sin texto superpuesto."
+
+4) ARCHIVO: propiedad_intelectual_marca.png
+USO: Galería en main.html y apoyo visual en especialidades.html.
+TAMAÑO: 1600x1000 (16:10).
+PROMPT:
+"Fotografía conceptual de asesoría en propiedad intelectual: escritorio elegante con documentos de registro de marca, sello legal, laptop con logotipo genérico, abogado señalando cláusulas al cliente. Ambiente premium, iluminación suave, estilo corporativo limpio, tonos vino, dorado y marfil, composición horizontal 16:10, ultra detallada, sin texto."
+
+5) ARCHIVO: derecho_ambiental_cumplimiento.png
+USO: Especialidades de derecho ambiental en especialidades.html.
+TAMAÑO: 1200x1200 (1:1).
+PROMPT:
+"Imagen realista de asesoría legal ambiental: abogado con casco y carpeta técnica junto a ingeniera ambiental, fondo con planta industrial limpia, áreas verdes y paneles solares. Concepto de cumplimiento normativo y sostenibilidad empresarial, estética profesional, luz natural, composición 1:1, alta definición, sin texto ni logos."
+
+6) ARCHIVO: familia_acuerdo_mediacion.png
+USO: Especialidades de derecho de familia en especialidades.html.
+TAMAÑO: 1800x1200 (3:2).
+PROMPT:
+"Escena de mediación familiar en despacho legal privado: abogado mediador guiando una conversación respetuosa entre dos adultos, ambiente cálido y profesional, lenguaje corporal tranquilo, enfoque en conciliación y empatía, decoración sobria, iluminación suave, fotografía realista horizontal 3:2, alta calidad, sin texto."
+
+7) ARCHIVO: bancario_finanzas_contrato.png
+USO: Imagen principal en servicios.html.
+TAMAÑO: 1500x1200 (5:4).
+PROMPT:
+"Fotografía profesional de firma de contrato financiero entre cliente y asesor legal bancario en oficina corporativa. Documentos legales, calculadora financiera y laptop sobre escritorio de madera fina. Ambiente serio, transparente y confiable, paleta sobria con acentos dorados, iluminación suave de estudio, encuadre 5:4, alta definición, sin texto."
+
+8) ARCHIVO: mapa_oficina_san_isidro.png
+USO: Página contacto.html.
+TAMAÑO: 1366x768 (16:9).
+PROMPT:
+"Mapa ilustrado moderno y limpio de San Isidro, Lima, Perú, con pin elegante destacando ubicación de un estudio de abogados. Estilo vectorial minimalista, calles claras, puntos de referencia genéricos, colores corporativos vino-dorado-gris, composición horizontal 16:9, alta nitidez, sin logos de plataformas ni texto largo."
+
+9) ARCHIVO: universidades_mentoria_vitella.png
+USO: Sección de vinculación académica (main.html).
+TAMAÑO: 1600x900 (16:9).
+PROMPT:
+"Ilustración realista de charla legal universitaria en auditorio moderno de Lima: abogada expositora frente a estudiantes de derecho, pantalla con gráficos jurídicos genéricos sin texto legible, ambiente académico profesional, colores corporativos vino y dorado, encuadre horizontal 16:9, alta definición, sin marcas."
+
+10) ARCHIVO: biblioteca_juridica_digital.png
+USO: Recurso visual para contenidos educativos y blog legal futuro.
+TAMAÑO: 1600x900 (16:9).
+PROMPT:
+"Escena digital realista de biblioteca jurídica moderna: laptop abierta con documentos legales genéricos, libros de derecho, tablet y notas de trabajo en escritorio elegante. Luz cálida, estética premium, tonos antracita-marfil-vino, composición horizontal 16:9, alta nitidez, sin texto incrustado."
+
+11) ARCHIVO: arbitraje_negociacion_empresarial.png
+USO: Página futura de arbitraje y resolución de conflictos.
+TAMAÑO: 1600x1000 (16:10).
+PROMPT:
+"Fotografía conceptual realista de negociación legal empresarial: dos equipos con abogados y gerentes revisando cláusulas contractuales en sala corporativa, lenguaje corporal profesional, enfoque en arbitraje y solución de controversias, paleta sobria elegante, composición horizontal 16:10, alta calidad, sin texto ni logos."
+
+12) ARCHIVO: compliance_auditoria_interna.png
+USO: Página futura de compliance corporativo.
+TAMAÑO: 1600x1000 (16:10).
+PROMPT:
+"Escena realista de auditoría legal interna en empresa peruana: abogada de compliance y equipo ejecutivo revisando matriz de riesgos y checklist normativo en pantallas y documentos genéricos, oficina moderna, iluminación profesional, tonos corporativos vino y antracita, encuadre horizontal 16:10, sin texto ni marcas."
+
+13) ARCHIVO: atencion_cliente_virtual_vitella.png
+USO: Recursos visuales para sección de contacto y atención digital.
+TAMAÑO: 1400x1000 (7:5).
+PROMPT:
+"Imagen realista de videollamada legal entre abogada y cliente empresarial, ambos en espacios de oficina ordenados, interfaz genérica sin marcas ni texto legible, ambiente de confianza y transparencia, iluminación suave, paleta corporativa elegante, alta definición, formato horizontal 7:5."
+
+14) ARCHIVO: equipo_litigio_estrategico.png
+USO: Banner futuro en página de litigio.
+TAMAÑO: 1800x1200 (3:2).
+PROMPT:
+"Fotografía editorial de equipo de litigio estratégico en estudio jurídico de Lima, abogados analizando expediente judicial y cronograma procesal en mesa de trabajo, actitud enfocada y colaborativa, estética premium, tonos sobrios, encuadre horizontal 3:2, alta nitidez, sin texto ni logotipos."
