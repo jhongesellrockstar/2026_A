@@ -1,0 +1,92 @@
+ESTRUCTURA DEL CÓDIGO (ENFOQUE EN EL CUERPO <body>)
+Archivo base analizado: trabajogrupal.html
+
+1) ENCABEZADO VISUAL FIJO (HEADER)
+- Etiqueta: <header id="top"> ... </header>
+- Incluye: <nav> con una lista <ul> de enlaces <a> internos.
+- Función:
+  - Sirve como menú principal de navegación.
+  - Los enlaces usan anclas (por ejemplo #inicio, #especialidades, #servicios) para desplazarse a secciones dentro de la misma página.
+  - El id="top" permite que el enlace "Volver al inicio" del footer regrese al inicio superior.
+
+2) CONTENIDO PRINCIPAL (MAIN)
+- Etiqueta: <main> ... </main>
+- Es el contenedor central de toda la información académica/comercial del sitio.
+- Está dividido en secciones temáticas con <section id="...">.
+
+2.1) SECCIÓN INICIO (id="inicio")
+- Presenta título principal <h1>, descripción institucional y propuesta de valor.
+- Incluye imagen principal (<img>) y mensajes de enfoque legal.
+- Muestra jerarquía semántica con <h2> y <h3>.
+- Usa etiquetas de formato de texto:
+  - <strong>, <b>, <i>, <mark>, <em>, <q>, <blockquote>
+- Contiene tabla de especialidades:
+  - Estructura: <table> + <thead> + <tbody> + <tr> + <th>/<td>
+- Incluye lista ordenada <ol> para explicar la ruta de atención.
+- Tiene un bloque informativo <div id="bloque-v" class="bloque">.
+- Botón con evento JavaScript:
+  - <button onclick="mostrarMensaje()">Solicitar llamada</button>
+  - Actualiza el texto del párrafo <p id="mensaje-js">.
+- Incluye galería de imágenes:
+  - <div class="gallery"> con varios <figure>, cada uno con <img> + <figcaption>.
+
+2.2) SECCIÓN ESPECIALIDADES (id="especialidades")
+- Introduce áreas legales atendidas.
+- Usa galería de imágenes temática.
+- Incluye lista no ordenada <ul> con áreas de práctica jurídica.
+
+2.3) SECCIÓN SERVICIOS (id="servicios")
+- Expone servicios profesionales del estudio.
+- Contiene una imagen destacada y una lista de servicios principales.
+- Cierra con un párrafo de metodología de trabajo.
+
+2.4) SECCIÓN DE MAQUETA EXPLÍCITA (id="layout-explicito")
+- Demuestra estructura de interfaz tipo panel.
+- Subdivisiones:
+  - layout-header (encabezado de módulo)
+  - layout-nav (barra de navegación interna del módulo)
+  - layout-main (zona principal con dos columnas)
+  - layout-content (detalle del expediente)
+  - layout-sidebar (datos del abogado)
+  - layout-footer (pie del módulo)
+- Es útil para estudiar diseño web con grid y separación funcional de componentes.
+
+2.5) SECCIÓN CONTACTO (id="contacto")
+- Muestra datos de ubicación, teléfono y correo.
+- Agrega imagen referencial del mapa de oficina.
+- Usa un contenedor de dos columnas (grid-layout):
+  - <article> con explicación de vinculación académica.
+  - <aside> con resumen de contacto rápido.
+- Incluye <iframe> con atributo srcdoc:
+  - Renderiza un mini-documento HTML embebido con información académica.
+
+2.6) SECCIÓN FORMULARIO (id="formulario")
+- Contiene un formulario HTML de contacto.
+- Campos:
+  - Nombre: <input type="text" required>
+  - Correo: <input type="email" required>
+  - Especialidad: <select> con <option>
+  - Detalle: <textarea>
+- Botones del formulario:
+  - Enviar (<button type="submit">)
+  - Limpiar (<button type="reset">)
+
+3) PIE DE PÁGINA (FOOTER)
+- Etiqueta: <footer> ... </footer>
+- Incluye derechos de autor y un enlace de retorno al inicio (#top).
+
+4) BLOQUE JAVASCRIPT INTERNO (SCRIPT)
+- Función declarada: mostrarMensaje()
+- Lógica:
+  - Busca el elemento con id "mensaje-js" mediante document.getElementById(...)
+  - Modifica su propiedad textContent para mostrar un mensaje de confirmación.
+- Relación con el body:
+  - Se activa desde el atributo onclick del botón "Solicitar llamada".
+
+RESUMEN PEDAGÓGICO
+- El cuerpo del documento está organizado por secciones semánticas claras.
+- Combina estructura HTML, estilos CSS internos y comportamiento JavaScript básico.
+- Es un buen ejemplo para exposición porque permite explicar:
+  1) semántica HTML,
+  2) maquetación responsiva con CSS,
+  3) interacción básica con DOM en JavaScript.

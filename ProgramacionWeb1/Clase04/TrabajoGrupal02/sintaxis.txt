@@ -1,0 +1,109 @@
+SINTAXIS Y PALABRAS RESERVADAS UTILIZADAS (HTML + CSS + JS)
+Archivo base: trabajogrupal.html
+
+========================================
+A) HTML: ETIQUETAS Y ATRIBUTOS CLAVE
+========================================
+1. Estructura base
+- <!DOCTYPE html>: declara que el documento usa HTML5.
+- <html lang="es">: raíz del documento y lenguaje principal (español).
+- <head>: metadatos, título, favicon y estilos.
+- <body>: contenido visible principal.
+
+2. Metadatos importantes
+- <meta charset="UTF-8">: codificación de caracteres.
+- <meta name="viewport" content="width=device-width, initial-scale=1.0">: adaptación móvil.
+- <meta name="description">, <meta name="keywords">, <meta name="author">: SEO e identificación.
+
+3. Navegación y semántica
+- <header>, <nav>, <main>, <section>, <article>, <aside>, <footer>
+  (etiquetas semánticas para dividir contenido por propósito).
+- <ul>, <ol>, <li>: listas no ordenadas y ordenadas.
+- <a href="#...">: hipervínculo interno (ancla).
+
+4. Títulos, texto y formatos
+- <h1>, <h2>, <h3>: jerarquía de encabezados.
+- <p>: párrafo.
+- <strong>, <b>, <em>, <i>, <mark>, <q>, <blockquote>:
+  realce semántico o visual del texto.
+
+5. Multimedia y datos
+- <img src="..." alt="...">: imagen y texto alternativo.
+- <figure> + <figcaption>: imagen con descripción asociada.
+- <table>, <thead>, <tbody>, <tr>, <th>, <td>: tablas.
+- <iframe srcdoc="...">: incrusta un documento HTML dentro de otro.
+
+6. Formularios
+- <form action="#" method="post">: formulario de envío.
+- <label for="...">: etiqueta asociada a un control.
+- <input>, <select>, <option>, <textarea>, <button>
+- Atributos usados:
+  - id, name, type, required, rows, class
+  - type="submit" y type="reset" en botones.
+
+7. Atributos globales comunes
+- id: identificador único para anclas y JavaScript.
+- class: agrupación para estilos CSS.
+- aria-label: accesibilidad para navegación.
+
+========================================
+B) CSS: SINTAXIS Y CONCEPTOS USADOS
+========================================
+1. Sintaxis básica de regla CSS
+- selector {
+    propiedad: valor;
+  }
+Ejemplo conceptual: body { margin: 0; }
+
+2. Variables CSS (custom properties)
+- :root { --vino: #4b1f2d; ... }
+- Uso: color: var(--vino);
+Beneficio: reutilización y coherencia visual.
+
+3. Selectores observados
+- Universal: *
+- Etiqueta: body, header, nav, table, iframe, footer
+- Clase: .hero, .gallery, .btn, .layout-main
+- ID: #mensaje-js
+- Múltiples selectores: .btn, button
+- Pseudoclase: a:hover, button:hover
+
+4. Propiedades frecuentes usadas
+- Modelo de caja: margin, padding, border, border-radius, box-sizing
+- Texto/color: color, font-family, font-weight, line-height, text-align
+- Fondo: background, background-color
+- Diseño: display, grid-template-columns, gap, max-width, width
+- Posicionamiento: position, top, z-index
+- Responsive: @media (max-width: ...)
+
+5. Reglas de responsividad
+- @media (max-width: 860px) { ... }
+- @media (max-width: 700px) { ... }
+Permiten cambiar el diseño en pantallas pequeñas.
+
+========================================
+C) JAVASCRIPT: PALABRAS CLAVE Y DOM
+========================================
+Código usado:
+function mostrarMensaje() {
+  document.getElementById('mensaje-js').textContent = 'Gracias. Un asesor se comunicará contigo en breve.';
+}
+
+1. function
+- Palabra reservada para declarar funciones.
+
+2. document
+- Objeto global del DOM (representa el documento HTML cargado).
+
+3. getElementById(...)
+- Método para obtener un elemento por su atributo id.
+
+4. textContent
+- Propiedad para leer o cambiar texto de un nodo.
+
+5. onclick="mostrarMensaje()"
+- Manejador de evento (atributo HTML) que invoca la función al hacer clic.
+
+NOTA SOBRE “PALABRAS RESERVADAS”
+- En sentido estricto, las palabras reservadas pertenecen principalmente a lenguajes de programación (por ejemplo JavaScript: function, return, if, let, const, etc.).
+- HTML y CSS no usan “palabras reservadas” del mismo modo; usan etiquetas, atributos, selectores y propiedades estandarizadas.
