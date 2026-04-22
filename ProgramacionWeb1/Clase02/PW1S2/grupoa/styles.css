@@ -1,0 +1,16 @@
+#titulo {
+    font-family: Verdana;
+    color: green;
+    border: 2px solid black;
+};
+.parrafo {
+    font-size: 15px;
+    color:brown;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+  border: 2px solid powderblue;
+  padding: 50px;
+  margin: 50px;
+}
