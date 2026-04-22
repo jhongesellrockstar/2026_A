@@ -3,196 +3,330 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PERBIONIC | Salud e inclusión</title>
+  <title>PERBIONIC | Prótesis, Órtesis y Vehículos Inclusivos</title>
   <link rel="icon" type="image/x-icon" href="image1.ico">
-
   <style>
-    /* 1. Configuración General */
-    * {
-      box-sizing: border-box;
+    :root {
+      --azul: #0a4d8c;
+      --azul-2: #1368b8;
+      --fondo: #f4f9ff;
+      --blanco: #ffffff;
+      --texto: #1f2d3d;
+      --borde: #c8def4;
     }
 
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background-color: #f2f9ff;
-      color: #1f2d3d;
-      line-height: 1.5;
+      color: var(--texto);
+      background: var(--fondo);
+      line-height: 1.55;
     }
 
-    /* 2. Header */
     header {
-      background-color: #0a4d8c;
-      color: #ffffff;
+      background: linear-gradient(110deg, var(--azul), var(--azul-2));
+      color: white;
+      padding: 36px 18px;
       text-align: center;
-      padding: 30px;
     }
 
-    /* 3. Contenedor de Layout (Flexbox) */
-    .row {
-      display: flex;
-      flex-wrap: wrap;
-      max-width: 1200px; /* Un poco más ancho para las columnas */
-      margin: 20px auto;
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { margin: 10px auto 0; max-width: 900px; }
+
+    .container {
+      max-width: 1250px;
+      margin: 22px auto;
+      padding: 0 16px;
     }
 
-    /* Navegación Lateral (Izquierda) */
-    nav {
-      flex: 30%; /* Ocupa el 30% del ancho */
-      padding: 20px;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 20px;
+      margin-bottom: 18px;
     }
 
-    /* Contenido Principal (Derecha) */
-    article {
-      flex: 70%; /* Ocupa el 70% del ancho */
-      padding: 20px;
-    }
-
-    /* 4. Estilos de componentes anteriores */
     .card {
-      background-color: #ffffff;
-      border: 1px solid #c9dff3;
+      background: var(--blanco);
+      border: 1px solid var(--borde);
       border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 20px;
+      padding: 18px;
+      box-shadow: 0 2px 9px rgba(8, 60, 110, 0.08);
     }
 
-    .resaltado {
-      color: #0a4d8c;
-      font-weight: bold;
+    .card h2, .card h3 {
+      margin-top: 0;
+      color: var(--azul);
     }
 
-    table {
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .brand img {
+      width: 76px;
+      border-radius: 8px;
+      border: 1px solid var(--borde);
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: var(--azul);
+      padding: 9px 14px;
+      border-radius: 6px;
+      margin-right: 8px;
+      margin-top: 10px;
+    }
+
+    .btn:hover { background: var(--azul-2); }
+
+    .solutions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .solutions img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--borde);
+      margin-bottom: 10px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 18px;
+    }
+
+    nav {
+      position: sticky;
+      top: 12px;
+      max-height: calc(100vh - 24px);
+      overflow: auto;
+    }
+
+    nav ul {
+      padding-left: 18px;
+      margin: 0;
+      columns: 1;
+    }
+
+    nav li { margin-bottom: 6px; }
+
+    nav a {
+      color: var(--azul);
+      text-decoration: none;
+      font-size: 0.95rem;
+    }
+
+    nav a:hover { text-decoration: underline; }
+
+    .topic-grid {
+      display: grid;
+      gap: 12px;
+    }
+
+    .topic {
+      border: 1px solid var(--borde);
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 14px;
+    }
+
+    .topic h4 {
+      margin: 0 0 8px;
+      color: var(--azul);
+      font-size: 1.02rem;
+    }
+
+    .table {
       width: 100%;
       border-collapse: collapse;
+      margin-top: 10px;
     }
 
-    th, td {
-      border: 1px solid #8fb6d9;
-      padding: 10px;
+    .table th, .table td {
+      border: 1px solid var(--borde);
+      padding: 9px;
       text-align: left;
     }
 
-    th { background-color: #dceeff; }
+    .table th { background: #eaf4ff; }
 
-    /* 5. Footer */
     footer {
+      margin-top: 22px;
+      background: #e9f4ff;
+      border-top: 1px solid var(--borde);
       text-align: center;
-      background-color: #e8f3ff;
-      padding: 20px;
-      clear: both;
+      padding: 16px;
+      font-size: 0.95rem;
     }
 
-    /* 6. Responsive: Si la pantalla es pequeña, se apilan */
-    @media (max-width: 600px) {
-      .row {
-        flex-direction: column;
-      }
+    @media (max-width: 980px) {
+      .hero-grid, .topics { grid-template-columns: 1fr; }
+      .solutions { grid-template-columns: 1fr; }
+      nav { position: static; max-height: none; }
     }
   </style>
 </head>
 <body>
-
   <header>
     <h1>PERBIONIC</h1>
-    <p>Más de 10 años impulsando ingeniería al servicio de la vida</p>
+    <p>Empresa consolidada en ingeniería biomédica: diseñamos y fabricamos prótesis, órtesis y vehículos inclusivos para mejorar la calidad de vida de nuestros usuarios.</p>
   </header>
 
-  <section class="row">
-    <nav>
-      <div class="card">
-        <h3>Navegación</h3>
-        <ul>
-          <li><a href="#quienes">¿Quiénes somos?</a></li>
-          <li><a href="#soluciones">Soluciones</a></li>
-          <li><a href="#aliados">Aliados</a></li>
-          <li><a href="#software">Software</a></li>
-        </ul>
-      </div>
-      
-      <div class="card">
-        <h3>Contacto rápido</h3>
-        <p>Estamos ubicados en Lima, Perú, puede escribirnos a perbionic2026@gmail.com o al Whatsapp +51 952354282:</p>
-        <a href="https://www.facebook.com/perbionic/" target="_blank">
-          <img src="image1.png" alt="Logo" width="100">
-        </a>
-      </div>
-    </nav>
+  <main class="container">
+    <section class="hero-grid">
+      <article class="card">
+        <div class="brand">
+          <img src="image1.png" alt="Logo corporativo de PERBIONIC">
+          <div>
+            <h2>Innovación biomédica con impacto social</h2>
+            <p>Más de 10 años desarrollando soluciones clínicas, mecánicas y digitales para hospitales, centros de rehabilitación y pacientes.</p>
+          </div>
+        </div>
+        <p>Trabajamos con especialistas en biomecánica, electrónica y software para entregar dispositivos confiables, adaptados al paciente y alineados con estándares de seguridad.</p>
+        <a class="btn" href="#soluciones">Ver soluciones</a>
+        <a class="btn" href="#temario">Ver guía HTML</a>
+      </article>
 
-    <article>
-      <section id="quienes" class="card">
-        <h3>¿Quiénes somos?</h3>
-        <p>Somos una empresa peruana enfocada en crear soluciones de salud con alto impacto social.</p>
-        <p>Contamos con profesionales de <span class="resaltado">ingeniería de sistemas, biomédica y medicina</span>.</p>
-        <img src="image2.jpg" alt="Equipo" width="100%">
-      </section>
+      <aside class="card">
+        <h3>Contacto corporativo</h3>
+        <p><strong>Correo:</strong> perbionic2026@gmail.com</p>
+        <p><strong>WhatsApp:</strong> +51 952354282</p>
+        <p><strong>Ubicación:</strong> Lima, Perú</p>
+        <p><strong>Aliado estratégico:</strong> <a href="https://www.facebook.com/twbionic/" target="_blank" rel="noopener noreferrer">TW Salud y Vida</a></p>
+        <p><strong>Desarrollado por:</strong> Jhon Gesell Villanueva Portella.</p>
+      </aside>
+    </section>
 
-      <section id="soluciones" class="card">
-        <h3>Nuestras soluciones inclusivas</h3>
-      <p>
-        Desarrollamos productos y servicios para hospitales, clínicas, centros de rehabilitación y pacientes:
-      </p>
-      <table>
+    <section id="soluciones" class="solutions">
+      <article class="card">
+        <img src="image2.jpg" alt="Equipo técnico de PERBIONIC en laboratorio biomédico">
+        <h3>Prótesis personalizadas</h3>
+        <p>Diseño anatómico, ajuste funcional y seguimiento clínico continuo para retorno seguro a actividades diarias.</p>
+      </article>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Terapia y soporte ortésico en proceso de rehabilitación">
+        <h3>Órtesis funcionales</h3>
+        <p>Dispositivos de soporte biomecánico para estabilización, corrección y rehabilitación progresiva del paciente.</p>
+      </article>
+      <article class="card">
+        <img src="image4.jpg" alt="Movilidad inclusiva y trabajo colaborativo con aliados">
+        <h3>Vehículos inclusivos</h3>
+        <p>Soluciones de movilidad adaptada para desplazamiento seguro de personas con discapacidad en entornos urbanos y clínicos.</p>
+      </article>
+    </section>
+
+    <section class="card">
+      <h3>Portafolio técnico</h3>
+      <table class="table">
         <tr>
-          <th>Servicio / Producto</th>
-          <th>Descripción</th>
-          <th>Beneficio principal</th>
-        </tr>
-        <tr>
-          <td>Prótesis personalizadas</td>
-          <td>Diseño y fabricación con ajuste anatómico para cada paciente.</td>
-          <td>Mayor autonomía y reintegración a actividades diarias.</td>
-        </tr>
-        <tr>
-          <td>Órtesis funcionales</td>
-          <td>Soporte biomecánico para recuperación y prevención de lesiones.</td>
-          <td>Reducción del dolor y mejora de movilidad.</td>
-        </tr>
-        <tr>
-          <td>Vehículos inclusivos</td>
-          <td>Adaptación de movilidad asistida para uso urbano y clínico.</td>
-          <td>Transporte seguro para personas con discapacidad.</td>
+          <th>Servicio</th>
+          <th>Aplicación</th>
+          <th>Valor para el usuario</th>
         </tr>
         <tr>
           <td>Mantenimiento de equipos médicos</td>
-          <td>Diagnóstico, calibración y mantenimiento preventivo/correctivo.</td>
-          <td>Continuidad operativa y seguridad en atención de pacientes.</td>
+          <td>Calibración y control preventivo</td>
+          <td>Mayor continuidad operativa clínica</td>
         </tr>
         <tr>
           <td>Software inclusivo</td>
-          <td>Programación de sistemas embebidos, así como creación de software con accesibilidad.</td>
-          <td>Herramientas que se adaptan a las necesidades de los usuarios.</td>
+          <td>Gestión de historias y seguimiento de rehabilitación</td>
+          <td>Accesibilidad y trazabilidad de datos</td>
+        </tr>
+        <tr>
+          <td>Sistemas embebidos</td>
+          <td>Control de módulos protésicos</td>
+          <td>Mejor desempeño y precisión</td>
         </tr>
       </table>
-      </section>
+    </section>
 
-      <section id="aliados" class="card">
-        <h3>Nuestros aliados</h3>
-        <p>
-          La sinergia nos permite seguir alcanzando retos más complejos, con TW trabajamos de forma conjunta desde hace unos años, para conocerlos pueden acceder a su 
-          <a href="https://www.facebook.com/twbionic/" target="_blank" rel="noopener noreferrer">fanpage de TW Salud y Vida</a>
-          y así también visualizar sus 
-          <a href="https://www.facebook.com/photo/?fbid=634597072134526&set=pb.100067527161484.-2207520000" target="_blank" rel="noopener noreferrer">productos y servicios</a>.
-        </p>
-        <p>Haz clic aquí para ir a sus redes sociales:</p>
-        <a href="https://www.facebook.com/twbionic/" target="_blank" rel="noopener noreferrer">
-          <img src="image4.jpg" alt="Imagen representativa de TW Salud y Vida" width="120">
-        </a>
-      </section>
+    <section id="temario" class="topics">
+      <nav class="card" aria-label="Temario HTML de referencia para el equipo digital de PERBIONIC">
+        <h3>Guía HTML (alcance del proyecto)</h3>
+        <p>Basado en la ruta de contenidos de W3Schools, aplicado al contexto corporativo de PERBIONIC.</p>
+        <ul>
+          <li><a href="#t1">HTML</a></li>
+          <li><a href="#t2">HTML Introduction</a></li>
+          <li><a href="#t3">HTML Editors</a></li>
+          <li><a href="#t4">HTML Basic</a></li>
+          <li><a href="#t5">HTML Attributes</a></li>
+          <li><a href="#t6">HTML Heading</a></li>
+          <li><a href="#t7">HTML Paragraphs</a></li>
+          <li><a href="#t8">HTML Syles</a></li>
+          <li><a href="#t9">HTML Formating</a></li>
+          <li><a href="#t10">HTML Quotations</a></li>
+          <li><a href="#t11">HTML Comments</a></li>
+          <li><a href="#t12">HTML Colors</a></li>
+          <li><a href="#t13">HTML Colors</a></li>
+          <li><a href="#t14">HTML CSS</a></li>
+          <li><a href="#t15">HTML Links</a></li>
+          <li><a href="#t16">HTML Favicon</a></li>
+          <li><a href="#t17">HTML Page tile</a></li>
+          <li><a href="#t18">HTML Tables</a></li>
+          <li><a href="#t19">HTML Lists</a></li>
+          <li><a href="#t20">HYML Block e Inline</a></li>
+          <li><a href="#t21">HTML Div</a></li>
+          <li><a href="#t22">HTML Classes</a></li>
+          <li><a href="#t23">HTML Id</a></li>
+          <li><a href="#t24">HTML Buttons</a></li>
+          <li><a href="#t25">HTML Iframes</a></li>
+          <li><a href="#t26">HTML JavasScript</a></li>
+          <li><a href="#t27">HTML File Paths</a></li>
+          <li><a href="#t28">HTML Head</a></li>
+          <li><a href="#t29">HTML Layout</a></li>
+        </ul>
+      </nav>
 
-      <section id="software" class="card">
-        <h3>Proyectos Open-Source</h3>
-        <p>Enable ViaCAM: Control del puntero con movimientos de cabeza.</p>
-        <div style="text-align: center;">
-             <iframe width="100%" height="315" src="https://www.youtube.com/watch?v=TsRjyoxzEZ8" frameborder="0" allowfullscreen></iframe>
-        </div>
-      </section>
-    </article>
-  </section>
+      <div class="card topic-grid">
+        <div id="t1" class="topic"><h4>HTML</h4><p>Base estructural del portal corporativo y de nuestros módulos de atención digital.</p></div>
+        <div id="t2" class="topic"><h4>HTML Introduction</h4><p>Introducción a etiquetas, atributos y estructura para páginas informativas empresariales.</p></div>
+        <div id="t3" class="topic"><h4>HTML Editors</h4><p>Herramientas para edición profesional y control de versiones en proyectos web de salud.</p></div>
+        <div id="t4" class="topic"><h4>HTML Basic</h4><p>Estructura mínima del documento para landing pages institucionales y micrositios.</p></div>
+        <div id="t5" class="topic"><h4>HTML Attributes</h4><p>Atributos como <code>alt</code> y <code>href</code> para accesibilidad y navegación.</p></div>
+        <div id="t6" class="topic"><h4>HTML Heading</h4><p>Jerarquía de títulos para comunicar servicios y diferenciadores de marca.</p></div>
+        <div id="t7" class="topic"><h4>HTML Paragraphs</h4><p>Redacción clara de propuestas de valor y descripción de productos biomédicos.</p></div>
+        <div id="t8" class="topic"><h4>HTML Syles</h4><p>Estilos inline para prototipos rápidos en revisiones funcionales internas.</p></div>
+        <div id="t9" class="topic"><h4>HTML Formating</h4><p>Formato de texto para destacar características clínicas y recomendaciones técnicas.</p></div>
+        <div id="t10" class="topic"><h4>HTML Quotations</h4><p>Uso de citas para testimonios de pacientes, profesionales y aliados estratégicos.</p></div>
+        <div id="t11" class="topic"><h4>HTML Comments</h4><p>Comentarios para documentar decisiones de implementación y mantenimiento.</p></div>
+        <div id="t12" class="topic"><h4>HTML Colors</h4><p>Paletas coherentes con la identidad de confianza, salud e innovación de PERBIONIC.</p></div>
+        <div id="t13" class="topic"><h4>HTML Colors</h4><p>Aplicación avanzada de color para estados de interfaz: éxito, alerta y advertencia.</p></div>
+        <div id="t14" class="topic"><h4>HTML CSS</h4><p>Separación de estilo y contenido para mantener escalabilidad del sitio corporativo.</p></div>
+        <div id="t15" class="topic"><h4>HTML Links</h4><p>Enlaces a redes, contacto, manuales técnicos y páginas de aliados.</p></div>
+        <div id="t16" class="topic"><h4>HTML Favicon</h4><p>Icono de marca para identificación rápida del sitio en pestañas del navegador.</p></div>
+        <div id="t17" class="topic"><h4>HTML Page tile</h4><p>Título de pestaña optimizado para posicionamiento y lectura profesional.</p></div>
+        <div id="t18" class="topic"><h4>HTML Tables</h4><p>Tablas para catálogo de servicios, costos y tiempos de implementación.</p></div>
+        <div id="t19" class="topic"><h4>HTML Lists</h4><p>Listados de beneficios, procesos y requisitos para pacientes e instituciones.</p></div>
+        <div id="t20" class="topic"><h4>HYML Block e Inline</h4><p>Control visual de bloques e inline para composición limpia de interfaces.</p></div>
+        <div id="t21" class="topic"><h4>HTML Div</h4><p>Contenedores para componer secciones de landing, servicios y formularios.</p></div>
+        <div id="t22" class="topic"><h4>HTML Classes</h4><p>Clases reutilizables para tarjetas de productos y componentes institucionales.</p></div>
+        <div id="t23" class="topic"><h4>HTML Id</h4><p>Identificadores únicos para anclajes y scripts de interacción.</p></div>
+        <div id="t24" class="topic"><h4>HTML Buttons</h4><p>Botones de contacto, cotización y solicitud de evaluación clínica.</p></div>
+        <div id="t25" class="topic"><h4>HTML Iframes</h4><p>Integración de contenido externo para demostraciones y capacitaciones.</p></div>
+        <div id="t26" class="topic"><h4>HTML JavasScript</h4><p>Interacciones dinámicas para formularios y validaciones de usabilidad.</p></div>
+        <div id="t27" class="topic"><h4>HTML File Paths</h4><p>Rutas relativas y absolutas para recursos multimedia del proyecto.</p></div>
+        <div id="t28" class="topic"><h4>HTML Head</h4><p>Metadatos y configuración esencial para SEO técnico y compatibilidad.</p></div>
+        <div id="t29" class="topic"><h4>HTML Layout</h4><p>Distribución profesional enfocada en conversión, confianza y experiencia de usuario.</p></div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    PERBIONIC | Facultad de Ingeniería de Sistemas - UNAC 2026
+    PERBIONIC © 2026 · Soluciones biomédicas inclusivas · Desarrollado por Jhon Gesell Villanueva Portella.
   </footer>
-
 </body>
 </html>
