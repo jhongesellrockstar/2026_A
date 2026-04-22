@@ -1,0 +1,55 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/29.6.6 Chrome/144.0.7559.236 Electron/40.8.4 Safari/537.36" version="29.6.6">
+  <diagram name="Página-1" id="5-tspTtOvr3wpGXo6rvX">
+    <mxGraphModel dx="1424" dy="832" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="INTRODUCCIÓN A LA INGENIERÍA DE SISTEMAS" vertex="1">
+          <mxGeometry height="70" width="140" x="750" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="1. INGENIERÍA" vertex="1">
+          <mxGeometry height="60" width="120" x="40" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="2. SISTEMA" vertex="1">
+          <mxGeometry height="60" width="120" x="200" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-4" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="3. INGENIERÍA DE SISTEMAS" vertex="1">
+          <mxGeometry height="60" width="120" x="360" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-5" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="4. PERFIL DEL INGENIERO DE SISTEMAS" vertex="1">
+          <mxGeometry height="60" width="120" x="520" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-7" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="5. CAMPO LABORAL" vertex="1">
+          <mxGeometry height="60" width="120" x="680" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-8" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="6. HISTORIA DE LA INGENIERÍA" vertex="1">
+          <mxGeometry height="60" width="120" x="840" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-9" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="7. EVOLUCIÓN DE LA INGENIERÍA DE SISTEMAS" vertex="1">
+          <mxGeometry height="60" width="120" x="1000" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-10" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="8. HISTORIA DE LA COMPUTACIÓN" vertex="1">
+          <mxGeometry height="60" width="120" x="1160" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-11" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="9. COMPONENTES TECNOLÓGICOS" vertex="1">
+          <mxGeometry height="60" width="120" x="1320" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-12" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="10. IMPORTANCIA DE LA INGENIERÍA DE SISTEMAS" vertex="1">
+          <mxGeometry height="60" width="120" x="1480" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-14" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="List" vertex="1">
+          <mxGeometry height="120" width="140" x="40" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-15" parent="vWVYEka0sqjl-ELVO6JZ-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Item 1" vertex="1">
+          <mxGeometry height="30" width="140" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-16" parent="vWVYEka0sqjl-ELVO6JZ-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Item 2" vertex="1">
+          <mxGeometry height="30" width="140" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="vWVYEka0sqjl-ELVO6JZ-17" parent="vWVYEka0sqjl-ELVO6JZ-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="Item 3" vertex="1">
+          <mxGeometry height="30" width="140" y="90" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
