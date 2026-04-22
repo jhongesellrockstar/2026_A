@@ -3,149 +3,161 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PERBIONIC | Guía de HTML aplicada a ingeniería biomédica</title>
+  <title>PERBIONIC | Prótesis, Órtesis y Vehículos Inclusivos</title>
   <link rel="icon" type="image/x-icon" href="image1.ico">
   <style>
     :root {
-      --azul-principal: #0a4d8c;
-      --azul-secundario: #0f66b8;
-      --azul-claro: #e8f3ff;
-      --texto: #1f2d3d;
+      --azul: #0a4d8c;
+      --azul-2: #1368b8;
+      --fondo: #f4f9ff;
       --blanco: #ffffff;
-      --borde: #b9d6f2;
-      --resalte: #f0f8ff;
+      --texto: #1f2d3d;
+      --borde: #c8def4;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    * { box-sizing: border-box; }
     body {
       margin: 0;
       font-family: Arial, Helvetica, sans-serif;
-      background: #f4f9ff;
       color: var(--texto);
-      line-height: 1.6;
+      background: var(--fondo);
+      line-height: 1.55;
     }
 
     header {
-      background: linear-gradient(120deg, var(--azul-principal), var(--azul-secundario));
-      color: var(--blanco);
-      padding: 40px 20px;
+      background: linear-gradient(110deg, var(--azul), var(--azul-2));
+      color: white;
+      padding: 36px 18px;
       text-align: center;
     }
 
-    header h1 {
-      margin: 0;
-      font-size: 2.3rem;
-    }
+    header h1 { margin: 0; font-size: 2.2rem; }
+    header p { margin: 10px auto 0; max-width: 900px; }
 
-    header p {
-      margin: 8px 0 0;
-      opacity: 0.95;
-    }
-
-    .layout {
-      display: flex;
-      gap: 24px;
-      max-width: 1300px;
+    .container {
+      max-width: 1250px;
       margin: 22px auto;
       padding: 0 16px;
-      align-items: flex-start;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+      gap: 20px;
+      margin-bottom: 18px;
+    }
+
+    .card {
+      background: var(--blanco);
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      padding: 18px;
+      box-shadow: 0 2px 9px rgba(8, 60, 110, 0.08);
+    }
+
+    .card h2, .card h3 {
+      margin-top: 0;
+      color: var(--azul);
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 10px;
+    }
+
+    .brand img {
+      width: 76px;
+      border-radius: 8px;
+      border: 1px solid var(--borde);
+    }
+
+    .btn {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: var(--azul);
+      padding: 9px 14px;
+      border-radius: 6px;
+      margin-right: 8px;
+      margin-top: 10px;
+    }
+
+    .btn:hover { background: var(--azul-2); }
+
+    .solutions {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+
+    .solutions img {
+      width: 100%;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 8px;
+      border: 1px solid var(--borde);
+      margin-bottom: 10px;
+    }
+
+    .topics {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 18px;
     }
 
     nav {
-      flex: 0 0 300px;
       position: sticky;
-      top: 16px;
-      max-height: calc(100vh - 32px);
-      overflow-y: auto;
-      background-color: var(--blanco);
-      border: 1px solid var(--borde);
-      border-radius: 10px;
-      padding: 16px;
-    }
-
-    nav h2 {
-      margin-top: 0;
-      color: var(--azul-principal);
-      font-size: 1.15rem;
+      top: 12px;
+      max-height: calc(100vh - 24px);
+      overflow: auto;
     }
 
     nav ul {
-      margin: 0;
       padding-left: 18px;
+      margin: 0;
+      columns: 1;
     }
 
-    nav li {
-      margin-bottom: 6px;
-    }
+    nav li { margin-bottom: 6px; }
 
     nav a {
-      color: var(--azul-principal);
+      color: var(--azul);
       text-decoration: none;
       font-size: 0.95rem;
     }
 
-    nav a:hover {
-      text-decoration: underline;
+    nav a:hover { text-decoration: underline; }
+
+    .topic-grid {
+      display: grid;
+      gap: 12px;
     }
 
-    main {
-      flex: 1;
-    }
-
-    .card {
-      background-color: var(--blanco);
+    .topic {
       border: 1px solid var(--borde);
-      border-radius: 10px;
-      padding: 20px;
-      margin-bottom: 18px;
-      box-shadow: 0 2px 8px rgba(8, 60, 110, 0.06);
+      border-radius: 8px;
+      background: #fbfdff;
+      padding: 14px;
     }
 
-    .card h2 {
-      margin-top: 0;
-      color: var(--azul-principal);
-      border-bottom: 2px solid var(--azul-claro);
-      padding-bottom: 8px;
+    .topic h4 {
+      margin: 0 0 8px;
+      color: var(--azul);
+      font-size: 1.02rem;
     }
 
-    .badge {
-      display: inline-block;
-      padding: 4px 10px;
-      border-radius: 50px;
-      background-color: var(--azul-claro);
-      color: var(--azul-principal);
-      font-weight: 700;
-      margin-bottom: 10px;
-      font-size: 0.8rem;
-      letter-spacing: 0.4px;
-      text-transform: uppercase;
-    }
-
-    .demo-box {
-      background: var(--resalte);
-      border-left: 4px solid var(--azul-secundario);
-      padding: 12px;
-      margin-top: 10px;
-      border-radius: 4px;
-    }
-
-    .tabla {
+    .table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 8px;
+      margin-top: 10px;
     }
 
-    .tabla th,
-    .tabla td {
+    .table th, .table td {
       border: 1px solid var(--borde);
-      padding: 10px;
+      padding: 9px;
       text-align: left;
       vertical-align: top;
     }
@@ -170,278 +182,172 @@
       cursor: pointer;
     }
 
-    .btn-demo:hover {
-      background-color: var(--azul-secundario);
-    }
+    .table th { background: #eaf4ff; }
 
     footer {
-      text-align: center;
-      background-color: var(--azul-claro);
-      padding: 18px;
       margin-top: 22px;
+      background: #e9f4ff;
       border-top: 1px solid var(--borde);
+      text-align: center;
+      padding: 16px;
+      font-size: 0.95rem;
     }
 
     @media (max-width: 980px) {
-      .layout {
-        flex-direction: column;
-      }
-
-      nav {
-        position: static;
-        width: 100%;
-        max-height: none;
-      }
+      .hero-grid, .topics { grid-template-columns: 1fr; }
+      .solutions { grid-template-columns: 1fr; }
+      nav { position: static; max-height: none; }
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>PERBIONIC · Manual HTML</h1>
-    <p>Contenido temático inspirado en la ruta de aprendizaje de W3Schools y contextualizado al entorno de ingeniería biomédica.</p>
+    <h1>PERBIONIC</h1>
+    <p>Empresa consolidada en ingeniería biomédica: diseñamos y fabricamos prótesis, órtesis y vehículos inclusivos para mejorar la calidad de vida de nuestros usuarios.</p>
   </header>
 
-  <section class="layout">
-    <nav aria-label="Índice de temas HTML">
-      <h2>Índice de contenidos</h2>
-      <ul>
-        <li><a href="#html">HTML</a></li>
-        <li><a href="#introduction">HTML Introduction</a></li>
-        <li><a href="#editors">HTML Editors</a></li>
-        <li><a href="#basic">HTML Basic</a></li>
-        <li><a href="#attributes">HTML Attributes</a></li>
-        <li><a href="#heading">HTML Heading</a></li>
-        <li><a href="#paragraphs">HTML Paragraphs</a></li>
-        <li><a href="#styles">HTML Styles</a></li>
-        <li><a href="#formatting">HTML Formatting</a></li>
-        <li><a href="#quotations">HTML Quotations</a></li>
-        <li><a href="#comments">HTML Comments</a></li>
-        <li><a href="#colors">HTML Colors</a></li>
-        <li><a href="#css">HTML CSS</a></li>
-        <li><a href="#links">HTML Links</a></li>
-        <li><a href="#favicon">HTML Favicon</a></li>
-        <li><a href="#pagetitle">HTML Page Title</a></li>
-        <li><a href="#tables">HTML Tables</a></li>
-        <li><a href="#lists">HTML Lists</a></li>
-        <li><a href="#block-inline">HTML Block e Inline</a></li>
-        <li><a href="#div">HTML Div</a></li>
-        <li><a href="#classes">HTML Classes</a></li>
-        <li><a href="#id">HTML Id</a></li>
-        <li><a href="#buttons">HTML Buttons</a></li>
-        <li><a href="#iframes">HTML Iframes</a></li>
-        <li><a href="#javascript">HTML JavaScript</a></li>
-        <li><a href="#paths">HTML File Paths</a></li>
-        <li><a href="#head">HTML Head</a></li>
-        <li><a href="#layout">HTML Layout</a></li>
-      </ul>
-    </nav>
-
-    <main>
-      <article id="html" class="card">
-        <span class="badge">Tema 01</span>
-        <h2>HTML</h2>
-        <p>HTML es el lenguaje base para estructurar la información en la web. En PERBIONIC lo usamos para construir interfaces de consulta clínica, catálogos de prótesis y formularios de evaluación técnica.</p>
-        <div class="demo-box"><strong>Ejemplo:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum vitae arcu venenatis, sollicitudin turpis a, facilisis justo.</div>
+  <main class="container">
+    <section class="hero-grid">
+      <article class="card">
+        <div class="brand">
+          <img src="image1.png" alt="Logo corporativo de PERBIONIC">
+          <div>
+            <h2>Innovación biomédica con impacto social</h2>
+            <p>Más de 10 años desarrollando soluciones clínicas, mecánicas y digitales para hospitales, centros de rehabilitación y pacientes.</p>
+          </div>
+        </div>
+        <p>Trabajamos con especialistas en biomecánica, electrónica y software para entregar dispositivos confiables, adaptados al paciente y alineados con estándares de seguridad.</p>
+        <a class="btn" href="#soluciones">Ver soluciones</a>
+        <a class="btn" href="#temario">Ver guía HTML</a>
       </article>
 
-      <article id="introduction" class="card">
-        <span class="badge">Tema 02</span>
-        <h2>HTML Introduction</h2>
-        <p>Una página HTML está compuesta por elementos que representan encabezados, párrafos, tablas e imágenes. Esta introducción permite entender cómo presentar datos biomédicos de forma clara y accesible.</p>
-      </article>
+      <aside class="card">
+        <h3>Contacto corporativo</h3>
+        <p><strong>Correo:</strong> perbionic2026@gmail.com</p>
+        <p><strong>WhatsApp:</strong> +51 952354282</p>
+        <p><strong>Ubicación:</strong> Lima, Perú</p>
+        <p><strong>Aliado estratégico:</strong> <a href="https://www.facebook.com/twbionic/" target="_blank" rel="noopener noreferrer">TW Salud y Vida</a></p>
+        <p><strong>Desarrollado por:</strong> Jhon Gesell Villanueva Portella.</p>
+      </aside>
+    </section>
 
-      <article id="editors" class="card">
-        <span class="badge">Tema 03</span>
-        <h2>HTML Editors</h2>
-        <p>Se puede trabajar con editores simples y avanzados. Para el equipo de PERBIONIC, editores con autocompletado agilizan la documentación de protocolos y la creación de plantillas clínicas.</p>
+    <section id="soluciones" class="solutions">
+      <article class="card">
+        <img src="image2.jpg" alt="Equipo técnico de PERBIONIC en laboratorio biomédico">
+        <h3>Prótesis personalizadas</h3>
+        <p>Diseño anatómico, ajuste funcional y seguimiento clínico continuo para retorno seguro a actividades diarias.</p>
       </article>
-
-      <article id="basic" class="card">
-        <span class="badge">Tema 04</span>
-        <h2>HTML Basic</h2>
-        <p>La estructura básica incluye <code>&lt;!DOCTYPE html&gt;</code>, <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code> y <code>&lt;body&gt;</code>. Con esta base se pueden montar paneles informativos para pacientes y profesionales.</p>
+      <article class="card">
+        <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=900&q=80" alt="Terapia y soporte ortésico en proceso de rehabilitación">
+        <h3>Órtesis funcionales</h3>
+        <p>Dispositivos de soporte biomecánico para estabilización, corrección y rehabilitación progresiva del paciente.</p>
       </article>
-
-      <article id="attributes" class="card">
-        <span class="badge">Tema 05</span>
-        <h2>HTML Attributes</h2>
-        <p>Los atributos añaden información a los elementos (por ejemplo, <code>href</code>, <code>src</code>, <code>alt</code>). Son esenciales para accesibilidad y trazabilidad de contenido técnico.</p>
+      <article class="card">
+        <img src="image4.jpg" alt="Movilidad inclusiva y trabajo colaborativo con aliados">
+        <h3>Vehículos inclusivos</h3>
+        <p>Soluciones de movilidad adaptada para desplazamiento seguro de personas con discapacidad en entornos urbanos y clínicos.</p>
       </article>
+    </section>
 
-      <article id="heading" class="card">
-        <span class="badge">Tema 06</span>
-        <h2>HTML Heading</h2>
-        <p>Los encabezados de <code>h1</code> a <code>h6</code> ordenan la jerarquía del contenido. Un reporte biomédico bien estructurado ayuda a que el personal clínico localice datos críticos rápidamente.</p>
-      </article>
+    <section class="card">
+      <h3>Portafolio técnico</h3>
+      <table class="table">
+        <tr>
+          <th>Servicio</th>
+          <th>Aplicación</th>
+          <th>Valor para el usuario</th>
+        </tr>
+        <tr>
+          <td>Mantenimiento de equipos médicos</td>
+          <td>Calibración y control preventivo</td>
+          <td>Mayor continuidad operativa clínica</td>
+        </tr>
+        <tr>
+          <td>Software inclusivo</td>
+          <td>Gestión de historias y seguimiento de rehabilitación</td>
+          <td>Accesibilidad y trazabilidad de datos</td>
+        </tr>
+        <tr>
+          <td>Sistemas embebidos</td>
+          <td>Control de módulos protésicos</td>
+          <td>Mejor desempeño y precisión</td>
+        </tr>
+      </table>
+    </section>
 
-      <article id="paragraphs" class="card">
-        <span class="badge">Tema 07</span>
-        <h2>HTML Paragraphs</h2>
-        <p>Los párrafos separan ideas y explicaciones. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dapibus massa vel congue tincidunt.</p>
-      </article>
-
-      <article id="styles" class="card">
-        <span class="badge">Tema 08</span>
-        <h2>HTML Styles</h2>
-        <p>Con estilos inline o clases CSS, se puede destacar información sensible, como alertas de mantenimiento preventivo en equipos médicos.</p>
-        <p><span class="inline-note">Nota:</span> Mantener consistencia visual mejora la usabilidad.</p>
-      </article>
-
-      <article id="formatting" class="card">
-        <span class="badge">Tema 09</span>
-        <h2>HTML Formatting</h2>
-        <p>Etiquetas como <b>&lt;b&gt;</b>, <strong>&lt;strong&gt;</strong>, <i>&lt;i&gt;</i> y <mark>&lt;mark&gt;</mark> ayudan a enfatizar términos clínicos, advertencias y resultados de pruebas.</p>
-      </article>
-
-      <article id="quotations" class="card">
-        <span class="badge">Tema 10</span>
-        <h2>HTML Quotations</h2>
-        <blockquote>
-          “La tecnología médica debe ser funcional, inclusiva y centrada en el paciente.”
-        </blockquote>
-        <p>Se pueden usar etiquetas de cita para resaltar principios institucionales o referencias de investigación.</p>
-      </article>
-
-      <article id="comments" class="card">
-        <span class="badge">Tema 11</span>
-        <h2>HTML Comments</h2>
-        <p>Los comentarios permiten documentar el código sin mostrar contenido al usuario final. Son útiles cuando varios desarrolladores colaboran en módulos clínicos.</p>
-      </article>
-
-      <article id="colors" class="card">
-        <span class="badge">Tema 12</span>
-        <h2>HTML Colors</h2>
-        <p>Los colores pueden definirse por nombre, HEX, RGB o HSL. Para PERBIONIC se priorizan tonos azules por su asociación con confianza, salud y tecnología.</p>
-      </article>
-
-      <article id="css" class="card">
-        <span class="badge">Tema 13</span>
-        <h2>HTML CSS</h2>
-        <p>CSS permite separar presentación y contenido. Con ello, un mismo sistema puede adoptar temas para laboratorio, consulta externa o administración.</p>
-      </article>
-
-      <article id="links" class="card">
-        <span class="badge">Tema 14</span>
-        <h2>HTML Links</h2>
-        <p>Los enlaces conectan recursos internos y externos, como manuales de uso o campañas de prevención.</p>
-        <p><a href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noopener noreferrer">Visitar referencia base de W3Schools</a></p>
-      </article>
-
-      <article id="favicon" class="card">
-        <span class="badge">Tema 15</span>
-        <h2>HTML Favicon</h2>
-        <p>El favicon ayuda a identificar rápidamente una pestaña del sistema, especialmente cuando el personal clínico trabaja con múltiples aplicaciones abiertas.</p>
-      </article>
-
-      <article id="pagetitle" class="card">
-        <span class="badge">Tema 16</span>
-        <h2>HTML Page Title</h2>
-        <p>El título de la página mejora la organización del navegador y también aporta contexto en buscadores y marcadores.</p>
-      </article>
-
-      <article id="tables" class="card">
-        <span class="badge">Tema 17</span>
-        <h2>HTML Tables</h2>
-        <table class="tabla">
-          <tr>
-            <th>Dispositivo</th>
-            <th>Estado</th>
-            <th>Último control</th>
-          </tr>
-          <tr>
-            <td>Prótesis mioeléctrica PX-21</td>
-            <td>Operativa</td>
-            <td>2026-03-18</td>
-          </tr>
-          <tr>
-            <td>Órtesis de rodilla KR-09</td>
-            <td>Mantenimiento</td>
-            <td>2026-04-10</td>
-          </tr>
-        </table>
-      </article>
-
-      <article id="lists" class="card">
-        <span class="badge">Tema 18</span>
-        <h2>HTML Lists</h2>
+    <section id="temario" class="topics">
+      <nav class="card" aria-label="Temario HTML de referencia para el equipo digital de PERBIONIC">
+        <h3>Guía HTML (alcance del proyecto)</h3>
+        <p>Basado en la ruta de contenidos de W3Schools, aplicado al contexto corporativo de PERBIONIC.</p>
         <ul>
-          <li>Evaluación biomecánica inicial.</li>
-          <li>Diseño asistido por computadora.</li>
-          <li>Validación con equipo clínico.</li>
+          <li><a href="#t1">HTML</a></li>
+          <li><a href="#t2">HTML Introduction</a></li>
+          <li><a href="#t3">HTML Editors</a></li>
+          <li><a href="#t4">HTML Basic</a></li>
+          <li><a href="#t5">HTML Attributes</a></li>
+          <li><a href="#t6">HTML Heading</a></li>
+          <li><a href="#t7">HTML Paragraphs</a></li>
+          <li><a href="#t8">HTML Syles</a></li>
+          <li><a href="#t9">HTML Formating</a></li>
+          <li><a href="#t10">HTML Quotations</a></li>
+          <li><a href="#t11">HTML Comments</a></li>
+          <li><a href="#t12">HTML Colors</a></li>
+          <li><a href="#t13">HTML Colors</a></li>
+          <li><a href="#t14">HTML CSS</a></li>
+          <li><a href="#t15">HTML Links</a></li>
+          <li><a href="#t16">HTML Favicon</a></li>
+          <li><a href="#t17">HTML Page tile</a></li>
+          <li><a href="#t18">HTML Tables</a></li>
+          <li><a href="#t19">HTML Lists</a></li>
+          <li><a href="#t20">HYML Block e Inline</a></li>
+          <li><a href="#t21">HTML Div</a></li>
+          <li><a href="#t22">HTML Classes</a></li>
+          <li><a href="#t23">HTML Id</a></li>
+          <li><a href="#t24">HTML Buttons</a></li>
+          <li><a href="#t25">HTML Iframes</a></li>
+          <li><a href="#t26">HTML JavasScript</a></li>
+          <li><a href="#t27">HTML File Paths</a></li>
+          <li><a href="#t28">HTML Head</a></li>
+          <li><a href="#t29">HTML Layout</a></li>
         </ul>
-        <ol>
-          <li>Prototipo.</li>
-          <li>Pruebas funcionales.</li>
-          <li>Implementación final.</li>
-        </ol>
-      </article>
+      </nav>
 
-      <article id="block-inline" class="card">
-        <span class="badge">Tema 19</span>
-        <h2>HTML Block e Inline</h2>
-        <p>Los elementos de bloque ocupan todo el ancho disponible, mientras que los inline se adaptan al contenido. Esta diferencia ayuda al diseñar fichas técnicas legibles.</p>
-      </article>
-
-      <article id="div" class="card">
-        <span class="badge">Tema 20</span>
-        <h2>HTML Div</h2>
-        <p>El contenedor <code>div</code> se utiliza para agrupar componentes y aplicar estilos. Es útil para organizar módulos de pacientes, dispositivos y reportes.</p>
-      </article>
-
-      <article id="classes" class="card">
-        <span class="badge">Tema 21</span>
-        <h2>HTML Classes</h2>
-        <p>Las clases permiten reutilizar estilos en múltiples componentes. Por ejemplo, tarjetas de evaluación con un mismo formato visual.</p>
-      </article>
-
-      <article id="id" class="card">
-        <span class="badge">Tema 22</span>
-        <h2>HTML Id</h2>
-        <p>El atributo <code>id</code> identifica un elemento único, ideal para crear anclas de navegación o disparar comportamientos con JavaScript.</p>
-      </article>
-
-      <article id="buttons" class="card">
-        <span class="badge">Tema 23</span>
-        <h2>HTML Buttons</h2>
-        <p>Los botones permiten acciones como guardar evaluaciones o enviar formularios de contacto.</p>
-        <button class="btn-demo" type="button" onclick="alert('Gracias por interesarte en las soluciones PERBIONIC');">Botón de demostración</button>
-      </article>
-
-      <article id="iframes" class="card">
-        <span class="badge">Tema 24</span>
-        <h2>HTML Iframes</h2>
-        <p>Un iframe permite incrustar contenido externo, como videos explicativos de rehabilitación.</p>
-        <iframe width="100%" height="315" src="https://www.youtube.com/embed/TsRjyoxzEZ8" title="Video informativo" allowfullscreen></iframe>
-      </article>
-
-      <article id="javascript" class="card">
-        <span class="badge">Tema 25</span>
-        <h2>HTML JavaScript</h2>
-        <p>JavaScript agrega interactividad al HTML: validación de formularios, alertas, cálculos simples y actualización dinámica de métricas clínicas.</p>
-      </article>
-
-      <article id="paths" class="card">
-        <span class="badge">Tema 26</span>
-        <h2>HTML File Paths</h2>
-        <p>Las rutas relativas y absolutas ayudan a cargar imágenes, íconos y scripts correctamente. Una ruta bien definida evita errores en despliegues internos.</p>
-      </article>
-
-      <article id="head" class="card">
-        <span class="badge">Tema 27</span>
-        <h2>HTML Head</h2>
-        <p>Dentro de <code>head</code> se declaran metadatos, estilos, favicon y título. Es la base para preparar una página optimizada y bien identificada.</p>
-      </article>
-
-      <article id="layout" class="card">
-        <span class="badge">Tema 28</span>
-        <h2>HTML Layout</h2>
-        <p>El layout define cómo se distribuyen las secciones visibles. En esta página se utiliza un esquema con navegación lateral y contenido principal para facilitar el estudio secuencial de HTML.</p>
-      </article>
-    </main>
-  </section>
+      <div class="card topic-grid">
+        <div id="t1" class="topic"><h4>HTML</h4><p>Base estructural del portal corporativo y de nuestros módulos de atención digital.</p></div>
+        <div id="t2" class="topic"><h4>HTML Introduction</h4><p>Introducción a etiquetas, atributos y estructura para páginas informativas empresariales.</p></div>
+        <div id="t3" class="topic"><h4>HTML Editors</h4><p>Herramientas para edición profesional y control de versiones en proyectos web de salud.</p></div>
+        <div id="t4" class="topic"><h4>HTML Basic</h4><p>Estructura mínima del documento para landing pages institucionales y micrositios.</p></div>
+        <div id="t5" class="topic"><h4>HTML Attributes</h4><p>Atributos como <code>alt</code> y <code>href</code> para accesibilidad y navegación.</p></div>
+        <div id="t6" class="topic"><h4>HTML Heading</h4><p>Jerarquía de títulos para comunicar servicios y diferenciadores de marca.</p></div>
+        <div id="t7" class="topic"><h4>HTML Paragraphs</h4><p>Redacción clara de propuestas de valor y descripción de productos biomédicos.</p></div>
+        <div id="t8" class="topic"><h4>HTML Syles</h4><p>Estilos inline para prototipos rápidos en revisiones funcionales internas.</p></div>
+        <div id="t9" class="topic"><h4>HTML Formating</h4><p>Formato de texto para destacar características clínicas y recomendaciones técnicas.</p></div>
+        <div id="t10" class="topic"><h4>HTML Quotations</h4><p>Uso de citas para testimonios de pacientes, profesionales y aliados estratégicos.</p></div>
+        <div id="t11" class="topic"><h4>HTML Comments</h4><p>Comentarios para documentar decisiones de implementación y mantenimiento.</p></div>
+        <div id="t12" class="topic"><h4>HTML Colors</h4><p>Paletas coherentes con la identidad de confianza, salud e innovación de PERBIONIC.</p></div>
+        <div id="t13" class="topic"><h4>HTML Colors</h4><p>Aplicación avanzada de color para estados de interfaz: éxito, alerta y advertencia.</p></div>
+        <div id="t14" class="topic"><h4>HTML CSS</h4><p>Separación de estilo y contenido para mantener escalabilidad del sitio corporativo.</p></div>
+        <div id="t15" class="topic"><h4>HTML Links</h4><p>Enlaces a redes, contacto, manuales técnicos y páginas de aliados.</p></div>
+        <div id="t16" class="topic"><h4>HTML Favicon</h4><p>Icono de marca para identificación rápida del sitio en pestañas del navegador.</p></div>
+        <div id="t17" class="topic"><h4>HTML Page tile</h4><p>Título de pestaña optimizado para posicionamiento y lectura profesional.</p></div>
+        <div id="t18" class="topic"><h4>HTML Tables</h4><p>Tablas para catálogo de servicios, costos y tiempos de implementación.</p></div>
+        <div id="t19" class="topic"><h4>HTML Lists</h4><p>Listados de beneficios, procesos y requisitos para pacientes e instituciones.</p></div>
+        <div id="t20" class="topic"><h4>HYML Block e Inline</h4><p>Control visual de bloques e inline para composición limpia de interfaces.</p></div>
+        <div id="t21" class="topic"><h4>HTML Div</h4><p>Contenedores para componer secciones de landing, servicios y formularios.</p></div>
+        <div id="t22" class="topic"><h4>HTML Classes</h4><p>Clases reutilizables para tarjetas de productos y componentes institucionales.</p></div>
+        <div id="t23" class="topic"><h4>HTML Id</h4><p>Identificadores únicos para anclajes y scripts de interacción.</p></div>
+        <div id="t24" class="topic"><h4>HTML Buttons</h4><p>Botones de contacto, cotización y solicitud de evaluación clínica.</p></div>
+        <div id="t25" class="topic"><h4>HTML Iframes</h4><p>Integración de contenido externo para demostraciones y capacitaciones.</p></div>
+        <div id="t26" class="topic"><h4>HTML JavasScript</h4><p>Interacciones dinámicas para formularios y validaciones de usabilidad.</p></div>
+        <div id="t27" class="topic"><h4>HTML File Paths</h4><p>Rutas relativas y absolutas para recursos multimedia del proyecto.</p></div>
+        <div id="t28" class="topic"><h4>HTML Head</h4><p>Metadatos y configuración esencial para SEO técnico y compatibilidad.</p></div>
+        <div id="t29" class="topic"><h4>HTML Layout</h4><p>Distribución profesional enfocada en conversión, confianza y experiencia de usuario.</p></div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    PERBIONIC · Ingeniería Biomédica e Inclusión · Programación Web 1 · 2026
+    PERBIONIC © 2026 · Soluciones biomédicas inclusivas · Desarrollado por Jhon Gesell Villanueva Portella.
   </footer>
 </body>
 </html>
