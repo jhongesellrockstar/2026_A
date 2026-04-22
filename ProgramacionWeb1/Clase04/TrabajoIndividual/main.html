@@ -304,40 +304,75 @@
       </article>
     </section>
 
-    <section id="temario" class="card">
-      <h3>Guía HTML (alcance del proyecto digital)</h3>
-      <p>Referencia de contenidos basada en W3Schools para el equipo web de PERBIONIC.</p>
-      <div class="topics-grid">
-        <div class="topic-item">HTML</div>
-        <div class="topic-item">HTML Introduction</div>
-        <div class="topic-item">HTML Editors</div>
-        <div class="topic-item">HTML Basic</div>
-        <div class="topic-item">HTML Attributes</div>
-        <div class="topic-item">HTML Heading</div>
-        <div class="topic-item">HTML Paragraphs</div>
-        <div class="topic-item">HTML Syles</div>
-        <div class="topic-item">HTML Formating</div>
-        <div class="topic-item">HTML Quotations</div>
-        <div class="topic-item">HTML Comments</div>
-        <div class="topic-item">HTML Colors</div>
-        <div class="topic-item">HTML Colors</div>
-        <div class="topic-item">HTML CSS</div>
-        <div class="topic-item">HTML Links</div>
-        <div class="topic-item">HTML Favicon</div>
-        <div class="topic-item">HTML Page tile</div>
-        <div class="topic-item">HTML Tables</div>
-        <div class="topic-item">HTML Lists</div>
-        <div class="topic-item">HYML Block e Inline</div>
-        <div class="topic-item">HTML Div</div>
-        <div class="topic-item">HTML Classes</div>
-        <div class="topic-item">HTML Id</div>
-        <div class="topic-item">HTML Buttons</div>
-        <div class="topic-item">HTML Iframes</div>
-        <div class="topic-item">HTML JavasScript</div>
-        <div class="topic-item">HTML File Paths</div>
-        <div class="topic-item">HTML Head</div>
-        <div class="topic-item">HTML Layout</div>
-      </div>
+    <section id="contacto-form" class="card">
+      <h3>Solicita información personalizada</h3>
+      <p>Completa el formulario y el equipo comercial de PERBIONIC se comunicará contigo para orientarte sobre prótesis, órtesis, movilidad inclusiva o soporte técnico.</p>
+
+      <form action="#" method="post">
+        <div class="topics-grid">
+          <div>
+            <label for="nombres"><strong>Nombres y apellidos</strong></label><br>
+            <input id="nombres" name="nombres" type="text" placeholder="Ej. María Torres" required style="width:100%; margin-top:6px; padding:10px; border:1px solid var(--borde); border-radius:6px;">
+          </div>
+          <div>
+            <label for="correo"><strong>Correo electrónico</strong></label><br>
+            <input id="correo" name="correo" type="email" placeholder="correo@ejemplo.com" required style="width:100%; margin-top:6px; padding:10px; border:1px solid var(--borde); border-radius:6px;">
+          </div>
+          <div>
+            <label for="telefono"><strong>Teléfono / WhatsApp</strong></label><br>
+            <input id="telefono" name="telefono" type="tel" placeholder="+51 999 999 999" style="width:100%; margin-top:6px; padding:10px; border:1px solid var(--borde); border-radius:6px;">
+          </div>
+          <div>
+            <label for="departamento"><strong>Departamento</strong></label><br>
+            <select id="departamento" name="departamento" style="width:100%; margin-top:6px; padding:10px; border:1px solid var(--borde); border-radius:6px;">
+              <option value="">Seleccione una opción</option>
+              <option>Lima</option>
+              <option>Arequipa</option>
+              <option>La Libertad</option>
+              <option>Piura</option>
+              <option>Cusco</option>
+              <option>Lambayeque</option>
+              <option>Junín</option>
+              <option>Áncash</option>
+              <option>Ica</option>
+              <option>Puno</option>
+            </select>
+          </div>
+          <div>
+            <label for="servicio"><strong>Servicio de interés</strong></label><br>
+            <select id="servicio" name="servicio" required style="width:100%; margin-top:6px; padding:10px; border:1px solid var(--borde); border-radius:6px;">
+              <option value="">Seleccione un servicio</option>
+              <option>Prótesis personalizadas</option>
+              <option>Órtesis funcionales</option>
+              <option>Vehículos inclusivos</option>
+              <option>Mantenimiento de equipos médicos</option>
+              <option>Software inclusivo</option>
+            </select>
+          </div>
+          <div>
+            <label for="canal"><strong>Canal preferido de contacto</strong></label><br>
+            <select id="canal" name="canal" style="width:100%; margin-top:6px; padding:10px; border:1px solid var(--borde); border-radius:6px;">
+              <option>Correo</option>
+              <option>WhatsApp</option>
+              <option>Llamada telefónica</option>
+            </select>
+          </div>
+        </div>
+
+        <div style="margin-top:12px;">
+          <label for="mensaje"><strong>Cuéntanos tu caso</strong></label><br>
+          <textarea id="mensaje" name="mensaje" rows="5" placeholder="Describe el requerimiento clínico o técnico..." style="width:100%; margin-top:6px; padding:10px; border:1px solid var(--borde); border-radius:6px;"></textarea>
+        </div>
+
+        <div style="margin-top:10px;">
+          <label><input type="checkbox" required> Acepto el tratamiento de datos para recibir información de PERBIONIC.</label>
+        </div>
+
+        <div style="margin-top:12px;">
+          <button class="btn" type="submit">Enviar solicitud</button>
+          <button class="btn" type="reset" style="background:#4f6f90;">Limpiar formulario</button>
+        </div>
+      </form>
     </section>
   </main>
 
