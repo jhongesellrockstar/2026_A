@@ -1,0 +1,41 @@
+IV. METODOLOGÍA
+
+La metodología del presente informe se desarrolla a partir del análisis del artículo “Estudio de sistemas blandos para el desarrollo de un sistema de información gerencial, mediante una adaptación de la metodología para sistemas blandos de Peter Checkland”, elaborado por Martínez Marín y Rossi Ríos Rosas (2008). Este estudio se toma como base principal porque integra la Metodología de Sistemas Blandos (SSM), el modelado orientado a objetos mediante UML y la evaluación de cambios a través de modelos dinámicos. Asimismo, se considera el aporte de Pressman (2010), quien sostiene que el desarrollo de software requiere comprender el problema, identificar requerimientos, modelar la solución, construir el sistema y validar sus resultados. En consecuencia, la metodología del informe sigue una secuencia de análisis sistémico y diseño de software orientada a comprender una situación organizacional compleja y proponer una solución tecnológica viable.
+
+4.1 Descripción de la situación actual
+
+La primera etapa consiste en describir la situación actual del sistema organizacional estudiado, considerando su estructura, actores, actividades y relación con el entorno. En el caso analizado por Martínez Marín y Rossi Ríos Rosas (2008), la Subcomisión de Trabajos de Grado de Ingeniería de Sistemas de la Universidad de Oriente presentaba demoras en la revisión de proyectos y falta de información precisa sobre el estado de estos. Esta situación evidencia un problema de gestión de información, pero también un problema humano y organizacional, debido a que intervienen estudiantes, profesores, coordinadores, miembros de la subcomisión y dependencias académicas. Por ello, esta etapa permite reconocer que el problema no debe abordarse únicamente como una falla técnica, sino como una situación sistémica que requiere comprender procesos, responsabilidades y necesidades de información.
+
+4.2 Definiciones raíz (CATWOE)
+
+La segunda etapa corresponde a la construcción de definiciones raíz mediante el análisis CATWOE, herramienta propia de la Metodología de Sistemas Blandos. Según Martínez Marín y Rossi Ríos Rosas (2008), las definiciones raíz permiten representar lo que el sistema debería ser desde una determinada visión del mundo o Weltanschauung. Para ello, se identifican los clientes o beneficiarios del sistema, los actores que ejecutan las actividades, el proceso de transformación, la visión del mundo que justifica el sistema, los propietarios con capacidad de decisión y las restricciones del entorno. En el caso estudiado, esta técnica permite comprender que la subcomisión no solo recibe y revisa proyectos, sino que transforma solicitudes académicas en decisiones institucionales mediante procedimientos regulados.
+
+4.3 Modelos conceptuales
+
+La tercera etapa consiste en elaborar modelos conceptuales que representen las actividades humanas necesarias para cumplir con las definiciones raíz formuladas. De acuerdo con Martínez Marín y Rossi Ríos Rosas (2008), estos modelos se construyen a partir de los verbos de acción presentes en las definiciones raíz, los cuales permiten identificar actividades mínimas necesarias dentro del sistema. En este sentido, el modelo conceptual no describe exactamente la realidad existente, sino una representación lógica de lo que el sistema debería realizar para funcionar adecuadamente. Esta etapa resulta importante porque permite visualizar procesos, relaciones y actividades críticas antes de proponer cambios o diseñar una solución informática.
+
+4.4 Transformación a modelos de objetos
+
+La cuarta etapa consiste en transformar los modelos conceptuales en modelos de objetos, utilizando herramientas propias del modelado orientado a objetos y del Lenguaje Unificado de Modelado (UML). Martínez Marín y Rossi Ríos Rosas (2008) señalan que esta transformación permite identificar aquellas actividades del sistema humano que pueden automatizarse y representarse mediante diagramas de casos de uso y diagramas de clases. Este procedimiento conecta el análisis sistémico con el diseño técnico del sistema de información, permitiendo pasar de una comprensión conceptual del problema a una representación estructurada del software. En relación con ello, Pressman (2010) indica que el modelado permite comprender mejor los requerimientos del sistema y diseñar una solución que responda a las necesidades de los usuarios.
+
+4.5 Comparación con la realidad
+
+La quinta etapa consiste en comparar los modelos conceptuales construidos con la situación actual del sistema. Según Martínez Marín y Rossi Ríos Rosas (2008), esta comparación permite identificar qué actividades se realizan realmente, cuáles se ejecutan de manera diferente y cuáles no se realizan, pero deberían incorporarse. Esta etapa es fundamental porque permite detectar brechas entre el funcionamiento real de la organización y el funcionamiento deseado según el enfoque sistémico. A partir de esta comparación, se generan criterios objetivos para formular cambios culturalmente viables, técnicamente posibles y organizacionalmente pertinentes.
+
+4.6 Propuesta de cambios
+
+La sexta etapa consiste en formular propuestas de cambio sobre el sistema humano y organizacional. En el caso analizado, Martínez Marín y Rossi Ríos Rosas (2008) proponen acciones como ampliar el número de miembros de la subcomisión, establecer horarios de atención, publicar periódicamente el estado de los proyectos, mantener registros organizados y coordinar con grupos de investigación. Estas propuestas buscan reducir la acumulación de proyectos, mejorar la comunicación con los usuarios y fortalecer el control del flujo de información. En este sentido, los cambios no se limitan a la implementación de software, sino que también buscan mejorar la forma en que las personas participan, coordinan y toman decisiones dentro del sistema.
+
+4.7 Diseño del sistema de información
+
+La séptima etapa corresponde al diseño del sistema de información gerencial, tomando como base los modelos de objetos previamente elaborados. Martínez Marín y Rossi Ríos Rosas (2008) explican que esta fase incluye la construcción de diagramas de casos de uso, diagramas de clases, diseño de base de datos y diagramas de secuencia. El propósito de esta etapa es definir una solución informática capaz de registrar proyectos, almacenar información de estudiantes y profesores, generar reportes y apoyar el seguimiento de los procesos académicos. Desde la perspectiva de Pressman (2010), esta etapa forma parte del proceso de ingeniería de software, porque permite pasar del análisis de requerimientos al diseño de una solución estructurada, verificable y orientada a la calidad.
+
+4.8 Evaluación del sistema
+
+La octava etapa consiste en evaluar el sistema propuesto y la viabilidad de los cambios planteados. Martínez Marín y Rossi Ríos Rosas (2008) realizaron esta evaluación mediante modelos dinámicos y simulación continua, comparando la situación actual con la propuesta de mejora. Los resultados mostraron que la cantidad de proyectos acumulados en revisión podía disminuir aproximadamente de 17 a 10 unidades al aplicar los cambios propuestos, lo que evidencia una mejora en el desempeño del sistema. Por tanto, esta etapa permite comprobar que la integración entre la Metodología de Sistemas Blandos, UML y el diseño de sistemas de información puede generar soluciones más adecuadas para problemas organizacionales complejos.
+
+Referencias
+
+Martínez Marín, A. Y., & Rossi Ríos Rosas, F. (2008). Estudio de sistemas blandos para el desarrollo de un sistema de información gerencial, mediante una adaptación de la metodología para sistemas blandos de Peter Checkland. Ciencia Ergo Sum, 15(1), 45–53. https://www.redalyc.org/pdf/104/10415105.pdf
+
+Pressman, R. S. (2010). Ingeniería del software: un enfoque práctico (7.ª ed.). McGraw-Hill.
