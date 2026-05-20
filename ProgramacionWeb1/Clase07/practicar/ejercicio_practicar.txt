@@ -1,0 +1,32 @@
+SIMULADOR DE PRÉSTAMOS (PHP + FORM)
+
+Crear un formulario HTML con método POST.
+Campos: nombre, monto, interés anual, años, tipo préstamo.
+Enviar a un archivo PHP para procesar.
+Validar que ningún campo esté vacío.
+Validar monto > 0.
+Validar interés entre 0 y 100.
+Validar años > 0.
+Usar if/else para validaciones.
+Usar switch o match para tipo préstamo.
+Ajustar interés según tipo.
+Convertir interés anual a mensual.
+Calcular número total de meses.
+Aplicar fórmula de cuota mensual.
+Usar pow() para exponentes.
+Crear función calcularCuota().
+Crear función validarDatos().
+Crear array para amortización.
+Usar bucle for para iterar meses.
+Calcular interés mensual por cuota.
+Calcular amortización de capital.
+Actualizar saldo restante.
+Guardar datos en array multidimensional.
+Mostrar tabla con echo.
+Mostrar cuota mensual.
+Mostrar total pagado.
+Mostrar total intereses.
+Usar number_format() para formato.
+Definir constantes (ej: MAX_MONTO).
+Opcional: mostrar FILE.
+Opcional: exportar resultados con json_encode().

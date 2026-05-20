@@ -1,0 +1,127 @@
+1. PROBLEMA — OPAMP Inversor (Ejercicio 1)
+
+Amplificador operacional inversor ideal. 
+Datos:
+Vi = 12 V
+R1 = 2 kΩ
+Rf = 8 kΩ
+RL = 10 kΩ
+
+Calcular:
+- Voltaje de salida Vo
+- Corriente de entrada I1
+- Corriente de realimentación If
+- Ganancia de voltaje A
+- Corriente en la carga IL
+- Potencia en la carga PL
+
+
+------------------------------------------------------------
+
+2. PROBLEMA — OPAMP No Inversor (Ejercicio 2)
+
+Amplificador operacional no inversor ideal.
+Datos:
+Vi = 3 V
+R1 = 150 kΩ
+Rf = 470 kΩ
+RL = 2 kΩ
+
+Calcular:
+- Voltaje de salida Vo
+- Ganancia de voltaje A
+- Corriente en la carga IL
+- Potencia en la carga PL
+
+
+------------------------------------------------------------
+
+3. PROBLEMA — OPAMP con análisis nodal (Ejercicio 3)
+
+Amplificador operacional ideal con análisis nodal.
+Datos:
+Vi = 50 V
+R1 = 1 kΩ
+R2 = 2 kΩ
+R3 = 1.5 kΩ
+R4 = 3 kΩ
+R5 = 6 kΩ
+RL = 8 kΩ
+
+Calcular:
+- Nodo VA
+- Voltaje de salida Vo
+- Corrientes I1, I2 e I3
+- Ganancia de voltaje A
+- Corriente en la carga IL
+
+
+------------------------------------------------------------
+
+4. PROBLEMA — JFET Canal N (Ejercicio 1)
+
+Circuito JFET canal N.
+Datos:
+VDD = 24 V
+RD = 4.7 kΩ
+RS = 1.2 kΩ
+Divisor de compuerta:
+3.9 MΩ y 470 kΩ
+
+Relación:
+ID = IDSS (1 - VGS/VP)^2
+
+Calcular:
+- Voltaje VG
+- Voltaje VS
+- Voltaje VGS
+- Corriente ID
+- Voltaje VD
+
+
+------------------------------------------------------------
+
+5. PROBLEMA — JFET Polarización DC (Ejercicio 2)
+
+Circuito JFET de polarización DC.
+Datos:
+VDD = 30 V
+RD = 5 kΩ
+RS = 1.5 kΩ
+Divisor resistivo:
+4.1 MΩ y 390 kΩ
+
+Relación:
+ID = IDSS (1 - VGS/VP)^2
+
+Calcular:
+- Voltaje VG
+- Voltaje VS
+- Voltaje VGS
+- Corriente ID
+- Voltaje VD
+
+
+------------------------------------------------------------
+
+6. PROBLEMA — JFET con ecuación cuadrática (Ejercicio 3)
+
+Circuito JFET canal N con ecuación cuadrática.
+Datos:
+VDD = 28 V
+RD = 6 kΩ
+RS = 2 kΩ
+Divisor de compuerta:
+3.7 MΩ y 365 kΩ
+
+Relación:
+ID = IDSS (1 - VGS/VP)^2
+
+Calcular:
+- Voltaje VG
+- Voltaje VS
+- Voltaje VGS
+- Corriente ID
+- Voltaje VD
+- Desarrollo de la ecuación cuadrática:
+  aID^2 + bID + c = 0

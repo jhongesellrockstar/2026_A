@@ -1,0 +1,124 @@
+EXAMEN PARCIAL – SIMULADOR DE PRÉSTAMOS
+Puntaje total: 20 puntos
+Caso
+Desarrollar un sistema web de simulación de préstamos.
+
+El sistema debe:
+
+Solicitar monto y plazo.
+
+Aplicar una tasa fija de interés de 14%.
+
+Calcular el préstamo.
+
+Guardar cada simulación en base de datos considerando fecha y hora.
+
+Permitir visualizar las simulaciones realizadas por el usuario.
+
+Además, el sistema debe mostrar el detalle completo de cada simulación.
+
+DETALLES QUE DEBE MOSTRAR LA SIMULACIÓN
+Cada simulación debe mostrar como mínimo:
+
+Monto solicitado
+
+Tasa de interés aplicada (14%)
+
+Interés generado
+
+Total a pagar
+
+Plazo seleccionado
+
+Cuota mensual aproximada
+
+Fecha de simulación
+
+Hora de simulación
+
+DISTRIBUCIÓN DE PUNTAJE
+1. Diseño del formulario (4 puntos)
+1.1 Creación del formulario HTML (1 punto)
+Debe existir un formulario funcional.
+
+1.2 Campo monto (1 punto)
+Debe existir un input para ingresar el monto del préstamo.
+
+1.3 Campo plazo (1 punto)
+Debe existir un input o selector para el plazo.
+
+1.4 Botón de simulación (1 punto)
+Debe existir un botón para ejecutar la simulación.
+
+2. Validaciones y lógica (7 puntos)
+2.1 Validación de campos vacíos (1 punto)
+El sistema debe validar que los campos no estén vacíos.
+
+2.2 Validación numérica del monto (1 punto)
+El monto debe ser numérico y mayor que cero.
+
+2.3 Validación del plazo (1 punto)
+El plazo debe ser válido y mayor que cero.
+
+2.4 Aplicación correcta del interés fijo 14% (2 puntos)
+Debe aplicarse correctamente la fórmula del interés.
+
+2.5 Cálculo correcto del total a pagar (1 punto)
+Debe mostrarse correctamente el monto final.
+
+2.6 Mostrar resultados al usuario (1 punto)
+Debe mostrarse correctamente el detalle completo de la simulación.
+
+3. Base de datos y almacenamiento (5 puntos)
+3.1 Creación de tabla en BD (1 punto)
+Debe existir una tabla adecuada para guardar simulaciones.
+
+3.2 Conexión correcta a la BD (1 punto)
+Debe realizar correctamente la conexión.
+
+3.3 Inserción de datos (2 puntos)
+Debe guardar:
+
+monto
+
+plazo
+
+interés
+
+total
+
+cuota mensual
+
+fecha
+
+hora
+
+3.4 Uso correcto de fecha y hora automática (1 punto)
+La simulación debe registrar fecha y hora del sistema.
+
+4. Visualización de simulaciones (4 puntos)
+4.1 Consulta de datos desde la BD (1 punto)
+Debe recuperar las simulaciones guardadas.
+
+4.2 Mostrar simulaciones en tabla (1 punto)
+Debe visualizarse ordenadamente.
+
+4.3 Mostrar fecha y hora de cada simulación (1 punto)
+Debe visualizar cuándo fue realizada.
+
+4.4 Orden y presentación visual (1 punto)
+La interfaz debe ser clara y legible.
+
+RESULTADO ESPERADO DE LA SIMULACIÓN
+Ejemplo:
+
+Monto solicitado: S/ 10,000
+Interés aplicado: 14%
+Interés generado: S/ 1,400
+Total a pagar: S/ 11,400
+Plazo: 12 meses
+Cuota mensual aproximada: S/ 950
+Fecha: 19/05/2026
+Hora: 10:30 AM
+
+Puntaje Total: 20 puntos

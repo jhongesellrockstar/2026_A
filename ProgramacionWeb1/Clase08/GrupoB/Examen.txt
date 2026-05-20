@@ -1,0 +1,134 @@
+EXAMEN PARCIAL – SISTEMA DE RESERVA DE HOTELES
+Puntaje total: 20 puntos
+Caso
+Desarrollar un sistema web de reserva de habitaciones de hotel.
+
+El sistema debe:
+
+Solicitar nombre del cliente, tipo de habitación y cantidad de noches.
+
+Aplicar una tarifa fija según el tipo de habitación.
+
+Calcular el costo total de hospedaje.
+
+Guardar cada reserva en base de datos considerando fecha y hora.
+
+Permitir visualizar las reservas realizadas por el usuario.
+
+Además, el sistema debe mostrar el detalle completo de cada reserva.
+
+DETALLES QUE DEBE MOSTRAR LA RESERVA
+Cada reserva debe mostrar como mínimo:
+
+Nombre del cliente
+
+Tipo de habitación seleccionada
+
+Precio por noche
+
+Cantidad de noches
+
+Subtotal
+
+IGV aplicado (18%)
+
+Total a pagar
+
+Fecha de reserva
+
+Hora de reserva
+
+TARIFAS DE HABITACIONES
+Tipo de habitación	Precio por noche
+Simple	S/ 120
+Doble	S/ 200
+Suite	S/ 350
+DISTRIBUCIÓN DE PUNTAJE
+1. Diseño del formulario (4 puntos)
+1.1 Creación del formulario HTML (1 punto)
+Debe existir un formulario funcional.
+
+1.2 Campo nombre del cliente (1 punto)
+Debe existir un input para ingresar el nombre.
+
+1.3 Campo tipo de habitación y noches (1 punto)
+Debe existir un selector de habitación y un input para noches.
+
+1.4 Botón de reserva (1 punto)
+Debe existir un botón para registrar la reserva.
+
+2. Validaciones y lógica (7 puntos)
+2.1 Validación de campos vacíos (1 punto)
+El sistema debe validar que los campos no estén vacíos.
+
+2.2 Validación de noches (1 punto)
+La cantidad de noches debe ser numérica y mayor que cero.
+
+2.3 Validación del tipo de habitación (1 punto)
+Debe seleccionarse una habitación válida.
+
+2.4 Aplicación correcta de tarifas (2 puntos)
+Debe calcular correctamente el subtotal según la habitación y noches.
+
+2.5 Cálculo correcto del IGV y total (1 punto)
+Debe mostrarse correctamente el monto final.
+
+2.6 Mostrar resultados al usuario (1 punto)
+Debe mostrarse correctamente el detalle completo de la reserva.
+
+3. Base de datos y almacenamiento (5 puntos)
+3.1 Creación de tabla en BD (1 punto)
+Debe existir una tabla adecuada para guardar reservas.
+
+3.2 Conexión correcta a la BD (1 punto)
+Debe realizar correctamente la conexión.
+
+3.3 Inserción de datos (2 puntos)
+Debe guardar:
+
+nombre del cliente
+
+tipo de habitación
+
+noches
+
+subtotal
+
+IGV
+
+total
+
+fecha
+
+hora
+
+3.4 Uso correcto de fecha y hora automática (1 punto)
+La reserva debe registrar fecha y hora del sistema.
+
+4. Visualización de reservas (4 puntos)
+4.1 Consulta de datos desde la BD (1 punto)
+Debe recuperar las reservas guardadas.
+
+4.2 Mostrar reservas en tabla (1 punto)
+Debe visualizarse ordenadamente.
+
+4.3 Mostrar fecha y hora de cada reserva (1 punto)
+Debe visualizar cuándo fue realizada.
+
+4.4 Orden y presentación visual (1 punto)
+La interfaz debe ser clara y legible.
+
+RESULTADO ESPERADO DE LA RESERVA
+Ejemplo:
+
+Cliente: Juan Pérez
+Habitación: Suite
+Precio por noche: S/ 350
+Noches: 3
+Subtotal: S/ 1,050
+IGV (18%): S/ 189
+Total a pagar: S/ 1,239
+Fecha: 19/05/2026
+Hora: 10:30 AM
+
+Puntaje Total: 20 puntos
