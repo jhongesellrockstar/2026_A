@@ -1,0 +1,106 @@
+REPORTE DE EJEMPLOS APLICADOS A INGENIERIA DE SISTEMAS
+Proyecto: analisis_financiero_unac
+Tema: Analisis financiero: analisis horizontal y analisis vertical de estados financieros
+Curso: Contabilidad Empresarial - Universidad Nacional del Callao
+Carrera: Ingenieria de Sistemas
+
+1. OBJETIVO DE LA ACTUALIZACION
+
+Se incorporaron ejemplos laborales vinculados con Ingenieria de Sistemas en la presentacion Beamer, el documento maestro, el guion de exposicion y la guia de estudio del grupo. La finalidad fue reforzar la utilidad del analisis financiero en contextos como ERP, bases de datos, dashboards, automatizacion de reportes y apoyo a decisiones gerenciales.
+
+2. CAMBIOS EN LA PRESENTACION BEAMER
+
+Se mantuvieron:
+- 26 diapositivas.
+- Figuras PNG F01-F16.
+- Logo UNAC e integrantes.
+- Colores por bloque.
+- Pie de pagina institucional.
+- Enfoque contable del tema.
+
+Se incorporaron ejemplos aplicados en:
+- Objetivos de la exposicion: relacion con sistemas de informacion, bases de datos y tableros de control.
+- Secuencia tematica: reportes automatizados que integran datos contables, calculos y visualizacion.
+- Concepto de analisis financiero: dashboard de ventas, costos y utilidades.
+- De la contabilidad al diagnostico: transacciones registradas y consultadas desde bases de datos empresariales.
+- Estados financieros: generacion automatica desde ERP.
+- Estado de Situacion Financiera: alertas sobre liquidez y endeudamiento.
+- Estado de Resultados: evaluacion de ingresos por licencias, soporte o desarrollo en empresas de software.
+- Relacion entre balance y resultados: dashboard con ventas, utilidad, activos y deuda.
+- Analisis horizontal: comparacion de costos cloud, gastos de personal o ingresos digitales.
+- Calculo horizontal: ejemplo de costo cloud de S/ 8000 a S/ 12000.
+- Procedimiento horizontal: automatizacion con consultas SQL.
+- Caso Empresa ABC: modelado en Excel, Power BI o sistema web.
+- Aplicacion horizontal: alerta cuando costos crecen mas rapido que ventas.
+- Interpretacion horizontal: regla de negocio para eficiencia operativa.
+- Analisis vertical: reportes gerenciales con peso porcentual de costos y gastos.
+- Calculo vertical: porcentajes automaticos para tablas dinamicas o dashboards.
+- Procedimiento vertical: ventas como base del 100%.
+- Aplicacion vertical: costos de licencias, servidores y soporte.
+- Interpretacion vertical: colores de alerta por reduccion de margen.
+- Comparacion de metodos: gasto en servidores visto por variacion y por peso porcentual.
+- Errores frecuentes: sistemas que muestran ventas crecientes sin advertir perdida de margen.
+- Decisiones empresariales: software, servicios cloud, automatizacion e inversion tecnologica.
+- Relacion con Ingenieria de Sistemas: ERP, bases de datos, ETL, dashboards, indicadores y alertas.
+- Conclusiones: automatizacion de reportes y dashboards como aporte de Ingenieria de Sistemas.
+
+3. DOCUMENTO MAESTRO
+
+Se actualizo la seccion de aplicacion para incluir:
+
+"Aplicacion del analisis financiero en Ingenieria de Sistemas"
+
+La nueva subseccion desarrolla:
+- Relacion entre contabilidad empresarial y sistemas de informacion.
+- Uso de bases de datos para almacenar ventas, costos, activos, pasivos y patrimonio.
+- Automatizacion del analisis horizontal y vertical con hojas de calculo, SQL, Python, Power BI o ERP.
+- Uso de dashboards para interpretar resultados financieros.
+- Ejemplo laboral de empresa tecnologica con ventas, costos cloud, gastos administrativos y utilidad.
+- Importancia para la toma de decisiones gerenciales.
+
+4. GUIA DE ESTUDIO
+
+Se actualizo:
+- 06_guion_exposicion/GUIA_ESTUDIO_GRUPO.md
+
+Se agrego la seccion:
+"Ejemplos aplicados a Ingenieria de Sistemas"
+
+Incluye ejemplos por bloque:
+- Bloque A: ERP que genera estados financieros desde modulos de ventas, compras y contabilidad.
+- Bloque B: comparacion del costo de servidores cloud entre 2024 y 2025.
+- Bloque C: porcentaje que representan costos tecnologicos respecto a ventas netas.
+- Bloque D: dashboard gerencial con alertas de margen, costos, deuda y rentabilidad.
+
+Tambien se agregaron preguntas probables y respuestas sobre:
+- Importancia del tema para Ingenieria de Sistemas.
+- Automatizacion del analisis horizontal.
+- Automatizacion del analisis vertical.
+- Diferencia entre mostrar datos y generar informacion financiera.
+- Herramientas tecnologicas para presentar indicadores.
+
+5. GUION ORAL
+
+Se actualizaron los cuatro bloques:
+
+- Bloque A: ejemplo de ERP con modulos integrados y participacion del ingeniero de sistemas en reportes, bases de datos y dashboards.
+- Bloque B: ejemplo de gasto cloud que aumenta de S/ 8000 a S/ 12000 y automatizacion con SQL, Excel, Python o Power BI.
+- Bloque C: ejemplo de costos tecnologicos como porcentaje de ventas y uso de dashboards con alertas.
+- Bloque D: ejemplo de dashboard gerencial que integra analisis horizontal, vertical y ratios.
+
+6. VERIFICACION FINAL
+
+- 03_presentacion_beamer/main.tex compilo correctamente.
+- 02_documento_maestro/documento_maestro.tex compilo correctamente.
+- main.pdf mantiene 26 diapositivas.
+- documento_maestro.pdf compila correctamente.
+- No aparecen tiempos visibles.
+- No aparecen rotulos internos de guion.
+- No aparece "Espacio para figura".
+- No se encontraron caracteres mojibake en los archivos fuente revisados.
+- Cada bloque incluye al menos un ejemplo aplicado a Ingenieria de Sistemas.
+- La diapositiva "Relacion con Ingenieria de Sistemas" fue fortalecida con ERP, bases de datos, ETL, dashboards, indicadores automatizados, alertas y apoyo a decisiones.
+
+7. RESULTADO
+
+La presentacion final queda mas solida y aplicada a Ingenieria de Sistemas. Los ejemplos laborales permiten explicar el tema en contextos reales como empresas tecnologicas, sistemas ERP, reportes gerenciales, dashboards y automatizacion de indicadores financieros.

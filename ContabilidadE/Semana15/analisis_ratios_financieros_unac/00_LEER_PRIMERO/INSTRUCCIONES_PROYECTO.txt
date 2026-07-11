@@ -1,0 +1,16 @@
+Proyecto: Análisis de Ratios Financieros
+Universidad Nacional del Callao
+Carrera profesional: Ingeniería de Sistemas
+Curso: Contabilidad Empresarial
+Unidad IV: Análisis e interpretación de estados financieros
+Semana 15
+
+Orden sugerido de trabajo:
+1. Revisar 04_casos_practicos/soluciones_detalladas.md.
+2. Ejecutar 09_scripts/verificar_utf8.py.
+3. Ejecutar 09_scripts/verificar_calculos.py.
+4. Compilar primero 03_presentacion_beamer/main.tex con XeLaTeX.
+5. Compilar luego 02_documento_maestro/documento_maestro.tex con XeLaTeX.
+
+Los casos empresariales son académicos y ficticios, elaborados con fines educativos.
+No representan estados financieros reales de empresas peruanas.

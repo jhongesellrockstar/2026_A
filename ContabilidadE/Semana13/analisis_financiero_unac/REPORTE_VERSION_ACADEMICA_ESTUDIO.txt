@@ -1,0 +1,118 @@
+REPORTE VERSION ACADEMICA DE ESTUDIO
+Proyecto: analisis_financiero_unac
+Tema: Analisis financiero: analisis horizontal y analisis vertical de estados financieros
+
+1. OBJETIVO DE LA MEJORA
+
+Se mejoro la presentacion Beamer para que mantenga su diseno visual con figuras PNG, pero incorpore contenido academico breve en las diapositivas. El objetivo fue que la presentacion pueda estudiarse directamente y sostenga una exposicion universitaria de aproximadamente 30 minutos.
+
+2. CAMBIOS EN LA PRESENTACION
+
+- Se mantuvieron 26 diapositivas.
+- Se mantuvieron logo UNAC, integrantes y colores por bloque.
+- Se mantuvieron las figuras PNG F01-F16 ya insertadas.
+- No se volvio a mostrar "Duracion estimada" en las diapositivas.
+- Se agregaron microtextos academicos breves en las diapositivas de contenido.
+- Los textos se integraron naturalmente al contenido, sin rotulos artificiales.
+- Se conservaron las formulas de analisis horizontal y analisis vertical.
+- Se conservaron tablas del caso Empresa ABC.
+- Se conservaron conclusiones y referencias APA 7.
+
+3. CONTENIDO AGREGADO POR BLOQUE
+
+Bloque A: Introduccion
+- Definicion academica de analisis financiero.
+- Utilidad para toma de decisiones.
+- Explicacion de estados financieros utilizados.
+- Diferencia general entre analisis horizontal y vertical.
+
+Bloque B: Analisis horizontal
+- Concepto y utilidad.
+- Explicacion de variacion absoluta y porcentual.
+- Procedimiento de calculo.
+- Interpretacion del caso Empresa ABC.
+
+Bloque C: Analisis vertical
+- Concepto y base comun.
+- Explicacion de formula.
+- Procedimiento para convertir partidas en porcentajes.
+- Interpretacion del margen y estructura porcentual.
+
+Bloque D: Aplicacion y cierre
+- Comparacion entre metodos.
+- Errores frecuentes de interpretacion.
+- Aplicaciones en decisiones empresariales.
+- Relacion con Ingenieria de Sistemas.
+- Conclusiones completas.
+
+4. GUION Y GUIA DE ESTUDIO
+
+Se actualizo 06_guion_exposicion con una version practica para cuatro bloques:
+- Bloque A: Introduccion.
+- Bloque B: Analisis horizontal.
+- Bloque C: Analisis vertical.
+- Bloque D: Aplicacion y cierre.
+
+Se creo:
+- 06_guion_exposicion/GUIA_ESTUDIO_GRUPO.md
+
+La guia incluye:
+- Resumen general del tema.
+- Que debe estudiar cada expositor.
+- Formulas principales.
+- Explicacion del caso Empresa ABC.
+- Interpretaciones clave.
+- Preguntas probables de la docente.
+- Respuestas cortas recomendadas.
+- Transiciones entre expositores.
+
+5. DOCUMENTO MAESTRO
+
+Se actualizo el documento maestro para incluir lectura continua del tema:
+- Introduccion.
+- Marco teorico.
+- Estados financieros utilizados.
+- Analisis horizontal.
+- Analisis vertical.
+- Caso Empresa ABC.
+- Interpretacion.
+- Aplicacion empresarial.
+- Relacion con Ingenieria de Sistemas.
+- Conclusiones.
+- Referencias APA 7.
+
+6. VERIFICACION FINAL
+
+- main.tex compilo correctamente.
+- documento_maestro.tex compilo correctamente.
+- main.pdf tiene 26 diapositivas.
+- documento_maestro.pdf compila correctamente.
+- No aparece "Duracion estimada" en el PDF.
+- No aparece "Espacio para figura" en el PDF.
+- No aparece "Idea para exponer" en el PDF.
+- No aparece "Texto para expositor" en el PDF.
+- No aparece "Texto para exponer" en el PDF.
+- No aparece "Apoyo del expositor" en el PDF.
+- No aparece "Guion" en el PDF.
+- Las figuras PNG se mantienen dentro de las diapositivas.
+- Las tablas principales caben en las diapositivas.
+
+7. ARCHIVOS PRINCIPALES ACTUALIZADOS
+
+- 03_presentacion_beamer/preambulo.tex
+- 03_presentacion_beamer/secciones/01_apertura.tex
+- 03_presentacion_beamer/secciones/02_intro_analisis_financiero.tex
+- 03_presentacion_beamer/secciones/03_analisis_horizontal.tex
+- 03_presentacion_beamer/secciones/04_analisis_vertical.tex
+- 03_presentacion_beamer/secciones/05_aplicacion_cierre.tex
+- 03_presentacion_beamer/secciones/06_referencias.tex
+- 06_guion_exposicion/bloque_01_introduccion.md
+- 06_guion_exposicion/bloque_02_analisis_horizontal.md
+- 06_guion_exposicion/bloque_03_analisis_vertical.md
+- 06_guion_exposicion/bloque_04_aplicacion_cierre.md
+- 06_guion_exposicion/GUIA_ESTUDIO_GRUPO.md
+- 02_documento_maestro/secciones/08_conclusiones.tex
+
+8. RESULTADO
+
+La presentacion queda formal, visual y academica, con suficiente contenido textual para que los integrantes puedan estudiar rapidamente y exponer sin perderse durante una presentacion de aproximadamente 30 minutos.

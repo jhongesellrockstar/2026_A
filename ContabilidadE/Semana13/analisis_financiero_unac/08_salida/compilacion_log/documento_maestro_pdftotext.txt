@@ -1,0 +1,420 @@
+Análisis financiero: análisis horizontal y análisis
+vertical de estados financieros
+Universidad Nacional del Callao
+Curso: Contabilidad Empresarial
+30 de junio de 2026
+
+Índice
+1. Introducción
+
+2
+
+2. Marco teórico
+
+2
+
+3. Estados financieros
+3.1. Estado de Situación Financiera . . . . . . . . . . . . . . . . . . . . . . .
+3.2. Estado de Resultados . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2
+3
+3
+
+4. Análisis horizontal
+4.1. Ejemplo básico de análisis horizontal . . . . . . . . . . . . . . . . . . . .
+4.2. Ejemplo aplicado de análisis horizontal . . . . . . . . . . . . . . . . . .
+
+3
+3
+4
+
+5. Análisis vertical
+5.1. Ejemplo básico de análisis vertical . . . . . . . . . . . . . . . . . . . . .
+5.2. Ejemplo aplicado de análisis vertical . . . . . . . . . . . . . . . . . . . .
+
+4
+4
+5
+
+6. Caso práctico: Empresa ABC
+6.1. Estado de Resultados . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+6.2. Estado de Situación Financiera . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+5
+6
+
+7. Interpretación del caso
+7.1. Análisis horizontal . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7.2. Análisis vertical . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+7.3. Interpretación gerencial del caso Empresa ABC . . . . . . . . . . . . . .
+
+6
+6
+6
+7
+
+8. Aplicación empresarial
+
+7
+
+9. Aplicación del análisis financiero en Ingeniería de Sistemas
+9.1. Aplicación tecnológica del análisis financiero . . . . . . . . . . . . . . .
+
+7
+8
+
+10. Conclusiones
+
+8
+
+11. Referencias APA 7
+
+8
+1
+
+1. Introducción
+El presente documento desarrolla el tema Análisis financiero: análisis horizontal y
+análisis vertical de estados financieros, correspondiente al curso Contabilidad Empresarial de la Universidad Nacional del Callao. El contenido se alinea con la Unidad IV:
+análisis e interpretación de estados financieros.
+El análisis financiero permite transformar datos contables en información útil para
+evaluar la situación económica y financiera de una empresa. En ese proceso, los estados financieros no se leen como cifras aisladas, sino como información comparable,
+estructurada e interpretable.
+La exposición se organiza en cuatro bloques: fundamentos, análisis horizontal, análisis vertical y aplicación empresarial. El caso Empresa ABC permite mostrar el uso de
+fórmulas, cuadros, gráficos e interpretación técnica.
+
+2. Marco teórico
+El análisis financiero es una lectura técnica de los estados financieros que busca
+explicar la situación de una empresa y apoyar decisiones económicas. El Marco Conceptual NIIF sostiene que la información financiera es útil cuando sirve a los usuarios
+para tomar decisiones.
+La NIC 1 destaca la importancia de la presentación y comparabilidad de los estados
+financieros. Esta comparabilidad permite analizar cambios entre periodos y estudiar la
+estructura interna de los estados.
+En el contexto peruano, el Plan Contable General Empresarial organiza cuentas
+contables que sirven como base para preparar estados financieros. Por ello, existe
+una relación entre registro contable, clasificación de cuentas, estados financieros y
+análisis.
+Fuentes como Amat, Edwards, Hermanson y Maher, y la bibliografía contable registrada en el proyecto resaltan que el balance y el estado de resultados son instrumentos
+centrales para comprender la posición financiera, el desempeño y la utilidad empresarial.
+
+3. Estados financieros
+Los estados financieros utilizados para el análisis son:
+Estado de Situación Financiera.
+Estado de Resultados.
+Estado de Flujos de Efectivo.
+Estado de Cambios en el Patrimonio.
+Para el caso práctico se utilizan principalmente el Estado de Situación Financiera
+y el Estado de Resultados.
+
+2
+
+3.1. Estado de Situación Financiera
+El Estado de Situación Financiera muestra los activos, pasivos y patrimonio de la
+empresa en una fecha determinada. La ecuación básica es:
+Activos = Pasivos + Patrimonio
+En el análisis vertical, el total activo suele tomarse como base para evaluar la estructura financiera.
+
+3.2. Estado de Resultados
+El Estado de Resultados muestra ingresos, costos, gastos, impuesto y utilidad neta
+durante un periodo. Permite evaluar el desempeño económico y la eficiencia de la
+empresa para convertir ventas en utilidad.
+En el análisis vertical, las ventas netas suelen tomarse como base del 100 %.
+
+4. Análisis horizontal
+El análisis horizontal compara una misma partida contable entre dos o más periodos. Su finalidad es identificar aumentos, disminuciones y tendencias.
+Las fórmulas son:
+Variación absoluta = Valor actual − Valor base
+Variación absoluta
+× 100
+Valor base
+El procedimiento consiste en seleccionar la partida, elegir un periodo base, calcular
+la variación absoluta, calcular la variación relativa e interpretar el resultado.
+Este método responde a la pregunta: ¿cuánto cambió una partida entre periodos?
+Variación relativa =
+
+4.1. Ejemplo básico de análisis horizontal
+Enunciado: una empresa desea comparar sus ventas entre dos periodos para medir
+el crecimiento comercial.
+Datos:
+Ventas 2024: S/ 100,000.00.
+Ventas 2025: S/ 120,000.00.
+Cálculo:
+S/ 120,000.00 − S/ 100,000.00 = S/ 20,000.00
+La variación porcentual es:
+
+3
+
+S/ 20,000.00
+× 100 = 20,00 %
+S/ 100,000.00
+Interpretación: las ventas aumentaron S/ 20,000.00, equivalentes al 20.00 % del
+periodo base.
+
+4.2. Ejemplo aplicado de análisis horizontal
+Enunciado: una empresa de servicios digitales contrata infraestructura cloud para
+alojar su plataforma. Al comparar dos periodos, la gerencia observa un incremento
+importante del costo mensual.
+Datos:
+Costo cloud 2024: S/ 8,000.00.
+Costo cloud 2025: S/ 12,000.00.
+Cálculo:
+S/ 12,000.00 − S/ 8,000.00 = S/ 4,000.00
+S/ 4,000.00
+× 100 = 50,00 %
+S/ 8,000.00
+Interpretación y decisión: el incremento puede estar justificado si creció la demanda
+de usuarios; sin embargo, si los ingresos no crecieron en la misma proporción, debe
+revisarse la eficiencia de la arquitectura, proveedores o plan contratado.
+
+5. Análisis vertical
+El análisis vertical expresa cada partida como porcentaje de una base común dentro
+del mismo estado financiero. Permite estudiar la estructura económica o financiera de
+la empresa.
+La formula es:
+Partida
+× 100
+Base
+En el Estado de Situación Financiera, la base usual es el total activo. En el Estado
+de Resultados, la base usual son las ventas netas.
+Este método responde a la pregunta: ¿qué peso tiene una partida dentro del
+total?
+Participación porcentual =
+
+5.1. Ejemplo básico de análisis vertical
+Enunciado: una empresa desea conocer qué proporción de sus ventas se destina
+al costo de ventas.
+Datos:
+
+4
+
+Ventas netas: S/ 100,000.00.
+Costo de ventas: S/ 60,000.00.
+Cálculo:
+S/ 60,000.00
+× 100 = 60,00 %
+S/ 100,000.00
+Interpretación: de cada S/ 100.00 vendidos, S/ 60.00 se destinan al costo de ventas
+y S/ 40.00 quedan como margen bruto antes de gastos.
+
+5.2. Ejemplo aplicado de análisis vertical
+Enunciado: una empresa tecnológica desea evaluar qué peso tienen sus costos de
+servidores y licencias dentro de sus ventas.
+Datos:
+Ventas: S/ 200,000.00.
+Servidores y licencias: S/ 70,000.00.
+Cálculo:
+S/ 70,000.00
+× 100 = 35,00 %
+S/ 200,000.00
+Interpretación y decisión: el 35.00 % de las ventas se destina a infraestructura tecnológica. Si este porcentaje aumenta, la empresa debe revisar arquitectura, proveedores cloud, licencias y escalabilidad.
+
+6. Caso práctico: Empresa ABC
+6.1. Estado de Resultados
+Partida
+Ventas netas
+Costo de ventas
+Utilidad bruta
+Gastos administrativos
+Gastos de ventas
+Utilidad operativa
+Impuesto a la renta
+Utilidad neta
+
+2024
+
+2025
+
+S/ 180,000.00 S/ 215,000.00
+S/ 108,000.00 S/ 133,000.00
+S/ 72,000.00
+S/ 82,000.00
+S/ 23,000.00
+S/ 26,000.00
+S/ 18,000.00
+S/ 20,500.00
+S/ 31,000.00
+S/ 35,500.00
+S/ 9,145.00
+S/ 10,473.00
+S/ 21,855.00
+S/ 25,027.00
+
+5
+
+6.2. Estado de Situación Financiera
+Partida
+
+2024
+
+Activo corriente
+Activo no corriente
+Total activo
+Pasivo corriente
+Pasivo no corriente
+Patrimonio
+Total pasivo y patrimonio
+
+2025
+
+S/ 95,000.00 S/ 113,000.00
+S/ 105,000.00 S/ 112,000.00
+S/ 200,000.00 S/ 225,000.00
+S/ 28,000.00
+S/ 35,000.00
+S/ 42,000.00
+S/ 47,000.00
+S/ 130,000.00 S/ 143,000.00
+S/ 200,000.00 S/ 225,000.00
+
+7. Interpretación del caso
+7.1. Análisis horizontal
+Partida
+
+2024
+
+Ventas netas
+Costo de ventas
+Utilidad bruta
+Utilidad neta
+Total activo
+Patrimonio
+
+S/ 180,000.00
+S/ 108,000.00
+S/ 72,000.00
+S/ 21,855.00
+S/ 200,000.00
+S/ 130,000.00
+
+2025 Variación %
+S/ 215,000.00
+S/ 133,000.00
+S/ 82,000.00
+S/ 25,027.00
+S/ 225,000.00
+S/ 143,000.00
+
+19.44 %
+23.15 %
+13.89 %
+14.51 %
+12.50 %
+10.00 %
+
+La empresa incrementa sus ventas en 19.44 %, lo cual es favorable. Sin embargo,
+el costo de ventas aumenta 23.15 %, es decir, crece más rápido que las ventas. Esto
+reduce la eficiencia operativa y presiona el margen bruto.
+
+7.2. Análisis vertical
+Partida
+Ventas netas
+Costo de ventas
+Utilidad bruta
+Utilidad neta
+Activo corriente
+Patrimonio
+
+2024
+
+2025
+
+100.00 % 100.00 %
+60.00 %
+61.86 %
+40.00 %
+38.14 %
+12.14 %
+11.64 %
+47.50 %
+50.22 %
+65.00 %
+63.56 %
+
+El costo de ventas pasa de representar 60.00 % a 61.86 % de las ventas. En consecuencia, el margen bruto baja de 40.00 % a 38.14 %. La utilidad neta también reduce
+su peso relativo.
+En el balance, el activo corriente gana participación y el patrimonio reduce su peso
+relativo frente al total activo. Esto debe revisarse junto con ratios de liquidez y solvencia.
+
+6
+
+7.3. Interpretación gerencial del caso Empresa ABC
+El caso Empresa ABC muestra que el crecimiento de ventas no debe interpretarse
+de forma aislada. Aunque las ventas aumentan 19.44 %, el costo de ventas aumenta
+23.15 %, lo que evidencia una presión sobre la eficiencia operativa.
+Desde una perspectiva gerencial, la empresa podría revisar proveedores, precios,
+productividad, procesos internos y políticas de costos. También podría configurar alertas en un dashboard financiero para detectar automáticamente cuando los costos crecen más rápido que las ventas.
+La lectura vertical confirma el hallazgo: el costo de ventas pasa de 60.00 % a 61.86 %
+de las ventas, reduciendo la utilidad bruta relativa. Esto indica que la empresa debe
+proteger sus márgenes y no evaluar el crecimiento solo por el aumento de ingresos.
+
+8. Aplicación empresarial
+El análisis financiero permite convertir resultados numéricos en decisiones concretas. Si las ventas crecen, pero el costo de ventas aumenta a mayor velocidad, la
+empresa debe revisar precios, proveedores, procesos productivos y eficiencia operativa. Si el patrimonio pierde participación relativa frente al total activo, también conviene
+evaluar la estructura de financiamiento.
+En la gestión empresarial, el análisis horizontal ayuda a detectar tendencias, mientras que el análisis vertical permite observar la composición económica y financiera.
+Ambos métodos pueden usarse en presupuestos, control de costos, evaluación de
+rentabilidad, decisiones de inversión y seguimiento de metas.
+
+9. Aplicación del análisis financiero en Ingeniería de
+Sistemas
+La Contabilidad Empresarial y la Ingeniería de Sistemas se relacionan mediante
+los sistemas de información que registran, procesan y reportan datos económicos. En
+una empresa, las operaciones de ventas, compras, bancos, inventarios y contabilidad
+pueden integrarse en un ERP, permitiendo que la información contable sea consultada
+y transformada en reportes financieros.
+Las bases de datos permiten almacenar ventas, costos, activos, pasivos, patrimonio, compras e inventarios de manera estructurada. A partir de estas tablas, un analista
+o ingeniero de sistemas puede construir consultas que agrupen información por periodo, cuenta contable, área, proyecto o centro de costo.
+El análisis horizontal puede automatizarse mediante hojas de cálculo, SQL, Python,
+Power BI o módulos de ERP que comparen el periodo actual con el periodo anterior. Del
+mismo modo, el análisis vertical puede calcularse dividiendo automáticamente cada
+partida entre una base común, como ventas netas o total de activos.
+Los dashboards financieros permiten presentar resultados de forma visual, mostrando variaciones, márgenes, estructura de costos, liquidez, deuda y rentabilidad. Estos tableros pueden incluir alertas cuando los costos crecen más rápido que las ventas,
+cuando el margen bruto disminuye o cuando el endeudamiento supera un límite definido.
+7
+
+Como ejemplo laboral, una empresa tecnológica puede monitorear ventas por licencias, costos de infraestructura cloud, gastos administrativos, soporte técnico y utilidad
+neta. Si el gasto cloud pasa de S/ 8,000.00 a S/ 12,000.00, el análisis horizontal mide el
+incremento; si ese gasto representa un porcentaje creciente de las ventas, el análisis
+vertical ayuda a evaluar si la estructura de costos sigue siendo sostenible.
+Por ello, el análisis financiero no solo es una herramienta contable. También es un
+campo de aplicación para la Ingeniería de Sistemas, porque permite diseñar reportes,
+automatizar indicadores y apoyar decisiones gerenciales con información oportuna,
+trazable y útil.
+
+9.1. Aplicación tecnológica del análisis financiero
+Una solución tecnológica de análisis financiero puede organizarse como un flujo:
+ERP, base de datos, proceso ETL, cálculo de indicadores, dashboard y alerta gerencial.
+En este flujo, el ERP registra operaciones; la base de datos almacena transacciones; el
+ETL limpia y organiza la información; el cálculo financiero genera variaciones, porcentajes y ratios; y el dashboard presenta resultados visuales para la toma de decisiones.
+Herramientas como Excel, SQL, Python, Power BI o sistemas web permiten automatizar reportes y reducir errores de cálculo. Esta automatización facilita que la gerencia revise tendencias, márgenes, deuda, liquidez y rentabilidad con información actualizada.
+
+10. Conclusiones
+El análisis financiero convierte estados financieros en información para decidir.
+El análisis horizontal permite observar tendencias y variaciones entre periodos.
+El análisis vertical permite estudiar la estructura porcentual de un estado financiero.
+En la Empresa ABC, las ventas crecen, pero el costo de ventas crece más rápido,
+reduciendo el margen bruto.
+Los resultados deben complementarse con ratios de liquidez, gestión, solvencia
+y rentabilidad.
+Para Ingeniería de Sistemas, estos análisis pueden automatizarse mediante ERP,
+bases de datos y dashboards.
+
+11. Referencias APA 7
+Amat, O. (s. f.). Contabilidad y finanzas para Dummies.
+Edwards, J. D., Hermanson, R. H., & Maher, M. W. (2011). Principios de Contabilidad: Una perspectiva empresarial. Volumen 1.
+Flores Soria, J. (2014). Estados financieros: teoria y practica. Centro de Especializacion en Contabilidad y Finanzas.
+8
+
+Horngren, C. T., Harrison, W. T., & Oliver, M. S. (2010). Contabilidad. Pearson.
+International Accounting Standards Board. (2024). Normas Internacionales de
+Informacion Financiera.
+Ministerio de Economia y Finanzas del Peru. (2019). Plan Contable General Empresarial.
+Romero Lopez, A. J. (2012). Contabilidad intermedia. McGraw-Hill.
+Warren, C. S., Reeve, J. M., & Duchac, J. E. (2016). Contabilidad financiera.
+Cengage Learning.
+Zevallos Zevallos, E. (2013). Contabilidad general. Ediciones Contables.
+
+9
+
+

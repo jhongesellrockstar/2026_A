@@ -1,0 +1,96 @@
+\begin{frame}{Caso integrador: Empresa Peruana ABC S.A.C.}
+\small
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.55\textwidth}
+\casehead{Caso académico ficticio elaborado con fines educativos.}
+
+\vspace{0.4em}
+\begin{tabular}{lr}
+\toprule
+Dato & Importe \\
+\midrule
+Activo corriente & \soles{540,000.00}\\
+Inventarios & \soles{180,000.00}\\
+Activo total & \soles{1,200,000.00}\\
+Pasivo corriente & \soles{300,000.00}\\
+Pasivo total & \soles{570,000.00}\\
+Patrimonio & \soles{630,000.00}\\
+Ventas netas & \soles{1,500,000.00}\\
+Utilidad neta & \soles{126,900.00}\\
+\bottomrule
+\end{tabular}
+
+\column{0.40\textwidth}
+\centering
+\begin{tikzpicture}[node distance=0.45cm, every node/.style={draw, rounded corners=2pt, align=center, font=\scriptsize, minimum width=3.1cm}]
+\node (a) {Estado de Situación\\Financiera};
+\node[below=of a] (b) {Estado de\\Resultados};
+\node[below=of b, fill=unacblue!8] (c) {Ratios\\financieros};
+\draw[-{Stealth}] (a) -- (b);
+\draw[-{Stealth}] (b) -- (c);
+\end{tikzpicture}
+
+\vspace{0.8em}
+\scriptsize Esta diapositiva presenta los datos base; los cálculos se desarrollan en la siguiente.
+\end{columns}
+\end{frame}
+
+\begin{frame}{Caso integrador: operaciones y respuestas}
+\scriptsize
+\begin{tabularx}{\textwidth}{p{0.24\textwidth}X p{0.16\textwidth}}
+\toprule
+Ratio & Operación & Resultado \\
+\midrule
+Razón corriente & \soles{540,000.00} / \soles{300,000.00} & 1.80 \\
+Prueba ácida & (\soles{540,000.00} - \soles{180,000.00}) / \soles{300,000.00} & 1.20 \\
+Endeudamiento & \soles{570,000.00} / \soles{1,200,000.00} x 100 & 47.50 \pct \\
+Margen neto & \soles{126,900.00} / \soles{1,500,000.00} x 100 & 8.46 \pct \\
+ROA simple & \soles{126,900.00} / \soles{1,200,000.00} x 100 & 10.58 \pct \\
+ROE simple & \soles{126,900.00} / \soles{630,000.00} x 100 & 20.14 \pct \\
+\bottomrule
+\end{tabularx}
+
+\vspace{0.5em}
+\begin{block}{Aclaración}
+El ROA y el ROE se calculan con saldos finales debido a que el caso no proporciona valores iniciales. En un análisis más riguroso se emplearían activos y patrimonio promedio.
+\end{block}
+\end{frame}
+
+\begin{frame}{Diagnóstico y decisiones}
+\small
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.50\textwidth}
+\begin{tabular}{p{0.31\textwidth}p{0.60\textwidth}}
+\toprule
+Área & Diagnóstico \\
+\midrule
+Liquidez & 1.80 baja a 1.20 al excluir inventarios. \\
+Solvencia & 47.50 \pct{} de activos financiados por terceros. \\
+Rentabilidad & Margen neto de 8.46 \pct. \\
+Propietarios & ROE simple de 20.14 \pct, ligado al endeudamiento. \\
+\bottomrule
+\end{tabular}
+
+\column{0.47\textwidth}
+\casehead{Decisiones sugeridas}
+\begin{itemize}
+  \item Fortalecer la cobranza.
+  \item Controlar inventarios.
+  \item Revisar costo financiero.
+  \item Comparar márgenes anteriores.
+  \item Implementar seguimiento mensual.
+\end{itemize}
+\end{columns}
+\vspace{0.3em}
+\centering
+\begin{tikzpicture}[node distance=0.28cm, every node/.style={font=\scriptsize, draw, rounded corners=2pt, align=center}]
+\node (a) {Datos};
+\node[right=of a] (b) {Ratios};
+\node[right=of b] (c) {Diagnóstico};
+\node[right=of c] (d) {Decisión};
+\node[right=of d] (e) {Seguimiento};
+\draw[-{Stealth}] (a)--(b);\draw[-{Stealth}] (b)--(c);\draw[-{Stealth}] (c)--(d);\draw[-{Stealth}] (d)--(e);
+\end{tikzpicture}
+
+\scriptsize Los ratios pueden automatizarse mediante ERP, bases de datos, Excel, Python o Power BI, pero la decisión requiere interpretación contable.
+\end{frame}

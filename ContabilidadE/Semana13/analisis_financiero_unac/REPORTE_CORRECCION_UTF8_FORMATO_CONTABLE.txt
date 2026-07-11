@@ -1,0 +1,150 @@
+REPORTE DE CORRECCION UTF-8, FORMATO CONTABLE Y CONTEXTUALIZACION
+Proyecto: analisis_financiero_unac
+Tema: Analisis financiero: analisis horizontal y analisis vertical de estados financieros
+Curso: Contabilidad Empresarial - Universidad Nacional del Callao
+Carrera: Ingenieria de Sistemas
+
+1. OBJETIVO
+
+Se corrigio la presentacion Beamer, el documento maestro, la guia de estudio y el guion oral para eliminar problemas de codificacion, aplicar formato contable uniforme y convertir ejemplos abstractos en casos contextualizados con enunciado, datos, calculo, interpretacion y decision.
+
+2. ARCHIVOS CORREGIDOS
+
+- 03_presentacion_beamer/secciones/02_intro_analisis_financiero.tex
+- 03_presentacion_beamer/secciones/03_analisis_horizontal.tex
+- 03_presentacion_beamer/secciones/04_analisis_vertical.tex
+- 03_presentacion_beamer/secciones/05_aplicacion_cierre.tex
+- 02_documento_maestro/secciones/04_analisis_horizontal.tex
+- 02_documento_maestro/secciones/05_analisis_vertical.tex
+- 02_documento_maestro/secciones/06_comparacion.tex
+- 02_documento_maestro/secciones/07_caso_practico.tex
+- 02_documento_maestro/secciones/08_conclusiones.tex
+- 06_guion_exposicion/GUIA_ESTUDIO_GRUPO.md
+- 06_guion_exposicion/bloque_02_analisis_horizontal.md
+- 06_guion_exposicion/bloque_03_analisis_vertical.md
+- 06_guion_exposicion/bloque_04_aplicacion_cierre.md
+- 04_figuras/png/F17_Flujo_ERP_Dashboard.png
+- 04_figuras/png/F18_Ejemplo_Cloud_Horizontal.png
+- 04_figuras/png/F19_Ejemplo_Vertical_Costos_Tecnologicos.png
+- 04_figuras/png/F20_Ejemplo_Comparativo_Horizontal_Vertical.png
+
+3. CODIFICACION
+
+Se revisaron los archivos .tex, .md, .csv y .bib para detectar patrones de codificacion incorrecta como:
+- informaci?n
+- Decisi?n
+- m?tricas
+- Â¾
+- ï¿¾
+- caracteres mojibake como Ã, Â o �
+
+Resultado: no quedaron coincidencias en los fuentes revisados.
+
+4. FORMATO CONTABLE
+
+Se aplico formato monetario uniforme:
+
+- S/ 100,000.00
+- S/ 120,000.00
+- S/ 20,000.00
+- S/ 8,000.00
+- S/ 12,000.00
+- S/ 4,000.00
+- S/ 180,000.00
+- S/ 215,000.00
+- S/ 108,000.00
+- S/ 133,000.00
+- S/ 72,000.00
+- S/ 82,000.00
+- S/ 21,855.00
+- S/ 25,027.00
+- S/ 200,000.00
+- S/ 70,000.00
+
+Se eliminaron montos crudos como 100000, 120000, 8000, 12000, 180000 y similares en archivos .tex y .md.
+
+5. PORCENTAJES
+
+Se uniformizaron porcentajes calculados con dos decimales:
+
+- 20.00 %
+- 50.00 %
+- 35.00 %
+- 60.00 %
+- 19.44 %
+- 23.15 %
+- 13.89 %
+- 14.51 %
+- 61.86 %
+- 38.14 %
+- 12.14 %
+- 11.64 %
+
+6. EJEMPLOS CONTEXTUALIZADOS
+
+Se reforzaron los ejemplos como casos breves:
+
+- Ejemplo de datos contables a tablero gerencial:
+  Incluye empresa comercial, ERP, base de datos, ETL, indicadores, dashboard e interpretacion.
+
+- Ejemplo basico de analisis horizontal:
+  Incluye enunciado, ventas 2024 y 2025, variacion absoluta, variacion porcentual e interpretacion.
+
+- Ejemplo de costo cloud:
+  Incluye empresa de servicios digitales, costo 2024, costo 2025, calculo, interpretacion y decision.
+
+- Ejemplo basico de analisis vertical:
+  Incluye ventas, costo de ventas, participacion porcentual e interpretacion.
+
+- Ejemplo de estructura de costos tecnologicos:
+  Incluye ventas, servidores/licencias, participacion, interpretacion y decision.
+
+- Ejemplo comparativo de servidores:
+  Incluye analisis horizontal, analisis vertical e interpretacion conjunta.
+
+7. FIGURAS Y GRAFICOS
+
+Se regeneraron F17-F20 con textos correctos:
+
+- F17_Flujo_ERP_Dashboard.png:
+  "Flujo de informacion financiera automatizada", ERP, Base de datos, ETL, Indicadores, Dashboard y Decision.
+
+- F18_Ejemplo_Cloud_Horizontal.png:
+  Barras 2024 y 2025 con S/ 8,000.00, S/ 12,000.00, S/ 4,000.00 y 50.00 %.
+
+- F19_Ejemplo_Vertical_Costos_Tecnologicos.png:
+  Barra 100 % con servidores/licencias 35.00 %.
+
+- F20_Ejemplo_Comparativo_Horizontal_Vertical.png:
+  Tabla visual con horizontal, vertical y decision.
+
+8. COMPILACION
+
+Compilacion realizada:
+
+- 03_presentacion_beamer/main.tex
+- 02_documento_maestro/documento_maestro.tex
+
+Salidas:
+
+- 08_salida/pdf/main.pdf
+- 08_salida/pdf/documento_maestro.pdf
+
+9. VERIFICACION FINAL
+
+Se verifico que:
+
+- main.pdf tiene 39 diapositivas.
+- documento_maestro.pdf compila correctamente.
+- No aparece "informaci?n".
+- No aparece "Decisi?n".
+- No aparece "m?tricas".
+- No aparece "Â¾".
+- No aparece "Duracion estimada".
+- No aparecen montos sin formato como S/ 100000, S/ 120000, S/ 8000, S/ 12000, S/ 180000 o S/ 215000.
+- Si aparecen montos formateados como S/ 100,000.00, S/ 120,000.00, S/ 8,000.00 y S/ 12,000.00.
+- Los porcentajes calculados se muestran con dos decimales.
+
+10. RESULTADO
+
+La presentacion final queda con estructura didactica, codificacion corregida, formato contable uniforme y ejemplos entendibles como casos empresariales breves. El material es adecuado para una exposicion universitaria de Contabilidad Empresarial aplicada a Ingenieria de Sistemas.

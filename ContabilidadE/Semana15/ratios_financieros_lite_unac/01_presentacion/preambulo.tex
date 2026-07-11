@@ -1,0 +1,29 @@
+\usepackage{fontspec}
+\usepackage[spanish,es-tabla]{babel}
+\setmainfont{TeX Gyre Heros}
+\setsansfont{TeX Gyre Heros}
+\setmonofont{DejaVu Sans Mono}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+\usepackage{xcolor}
+\usetheme{Madrid}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{footline}[frame number]
+\definecolor{unacblue}{HTML}{123C69}
+\definecolor{liquidez}{HTML}{0284C7}
+\definecolor{gestion}{HTML}{15803D}
+\definecolor{solvencia}{HTML}{EA580C}
+\definecolor{rentabilidad}{HTML}{7C3AED}
+\definecolor{cierre}{HTML}{0F172A}
+\setbeamercolor{title}{fg=unacblue}
+\setbeamercolor{frametitle}{fg=white,bg=unacblue}
+\setbeamerfont{frametitle}{series=\bfseries,size=\large}
+\newcommand{\soles}[1]{S/ #1}
+\newcommand{\pct}{\char37{}}
+\newcommand{\smallcase}{\fontsize{8.8}{10.4}\selectfont}
+\newcommand{\casehead}[1]{\textbf{\color{unacblue}#1}}
+\newcommand{\flowbox}[2]{\node[draw, rounded corners=2pt, align=center, minimum width=#1, minimum height=0.62cm, fill=white] {#2};}

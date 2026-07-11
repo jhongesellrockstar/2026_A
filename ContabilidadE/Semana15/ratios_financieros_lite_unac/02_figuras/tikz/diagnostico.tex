@@ -1,0 +1,11 @@
+\begin{tikzpicture}[node distance=0.35cm, every node/.style={draw, rounded corners=2pt, align=center}]
+\node (a) {Datos};
+\node[right=of a] (b) {Cálculo};
+\node[right=of b] (c) {Resultado};
+\node[right=of c] (d) {Interpretación};
+\node[right=of d] (e) {Decisión};
+\draw[-{Stealth}] (a)--(b);
+\draw[-{Stealth}] (b)--(c);
+\draw[-{Stealth}] (c)--(d);
+\draw[-{Stealth}] (d)--(e);
+\end{tikzpicture}

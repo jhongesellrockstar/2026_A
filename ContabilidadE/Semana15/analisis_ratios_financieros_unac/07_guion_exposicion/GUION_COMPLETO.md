@@ -1,0 +1,43 @@
+# Guion completo de exposición
+
+- 1. Portada: presentar tema, curso, unidad y estudiante.
+- 2. Objetivos: explicar que se priorizan casos prácticos e interpretación.
+- 3. Organización: anticipar el recorrido de liquidez a decisiones.
+- 4. Ratio financiero: enfatizar relación entre partidas contables.
+- 5. Importancia y limitaciones: advertir que no se interpreta aislado.
+- 6. Estados financieros: conectar ESF y Estado de Resultados.
+- 7. Clasificación: presentar las cuatro familias de ratios.
+- 8. Liquidez: introducir obligaciones de corto plazo.
+- 9. Razón corriente: explicar fórmula y datos.
+- 10. Caso razón corriente: resolver 1.60 e interpretar.
+- 11. Prueba ácida: explicar exclusión de inventarios.
+- 12. Caso prueba ácida: resolver 1.00 y decidir.
+- 13. Comparación liquidez: mostrar dependencia de inventarios.
+- 14. Gestión: introducir ciclo operativo.
+- 15. Rotación CxC: explicar ventas a crédito y promedio.
+- 16. Periodo de cobro: justificar uso de 360 días.
+- 17. Caso cobranza: resolver 6.00 veces y 60 días.
+- 18. Rotación inventarios: explicar costo de ventas e inventario promedio.
+- 19. Caso inventarios: resolver 6.00 veces y 60 días.
+- 20. Solvencia: introducir financiamiento de terceros.
+- 21. Endeudamiento: explicar fórmula porcentual.
+- 22. Caso endeudamiento: resolver 45.00 %.
+- 23. Deuda-patrimonio: interpretar 0.82.
+- 24. Rentabilidad: explicar utilidad respecto a ventas, activos y patrimonio.
+- 25. Margen neto: presentar fórmula.
+- 26. Caso margen neto: resolver 9.00 %.
+- 27. ROA: resolver 9.00 % y explicar activo promedio.
+- 28. ROE: resolver 15.00 % y explicar patrimonio promedio.
+- 29. Comparación ROA y ROE: conectar apalancamiento.
+- 30. Caso integrador ESF: validar igualdad contable.
+- 31. Estado de Resultados: explicar utilidad neta.
+- 32. Liquidez integradora: leer razón corriente y prueba ácida juntas.
+- 33. Solvencia integradora: explicar 47.50 % y 0.90.
+- 34. Rentabilidad integradora: explicar margen, ROA y ROE simples.
+- 35. Diagnóstico integral: unir las cuatro áreas.
+- 36. Decisiones: pasar de cálculo a gestión.
+- 37. Sistemas: explicar ERP, SQL, cálculo, dashboard y trazabilidad.
+- 38. Conclusiones: cerrar por ejes.
+- 39. Referencias: mencionar fuentes verificables.
+
+Transición central: después de cada fórmula, pasar inmediatamente al caso, interpretación y decisión. Mantener énfasis en que los ratios son herramientas de análisis, no respuestas automáticas.

@@ -1,0 +1,30 @@
+\begin{frame}{Decisiones empresariales}
+\begin{itemize}
+  \item Fortalecer cobranza mediante seguimiento por antigüedad de saldos.
+  \item Controlar inventarios para reducir capital inmovilizado.
+  \item Revisar costo financiero y calendario de deuda.
+  \item Evaluar margen por producto o línea de negocio.
+  \item Proyectar flujo de efectivo mensual.
+  \item Monitorear indicadores con cierre contable confiable.
+\end{itemize}
+\end{frame}
+
+\begin{frame}{Aplicación en Ingeniería de Sistemas}
+\begin{center}
+\begin{tikzpicture}[node distance=0.65cm, every node/.style={draw, rounded corners, align=center, minimum width=1.7cm, minimum height=0.7cm, font=\scriptsize}]
+\node (erp) {ERP};
+\node[right=of erp] (bd) {Base de\\datos};
+\node[right=of bd] (calc) {Cálculo\\ratios};
+\node[right=of calc] (dash) {Dashboard};
+\node[right=of dash] (alert) {Alertas};
+\node[right=of alert] (dec) {Decisión};
+\foreach \a/\b in {erp/bd,bd/calc,calc/dash,dash/alert,alert/dec}{\draw[-{Stealth}] (\a) -- (\b);}
+\end{tikzpicture}
+\end{center}
+\begin{itemize}
+  \item SQL obtiene saldos contables.
+  \item Python o Excel calcula ratios.
+  \item Power BI presenta indicadores.
+  \item La trazabilidad contable debe mantenerse.
+\end{itemize}
+\end{frame}

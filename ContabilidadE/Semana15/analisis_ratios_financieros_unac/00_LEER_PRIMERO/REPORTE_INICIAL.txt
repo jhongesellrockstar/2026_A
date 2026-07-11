@@ -1,0 +1,10 @@
+Alcance inicial del proyecto
+
+Se creó una estructura modular para una exposición individual de 25 a 35 minutos,
+centrada en casos prácticos sobre ratios financieros. La teoría se mantiene breve
+y cada indicador se acompaña de cálculo, interpretación y decisión empresarial.
+
+Motor de compilación previsto: XeLaTeX.
+Codificación prevista: UTF-8.
+Formato de importes: S/ 1,500,000.00.
+Formato de porcentajes: 47.50 %.

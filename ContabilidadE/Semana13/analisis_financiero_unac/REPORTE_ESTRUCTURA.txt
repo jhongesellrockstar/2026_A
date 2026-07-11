@@ -1,0 +1,118 @@
+REPORTE DE ESTRUCTURA DEL PROYECTO
+Proyecto: analisis_financiero_unac
+Fecha de generacion: 2026-06-29
+Curso: Contabilidad Empresarial - Universidad Nacional del Callao
+Tema: Analisis financiero: analisis horizontal y analisis vertical de estados financieros
+
+1. ESTRUCTURA CREADA
+
+00_LEER_PRIMERO/
+  INSTRUCCIONES_PROYECTO.txt
+
+01_literatura/
+  silabo/
+  libros_recomendados/
+  normas_contables/
+  articulos/
+  notas_fuentes.md
+
+02_documento_maestro/
+  documento_maestro.tex
+  secciones/
+    01_introduccion.tex
+    02_marco_teorico.tex
+    03_estados_financieros.tex
+    04_analisis_horizontal.tex
+    05_analisis_vertical.tex
+    06_comparacion.tex
+    07_caso_practico.tex
+    08_conclusiones.tex
+    09_referencias.tex
+
+03_presentacion_beamer/
+  main.tex
+  preambulo.tex
+  secciones/
+    01_apertura.tex
+    02_intro_analisis_financiero.tex
+    03_analisis_horizontal.tex
+    04_analisis_vertical.tex
+    05_aplicacion_cierre.tex
+    06_referencias.tex
+
+04_figuras/
+  prompts_figuras/
+    figura_01_mapa_general.txt
+    figura_02_estados_financieros.txt
+    figura_03_horizontal.txt
+    figura_04_vertical.txt
+    figura_05_comparacion.txt
+    figura_06_toma_decisiones.txt
+  png/
+  pdf/
+  svg/
+
+05_tablas_casos/
+  caso_empresa_abc.xlsx
+  tabla_estado_situacion_financiera.csv
+  tabla_estado_resultados.csv
+  analisis_horizontal.csv
+  analisis_vertical.csv
+
+06_guion_exposicion/
+  bloque_01_introduccion.md
+  bloque_02_analisis_horizontal.md
+  bloque_03_analisis_vertical.md
+  bloque_04_aplicacion_cierre.md
+
+07_bibliografia/
+  referencias.bib
+
+08_salida/
+  pdf/
+    main.pdf
+    documento_maestro.pdf
+  compilacion_log/
+    latexmk_presentacion.log
+    pdflatex_presentacion_1.log
+    pdflatex_presentacion_2.log
+    pdflatex_documento_maestro.log
+
+compilar_presentacion.bat
+REPORTE_ESTRUCTURA.txt
+
+2. CONTENIDO ACADEMICO INICIAL
+
+- La presentacion Beamer esta organizada por secciones tematicas, no por integrantes.
+- El enfoque esta alineado con la Unidad IV: analisis e interpretacion de estados financieros, analisis horizontal, analisis vertical y ratios.
+- Se incluyeron formulas basicas:
+  variacion absoluta = valor actual - valor base
+  variacion relativa = variacion absoluta / valor base
+  participacion porcentual = partida / base
+- Se creo un caso Empresa ABC con estados base, analisis horizontal y analisis vertical.
+- Se preparo un guion oral por bloques para una exposicion minima de 30 minutos.
+
+3. COLORES DE LA PRESENTACION
+
+- Azul: introduccion y fundamentos.
+- Verde: analisis horizontal.
+- Naranja: analisis vertical.
+- Morado: aplicacion, conclusiones y cierre.
+
+4. VERIFICACION TECNICA
+
+- main.tex compila correctamente con pdflatex.
+- documento_maestro.tex compila correctamente con pdflatex.
+- La presentacion no depende de imagenes externas; por tanto compila aunque las carpetas de figuras aun esten vacias.
+- latexmk esta instalado, pero en esta maquina MiKTeX reporto ausencia de Perl para ejecutarlo. El script compilar_presentacion.bat ahora intenta latexmk y, si falla, continua automaticamente con pdflatex.
+
+5. PROXIMOS PASOS
+
+1. Colocar el silabo oficial en 01_literatura/silabo y revisar los resultados de aprendizaje de la Unidad IV.
+2. Completar notas_fuentes.md con paginas, enlaces y observaciones de cada fuente.
+3. Verificar y completar los datos exactos de referencias.bib: edicion, ano, editorial y URL oficial cuando corresponda.
+4. Ampliar el documento maestro con citas y desarrollo teorico.
+5. Revisar el caso Empresa ABC y reemplazar cifras si el docente proporciona un caso oficial.
+6. Crear figuras finales a partir de los prompts y guardarlas en 04_figuras/png, 04_figuras/pdf o 04_figuras/svg.
+7. Incorporar ratios de liquidez, gestion, solvencia y rentabilidad como complemento interpretativo.
+8. Ensayar la exposicion por bloques y ajustar el numero de diapositivas segun el tiempo real.

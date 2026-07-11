@@ -1,0 +1,104 @@
+REPORTE DE INSERCION DE FIGURAS
+Proyecto: analisis_financiero_unac
+Archivo principal: 03_presentacion_beamer/main.tex
+Salida compilada: 08_salida/pdf/main.pdf
+
+1. CAMBIOS GENERALES
+
+- Se elimino el texto visible "Duracion estimada" de las diapositivas.
+- La duracion se conserva mediante notas LaTeX invisibles usando \note{}.
+- Se reemplazaron diagramas TikZ simples por figuras PNG ubicadas en 04_figuras/png/.
+- Se insertaron imagenes con \includegraphics mediante la macro \figpng.
+- Se conservaron logo UNAC, integrantes y colores por bloque.
+- Se redujo texto visible en diapositivas para evitar saturacion.
+- Se mantuvieron tablas del caso Empresa ABC donde aportan calculo y evidencia.
+
+2. FIGURAS INSERTADAS
+
+- F01_Proceso_Analisis_Financiero.png:
+  Diapositivas: Proposito de la exposicion; Que es el analisis financiero?; De la contabilidad al analisis financiero; Lectura integrada de ambos estados.
+
+- F02_Estado_Situacion_Financiera.png:
+  Diapositivas: Estados financieros utilizados; Estado de Situacion Financiera.
+
+- F03_Estado_Resultados.png:
+  Diapositiva: Estado de Resultados.
+
+- F04_Analisis_Horizontal_Linea_Tiempo.png:
+  Diapositivas: Analisis horizontal: concepto; Procedimiento paso a paso.
+
+- F05_Formula_Analisis_Horizontal.png:
+  Diapositiva: Formulas del analisis horizontal.
+
+- F06_Barras_Comparativas_2024_2025.png:
+  Diapositiva: Caso Empresa ABC: analisis horizontal.
+
+- F07_Interpretacion_Horizontal.png:
+  Diapositiva: Interpretacion del analisis horizontal.
+
+- F08_Analisis_Vertical_Base_100.png:
+  Diapositivas: Analisis vertical: concepto; Procedimiento paso a paso.
+
+- F09_Formula_Analisis_Vertical.png:
+  Diapositiva: Formula del analisis vertical.
+
+- F10_Barras_Porcentuales_Analisis_Vertical.png:
+  Diapositiva: Caso Empresa ABC: analisis vertical.
+
+- F11_Interpretacion_Vertical.png:
+  Diapositiva: Interpretacion del analisis vertical.
+
+- F12_Comparacion_Horizontal_Vertical.png:
+  Diapositiva: Comparacion horizontal vs vertical.
+
+- F13_Errores_Frecuentes_Interpretacion.png:
+  Diapositiva: Errores frecuentes de interpretacion.
+
+- F14_Decisiones_Empresariales.png:
+  Diapositiva: Aplicacion en decisiones empresariales.
+
+- F15_Ingenieria_Sistemas_Contabilidad.png:
+  Diapositiva: Relacion con Ingenieria de Sistemas.
+
+- F16_Cierre_Conceptual.png:
+  Diapositivas: Ruta de aprendizaje; Conclusiones.
+
+3. DIAPOSITIVAS MODIFICADAS
+
+- Proposito de la exposicion.
+- Ruta de aprendizaje.
+- Que es el analisis financiero?
+- De la contabilidad al analisis financiero.
+- Estados financieros utilizados.
+- Estado de Situacion Financiera.
+- Estado de Resultados.
+- Lectura integrada de ambos estados.
+- Analisis horizontal: concepto.
+- Formulas del analisis horizontal.
+- Procedimiento paso a paso.
+- Caso Empresa ABC: analisis horizontal.
+- Interpretacion del analisis horizontal.
+- Analisis vertical: concepto.
+- Formula del analisis vertical.
+- Caso Empresa ABC: analisis vertical.
+- Interpretacion del analisis vertical.
+- Comparacion horizontal vs vertical.
+- Errores frecuentes de interpretacion.
+- Aplicacion en decisiones empresariales.
+- Relacion con Ingenieria de Sistemas.
+- Conclusiones.
+
+4. VERIFICACION
+
+- main.tex compilo correctamente.
+- documento_maestro.tex compilo correctamente.
+- main.pdf tiene 26 paginas.
+- documento_maestro.pdf tiene 6 paginas.
+- No aparece "Duracion estimada" en el texto extraido del PDF.
+- No aparece "Espacio para figura" en el texto extraido del PDF.
+- No aparece "integrante 1" en el texto extraido del PDF.
+- No quedan entornos tikzpicture ni PGFPlots en los archivos de secciones Beamer.
+
+5. RESULTADO
+
+La presentacion queda limpia, visual y universitaria, con figuras PNG integradas, tiempos ocultos en notas del expositor y salida final compilada en 08_salida/pdf.

@@ -1,0 +1,18 @@
+\section{Aplicación en Ingeniería de Sistemas}
+La Ingeniería de Sistemas puede automatizar el cálculo de ratios mediante integración de ERP, bases de datos, hojas de cálculo, Python y dashboards. El flujo recomendado es:
+
+\begin{center}
+\begin{tikzpicture}[node distance=1cm, every node/.style={draw, rounded corners, align=center, minimum width=2.2cm, minimum height=0.8cm}]
+\node (erp) {ERP};
+\node[right=of erp] (bd) {Base de datos};
+\node[right=of bd] (calc) {Cálculo};
+\node[right=of calc] (dash) {Dashboard};
+\node[right=of dash] (dec) {Decisión};
+\draw[-{Stealth}] (erp) -- (bd);
+\draw[-{Stealth}] (bd) -- (calc);
+\draw[-{Stealth}] (calc) -- (dash);
+\draw[-{Stealth}] (dash) -- (dec);
+\end{tikzpicture}
+\end{center}
+
+SQL obtiene saldos contables; Python o Excel calcula ratios; Power BI presenta indicadores; y el sistema debe conservar trazabilidad desde el indicador hasta la cuenta contable. La interpretación contable no debe ser sustituida por colores automáticos, porque un semáforo puede simplificar en exceso una realidad financiera compleja.

@@ -1,0 +1,113 @@
+REPORTE DE REESTRUCTURACION DIDACTICA
+Proyecto: analisis_financiero_unac
+Tema: Analisis financiero: analisis horizontal y analisis vertical de estados financieros
+Curso: Contabilidad Empresarial - Universidad Nacional del Callao
+Carrera: Ingenieria de Sistemas
+
+1. OBJETIVO
+
+Se reestructuro la presentacion para separar teoria, utilidad, formulas, procedimientos, ejemplos aplicados, caso practico e interpretacion. La finalidad fue mejorar la claridad didactica y facilitar una exposicion universitaria de aproximadamente 30 minutos.
+
+2. CAMBIOS PRINCIPALES
+
+- La presentacion aumento de 26 a 39 diapositivas.
+- Se mantuvieron logo UNAC, integrantes, pie institucional y colores por bloque.
+- Se conservaron las figuras PNG existentes F01-F16 cuando aportaban al contenido.
+- Se crearon nuevas figuras F17-F20 para los ejemplos aplicados.
+- Se separaron ejemplos en diapositivas independientes.
+- Se evito mezclar definicion, formula, caso e interpretacion en una sola lamina.
+- Se mantuvo el enfoque contable con aplicacion a Ingenieria de Sistemas.
+
+3. NUEVAS FIGURAS CREADAS
+
+- F17_Flujo_ERP_Dashboard.png: ERP -> base de datos -> ETL -> indicadores -> dashboard -> decision.
+- F18_Ejemplo_Cloud_Horizontal.png: grafico de barras del costo cloud 2024 y 2025.
+- F19_Ejemplo_Vertical_Costos_Tecnologicos.png: barra 100% de costos tecnologicos.
+- F20_Ejemplo_Comparativo_Horizontal_Vertical.png: tabla visual comparando enfoque horizontal y vertical.
+
+4. NUEVA ESTRUCTURA DE LA PRESENTACION
+
+Bloque A - Fundamentos:
+- Portada.
+- Objetivos.
+- Organizacion tematica.
+- Concepto de analisis financiero.
+- Funcion del analisis financiero.
+- Ejemplo ERP-dashboard.
+- Estados financieros utilizados.
+- Estado de Situacion Financiera.
+- Ejemplo aplicado del Estado de Situacion Financiera.
+- Estado de Resultados.
+- Ejemplo de empresa de servicios digitales.
+- Relacion entre balance y resultados.
+- Ejemplo de lectura integrada.
+
+Bloque B - Analisis horizontal:
+- Definicion.
+- Utilidad.
+- Formulas.
+- Ejemplo basico.
+- Ejemplo de costo cloud.
+- Procedimiento.
+- Caso Empresa ABC: datos.
+- Caso Empresa ABC: calculo.
+- Caso Empresa ABC: interpretacion.
+- Decision empresarial derivada.
+
+Bloque C - Analisis vertical:
+- Definicion.
+- Utilidad.
+- Formula.
+- Ejemplo basico.
+- Ejemplo de estructura de costos tecnologicos.
+- Procedimiento.
+- Caso Empresa ABC: calculo.
+- Caso Empresa ABC: interpretacion.
+- Decision derivada.
+
+Bloque D - Comparacion, decisiones y cierre:
+- Comparacion horizontal vs vertical.
+- Ejemplo comparativo integrado.
+- Errores frecuentes.
+- Aplicacion empresarial.
+- Aplicacion en Ingenieria de Sistemas y analisis de datos.
+- Conclusiones finales.
+- Referencias APA 7.
+
+5. DOCUMENTO MAESTRO
+
+Se ampliaron las secciones para incluir:
+- Ejemplo basico de analisis horizontal.
+- Ejemplo aplicado de analisis horizontal.
+- Ejemplo basico de analisis vertical.
+- Ejemplo aplicado de analisis vertical.
+- Interpretacion gerencial del caso Empresa ABC.
+- Aplicacion tecnologica del analisis financiero.
+
+6. GUIA Y GUION
+
+Se actualizo:
+- 06_guion_exposicion/GUIA_ESTUDIO_GRUPO.md
+- 06_guion_exposicion/bloque_01_introduccion.md
+- 06_guion_exposicion/bloque_02_analisis_horizontal.md
+- 06_guion_exposicion/bloque_03_analisis_vertical.md
+- 06_guion_exposicion/bloque_04_aplicacion_cierre.md
+
+La guia incluye explicacion de cada diapositiva, formulas, ejemplos basicos, ejemplo cloud, ejemplo de costos tecnologicos, caso Empresa ABC, preguntas probables y transiciones entre expositores.
+
+7. VERIFICACION FINAL
+
+- main.tex compilo correctamente.
+- documento_maestro.tex compilo correctamente.
+- main.pdf tiene 39 diapositivas.
+- documento_maestro.pdf compilo correctamente.
+- No aparecen tiempos visibles.
+- No aparecen rotulos internos como idea para exponer, texto para expositor o lectura rapida.
+- No aparece "Espacio para figura".
+- No se encontraron caracteres mojibake en los fuentes revisados.
+- Las nuevas figuras estan en 04_figuras/png.
+- Las tablas se simplificaron o separaron para mantener legibilidad.
+
+8. RESULTADO
+
+La presentacion queda mas didactica y defendible: cada tema tiene su lamina conceptual, su formula o procedimiento y luego un ejemplo aplicado. El grupo puede estudiar con mayor claridad y sostener una exposicion universitaria articulada para Contabilidad Empresarial en Ingenieria de Sistemas.

@@ -1,0 +1,723 @@
+Análisis financiero
+
+Análisis financiero
+Análisis horizontal y análisis vertical de estados financieros
+Universidad Nacional del Callao
+Curso: Contabilidad Empresarial
+Unidad IV: Análisis e interpretación de estados financieros
+Carrera: Ingeniería de Sistemas
+Integrantes: Caballero Ocrospoma Adriana Nataly; Espino Velasquez Emerson Miguel; Espinoza Espector Marco
+Antonio; Villanueva Portella Jhon Gesell.
+
+Contabilidad Empresarial - Unidad IV
+
+1/39
+
+Objetivos de la exposición
+
+Objetivo general
+Analizar la utilidad del análisis financiero mediante el análisis
+horizontal y vertical de estados financieros para interpretar
+variaciones, estructura y resultados empresariales.
+Objetivos específicos
+Reconocer los estados financieros usados en el análisis.
+Explicar cálculo e interpretación de ambos métodos.
+Aplicar los métodos en la Empresa ABC.
+Relacionar el análisis con sistemas de información.
+
+Contabilidad Empresarial - Unidad IV
+
+2/39
+
+Organización temática
+
+1
+
+Estados financieros.
+
+2
+
+Análisis horizontal.
+
+3
+
+Análisis vertical.
+
+4
+
+Interpretación.
+
+5
+
+Decisiones empresariales.
+
+La exposición avanza desde la información
+contable hasta la toma de decisiones,
+separando teoría, procedimiento, caso y
+ejemplos aplicados.
+
+Contabilidad Empresarial - Unidad IV
+
+3/39
+
+Concepto de análisis financiero
+
+El análisis financiero es un proceso técnico de
+revisión, comparación e interpretación de estados
+financieros.
+Su finalidad es evaluar posición financiera,
+desempeño económico y capacidad para generar
+resultados sostenibles.
+No es solo cálculo: es diagnóstico empresarial.
+
+Contabilidad Empresarial - Unidad IV
+
+4/39
+
+Función del análisis financiero en la empresa
+
+Evaluar desempeño y rentabilidad.
+Detectar tendencias y riesgos.
+Controlar costos y márgenes.
+Comunicar información a usuarios
+internos.
+La gerencia usa el análisis financiero para decidir
+con base en evidencia contable y no solo en
+percepciones.
+
+Contabilidad Empresarial - Unidad IV
+
+5/39
+
+Ejemplo aplicado: de datos contables a tablero gerencial
+
+Una empresa comercial registra diariamente
+ventas, compras y gastos en su ERP. La
+gerencia necesita saber si las ventas crecen,
+si los costos se mantienen controlados y si la
+utilidad mejora.
+ERP: registra operaciones.
+
+ERP
+
+Base de
+datos
+
+ETL
+
+Indicadores
+
+Dashboard
+
+Flujo de información financiera automatizada
+Registra operaciones → almacena transacciones
+→ calcula métricas → presenta alertas gerenciales.
+
+ETL: organiza la información.
+Dashboard: presenta alertas.
+El valor del sistema está en convertir datos
+en información financiera útil.
+
+Contabilidad Empresarial - Unidad IV
+
+6/39
+
+Decisión
+
+Estados financieros utilizados
+
+Estado de Situación Financiera.
+Estado de Resultados.
+Estado de Flujos de Efectivo.
+Estado de Cambios en el
+Patrimonio.
+Para el caso práctico se priorizan los dos
+primeros por su aplicación directa al cálculo
+horizontal y vertical.
+
+Contabilidad Empresarial - Unidad IV
+
+7/39
+
+Estado de Situación Financiera
+
+Activos: recursos controlados.
+Pasivos: obligaciones.
+Patrimonio: participación de
+propietarios.
+Activos = Pasivos + Patrimonio
+
+Contabilidad Empresarial - Unidad IV
+
+8/39
+
+Ejemplo aplicado: lectura del Estado de Situación Financiera
+
+Si la empresa aumenta activos, pero también
+incrementa deuda, el análisis debe identificar si el
+crecimiento se financia con recursos propios o con
+obligaciones.
+Un sistema puede generar alertas cuando el pasivo
+crece más rápido que el patrimonio o cuando baja la
+liquidez.
+
+Contabilidad Empresarial - Unidad IV
+
+9/39
+
+Estado de Resultados
+Ingresos.
+Costos y gastos.
+Impuestos.
+Utilidad o pérdida.
+Permite evaluar si las ventas se convierten en
+utilidad y si la empresa controla sus costos.
+
+Contabilidad Empresarial - Unidad IV
+
+10/39
+
+Ejemplo aplicado: empresa de servicios digitales
+
+Una empresa de software puede vender licencias,
+soporte y desarrollo. El Estado de Resultados
+permite evaluar si esos ingresos cubren costos de
+personal, servidores, licencias y soporte.
+Si los costos técnicos crecen más rápido que las
+ventas, el margen operativo puede deteriorarse.
+
+Contabilidad Empresarial - Unidad IV
+
+11/39
+
+Relación entre balance y resultados
+
+Resultados: desempeño del periodo.
+Balance: estructura acumulada.
+Lectura conjunta: rentabilidad,
+liquidez y deuda.
+
+Contabilidad Empresarial - Unidad IV
+
+12/39
+
+Ejemplo aplicado: lectura integrada
+
+Una empresa puede registrar utilidad positiva en el
+Estado de Resultados, pero presentar problemas de
+liquidez si gran parte de sus ventas aún no ha sido
+cobrada.
+Ejemplo: ventas crecientes, utilidad neta positiva,
+cuentas por cobrar elevadas y efectivo disponible
+reducido.
+
+ERP
+
+Base de
+datos
+
+ETL
+
+Indicadores
+
+Dashboard
+
+Flujo de información financiera automatizada
+Registra operaciones → almacena transacciones
+→ calcula métricas → presenta alertas gerenciales.
+
+El análisis debe integrar resultados y situación
+financiera para evitar conclusiones basadas en un
+solo reporte.
+
+Contabilidad Empresarial - Unidad IV
+
+13/39
+
+Decisión
+
+Análisis horizontal: definición
+
+El análisis horizontal compara una misma
+partida contable entre dos o más periodos.
+Permite responder cuánto cambió una cuenta
+respecto al periodo base y si ese cambio es
+favorable o requiere revisión.
+
+Contabilidad Empresarial - Unidad IV
+
+14/39
+
+Utilidad del análisis horizontal
+
+Detectar crecimiento.
+Reconocer disminuciones.
+Identificar tendencias.
+Evaluar señales de alerta.
+Su valor está en explicar la evolución de las
+partidas y no solo en mostrar que aumentaron o
+disminuyeron.
+
+Contabilidad Empresarial - Unidad IV
+
+15/39
+
+Fórmulas del análisis horizontal
+
+V A = Vactual − Vbase
+VP =
+
+VA
+× 100
+Vbase
+
+VA: variación absoluta.
+VP: variación porcentual.
+
+Contabilidad Empresarial - Unidad IV
+
+16/39
+
+Ejemplo básico de cálculo horizontal
+
+Una empresa desea comparar sus ventas entre dos
+periodos para medir el crecimiento comercial.
+Concepto
+Ventas 2024
+Ventas 2025
+Variación absoluta
+Variación porcentual
+
+Monto
+S/ 100,000.00
+S/ 120,000.00 Las ventas
+S/ 20,000.00
+20.00 %
+
+aumentaron S/ 20,000.00, equivalentes al 20.00 %
+del periodo base.
+
+Contabilidad Empresarial - Unidad IV
+
+17/39
+
+Ejemplo aplicado: variación de costo cloud
+
+Una empresa de servicios digitales contrata
+infraestructura cloud para alojar su
+plataforma.
+Costo 2024: S/ 8,000.00.
+Costo 2025: S/ 12,000.00.
+Variación: S/ 4,000.00 y 50.00 %.
+Si los ingresos no crecieron en la misma
+proporción, debe revisarse arquitectura,
+proveedor o plan contratado.
+
+Contabilidad Empresarial - Unidad IV
+
+18/39
+
+Procedimiento del análisis horizontal
+
+1
+
+Seleccionar partida.
+
+2
+
+Elegir periodo base.
+
+3
+
+Calcular variación absoluta.
+
+4
+
+Calcular variación porcentual.
+
+5
+
+Interpretar resultado.
+
+Contabilidad Empresarial - Unidad IV
+
+19/39
+
+Caso Empresa ABC: datos para análisis horizontal
+
+Partida
+Ventas netas
+Costo ventas
+Utilidad bruta
+Utilidad neta
+
+2024
+
+2025
+
+S/ 180,000.00
+S/ 108,000.00
+S/ 72,000.00
+S/ 21,855.00
+
+S/ 215,000.00
+S/ 133,000.00
+S/ 82,000.00
+S/ 25,027.00
+
+Estas
+
+partidas permiten observar crecimiento comercial,
+comportamiento del costo y evolución de utilidad.
+
+Contabilidad Empresarial - Unidad IV
+
+20/39
+
+Caso Empresa ABC: cálculo horizontal
+
+Partida
+
+2024
+
+2025
+
+Var. %
+
+Ventas
+Costo
+U. bruta
+U. neta
+
+S/ 180,000.00
+S/ 108,000.00
+S/ 72,000.00
+S/ 21,855.00
+
+S/ 215,000.00
+S/ 133,000.00
+S/ 82,000.00
+S/ 25,027.00
+
+19.44 %
+23.15 %
+13.89 %
+14.51 %
+
+Contabilidad Empresarial - Unidad IV
+
+21/39
+
+Caso Empresa ABC: interpretación horizontal
+
+Las ventas aumentan 19.44 %, pero el costo de
+ventas aumenta 23.15 %.
+Esto indica que el crecimiento comercial no se
+convierte totalmente en eficiencia operativa,
+porque el costo avanza con mayor intensidad.
+
+Contabilidad Empresarial - Unidad IV
+
+22/39
+
+Decisión empresarial derivada del análisis horizontal
+
+Revisar proveedores y costos.
+Evaluar precios y productividad.
+Mejorar procesos operativos.
+Configurar alertas en dashboards.
+Si el costo crece más rápido que las ventas, la
+gerencia debe actuar antes de que se deteriore la
+rentabilidad.
+
+Contabilidad Empresarial - Unidad IV
+
+23/39
+
+Análisis vertical: definición
+
+El análisis vertical estudia la composición interna
+de un estado financiero en un solo periodo.
+Cada partida se expresa como porcentaje de una
+base común, lo que permite conocer su peso
+relativo.
+
+Contabilidad Empresarial - Unidad IV
+
+24/39
+
+Utilidad del análisis vertical
+
+Medir peso de costos y gastos.
+Evaluar estructura de activos.
+Analizar deuda y patrimonio.
+Comparar márgenes.
+Permite estudiar qué partes concentran recursos,
+costos o financiamiento dentro del estado
+financiero.
+
+Contabilidad Empresarial - Unidad IV
+
+25/39
+
+Fórmula del análisis vertical
+
+PP =
+
+Partida
+× 100
+Base común
+
+Resultados: ventas netas.
+Situación financiera: total activos.
+
+Contabilidad Empresarial - Unidad IV
+
+26/39
+
+Ejemplo básico de cálculo vertical
+
+Una empresa desea conocer qué proporción de sus
+ventas se destina al costo de ventas.
+Concepto
+Monto
+Ventas netas
+Costo ventas
+Participación
+
+S/ 100,000.00 De cada S/
+S/ 60,000.00
+60.00 %
+
+100.00 vendidos, S/ 60.00 se destinan al costo de
+ventas.
+
+Contabilidad Empresarial - Unidad IV
+
+27/39
+
+Ejemplo aplicado: estructura de costos tecnológicos
+
+Una empresa tecnológica desea evaluar qué
+peso tienen sus costos de servidores y
+licencias dentro de sus ventas.
+Ventas: S/ 200,000.00.
+Servidores y licencias: S/ 70,000.00.
+Participación: 35.00 %.
+Si el porcentaje aumenta, deben revisarse
+arquitectura, proveedores cloud o licencias.
+
+Contabilidad Empresarial - Unidad IV
+
+28/39
+
+Procedimiento del análisis vertical
+
+1
+
+Elegir estado financiero.
+
+2
+
+Definir base 100 %.
+
+3
+
+Dividir cada partida entre la base.
+
+4
+
+Comparar porcentajes.
+
+5
+
+Interpretar estructura.
+
+Contabilidad Empresarial - Unidad IV
+
+29/39
+
+Caso Empresa ABC: cálculo vertical
+
+Partida
+Ventas
+Costo ventas
+Utilidad bruta
+Utilidad neta
+
+2024 %
+
+2025 %
+
+100.00 %
+60.00 %
+40.00 %
+12.14 %
+
+100.00 %
+61.86 %
+38.14 %
+11.64 %
+
+El costo de
+
+ventas gana participación sobre las ventas y reduce el
+peso relativo de la utilidad bruta.
+
+Contabilidad Empresarial - Unidad IV
+
+30/39
+
+Caso Empresa ABC: interpretación vertical
+
+El costo de ventas pasa de 60.00 % a 61.86 %.
+Por ello, la utilidad bruta baja de 40.00 % a
+38.14 %, mostrando presión sobre el margen.
+
+Contabilidad Empresarial - Unidad IV
+
+31/39
+
+Decisión derivada del análisis vertical
+
+Revisar sostenibilidad del costo.
+Comparar márgenes por periodo.
+Evaluar estructura de financiamiento.
+Priorizar acciones correctivas.
+Si una partida gana peso dentro de las ventas, la
+gerencia debe evaluar si reduce rentabilidad o
+eficiencia.
+
+Contabilidad Empresarial - Unidad IV
+
+32/39
+
+Comparación entre análisis horizontal y vertical
+
+Criterio
+
+Horizontal
+
+Vertical
+
+Enfoque
+Pregunta
+Base
+Utilidad
+
+Tiempo
+¿Cuánto cambió?
+Periodo anterior
+Tendencia
+
+Estructura
+¿Qué peso tiene?
+Base común
+Composición
+
+Contabilidad Empresarial - Unidad IV
+
+33/39
+
+Ejemplo comparativo en servicios digitales
+
+Una empresa de servicios digitales observa que
+su gasto en servidores aumentó entre 2024 y
+2025.
+El análisis horizontal muestra un aumento de S/
+4,000.00 y 50.00 %. El análisis vertical muestra
+que el gasto representa 30.00 % de las ventas.
+Ambos resultados sugieren revisar
+sostenibilidad y eficiencia.
+
+Contabilidad Empresarial - Unidad IV
+
+34/39
+
+Errores frecuentes en la interpretación
+
+Confundir ventas con rentabilidad.
+Ignorar la base porcentual.
+Leer cifras sin contexto.
+No complementar con ratios.
+
+Contabilidad Empresarial - Unidad IV
+
+35/39
+
+Aplicación empresarial
+
+Precios y costos.
+Financiamiento e inversión.
+Presupuesto.
+Control de gestión.
+Los resultados del análisis permiten priorizar
+acciones correctivas y asignar recursos con mayor
+criterio.
+
+Contabilidad Empresarial - Unidad IV
+
+36/39
+
+Aplicación en Ingeniería de Sistemas y análisis de datos
+
+ERP y bases de datos.
+ETL y cálculo financiero.
+SQL, Excel, Power BI y Python.
+Dashboard y alerta gerencial.
+
+ERP
+
+Base de
+datos
+
+ETL
+
+Indicadores
+
+Dashboard
+
+Flujo de información financiera automatizada
+Registra operaciones → almacena transacciones
+→ calcula métricas → presenta alertas gerenciales.
+
+El vínculo con Contabilidad Empresarial se
+mantiene porque los indicadores nacen de
+estados financieros y cuentas contables.
+
+Contabilidad Empresarial - Unidad IV
+
+37/39
+
+Decisión
+
+Conclusiones finales
+
+Los estados financieros organizan información económica y financiera en reportes comparables.
+El análisis horizontal identifica tendencias y variaciones entre periodos.
+El análisis vertical revela la estructura interna y el peso relativo de las partidas.
+La Empresa ABC muestra que vender más no siempre significa mayor eficiencia.
+La interpretación financiera orienta decisiones sobre precios, costos, inversión y financiamiento.
+La Ingeniería de Sistemas permite automatizar reportes, dashboards y alertas gerenciales.
+
+Contabilidad Empresarial - Unidad IV
+
+38/39
+
+Referencias APA 7
+
+Amat, O. (s. f.). Contabilidad y finanzas para Dummies.
+Edwards, J. D., Hermanson, R. H., & Maher, M. W. (2011). Principios de Contabilidad: Una perspectiva empresarial. Volumen 1.
+Flores Soria, J. (2014). Estados financieros: teoría y práctica. Centro de Especialización en Contabilidad y Finanzas.
+Horngren, C. T., Harrison, W. T., & Oliver, M. S. (2010). Contabilidad. Pearson.
+International Accounting Standards Board. (2024). Normas Internacionales de Información Financiera.
+Ministerio de Economía y Finanzas del Perú. (2019). Plan Contable General Empresarial.
+Romero López, A. J. (2012). Contabilidad intermedia. McGraw-Hill.
+Warren, C. S., Reeve, J. M., & Duchac, J. E. (2016). Contabilidad financiera. Cengage Learning.
+Zevallos Zevallos, E. (2013). Contabilidad general. Ediciones Contables.
+
+Contabilidad Empresarial - Unidad IV
+
+39/39
+
+

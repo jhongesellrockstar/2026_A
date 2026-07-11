@@ -1,0 +1,170 @@
+\usetheme{Madrid}
+\usefonttheme{professionalfonts}
+
+\usepackage{fontspec}
+\usepackage[spanish,es-tabla]{babel}
+\usepackage{booktabs}
+\usepackage{array}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{pgfplots}
+\usepackage{hyperref}
+
+\usetikzlibrary{arrows.meta,positioning,shapes.geometric,calc}
+\pgfplotsset{compat=1.18}
+
+\IfFontExistsTF{Arial}{%
+  \setmainfont{Arial}
+  \setsansfont{Arial}
+}{%
+  \setmainfont{TeX Gyre Heros}
+  \setsansfont{TeX Gyre Heros}
+}
+
+\definecolor{BloqueAzul}{HTML}{1D4ED8}
+\definecolor{BloqueVerde}{HTML}{15803D}
+\definecolor{BloqueNaranja}{HTML}{C2410C}
+\definecolor{BloqueMorado}{HTML}{6D28D9}
+\definecolor{GrisTexto}{HTML}{1F2937}
+\definecolor{GrisClaro}{HTML}{F3F4F6}
+\definecolor{GrisLinea}{HTML}{CBD5E1}
+
+\newcommand{\LogoUNAC}{../Logo_Universidad-nacional-del-callao.png}
+
+\setbeamercolor{normal text}{fg=GrisTexto}
+\setbeamercolor{title}{fg=white,bg=BloqueAzul}
+\setbeamercolor{frametitle}{fg=white,bg=BloqueAzul}
+\setbeamercolor{structure}{fg=BloqueAzul}
+\setbeamercolor{block title}{fg=white,bg=BloqueAzul}
+\setbeamercolor{block body}{fg=GrisTexto,bg=GrisClaro}
+\setbeamertemplate{navigation symbols}{}
+
+\setbeamertemplate{footline}{%
+  \leavevmode%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.10\paperwidth,ht=2.8ex,dp=1ex,center]{author in head/foot}%
+      \IfFileExists{\LogoUNAC}{\includegraphics[height=2.4ex]{\LogoUNAC}}{UNAC}
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.66\paperwidth,ht=2.8ex,dp=1ex,left]{title in head/foot}%
+      \hspace{0.7em}\scriptsize Contabilidad Empresarial - Unidad IV
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.14\paperwidth,ht=2.8ex,dp=1ex,right]{date in head/foot}%
+      \scriptsize\insertframenumber/\inserttotalframenumber\hspace{0.8em}
+    \end{beamercolorbox}%
+  }%
+}
+
+\newcommand{\colorbloque}[1]{%
+  \setbeamercolor{frametitle}{fg=white,bg=#1}%
+  \setbeamercolor{structure}{fg=#1}%
+  \setbeamercolor{block title}{fg=white,bg=#1}%
+}
+
+\newcommand{\bloqueintro}{\colorbloque{BloqueAzul}}
+\newcommand{\bloquehorizontal}{\colorbloque{BloqueVerde}}
+\newcommand{\bloquevertical}{\colorbloque{BloqueNaranja}}
+\newcommand{\bloquecierre}{\colorbloque{BloqueMorado}}
+\newcommand{\tiempo}[1]{\note{Tiempo sugerido: #1}}
+\newcommand{\cita}[1]{{\scriptsize\color{gray}#1}}
+\newcommand{\micro}[1]{\vspace{0.45em}{\footnotesize #1\par}}
+\newcommand{\figpng}[2][0.72\textheight]{%
+  \includegraphics[width=\linewidth,height=#1,keepaspectratio]{../04_figuras/png/#2}%
+}
+
+\newcommand{\flujoERPdashboard}{%
+\begin{center}
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[font=\scriptsize, node distance=0.18cm]
+  \tikzstyle{flujo}=[draw=BloqueAzul, fill=blue!5, rounded corners=2pt,
+    minimum width=1.55cm, minimum height=0.78cm, align=center]
+  \node[flujo] (erp) {ERP};
+  \node[flujo, right=of erp] (bd) {Base de\\datos};
+  \node[flujo, right=of bd, draw=BloqueVerde] (etl) {ETL};
+  \node[flujo, right=of etl, draw=BloqueNaranja] (ind) {Indicadores};
+  \node[flujo, right=of ind, draw=BloqueMorado] (dash) {Dashboard};
+  \node[flujo, right=of dash, draw=BloqueMorado] (dec) {Decisión};
+  \foreach \a/\b in {erp/bd,bd/etl,etl/ind,ind/dash,dash/dec}
+    \draw[-{Latex[length=1.8mm]}, thick, gray] (\a) -- (\b);
+  \node[align=center, text width=9.2cm, below=0.5cm of etl] {
+    \textbf{Flujo de información financiera automatizada}\\
+    Registra operaciones → almacena transacciones → calcula métricas → presenta alertas gerenciales.
+  };
+\end{tikzpicture}%
+}
+\end{center}
+}
+
+\newcommand{\flujoContable}{%
+\begin{tikzpicture}[node distance=0.12cm, every node/.style={font=\tiny}]
+  \tikzstyle{caja}=[draw=BloqueAzul, rounded corners=2pt, fill=blue!5, minimum width=1.22cm, minimum height=0.58cm, align=center]
+  \node[caja] (a) {Datos\\contables};
+  \node[caja, right=of a] (b) {Estados\\financieros};
+  \node[caja, right=of b] (c) {Análisis\\financiero};
+  \node[caja, right=of c] (d) {Decisión\\empresarial};
+  \draw[-{Latex[length=2mm]}, thick, BloqueAzul] (a) -- (b);
+  \draw[-{Latex[length=2mm]}, thick, BloqueAzul] (b) -- (c);
+  \draw[-{Latex[length=2mm]}, thick, BloqueAzul] (c) -- (d);
+\end{tikzpicture}}
+
+\newcommand{\esquemaBalance}{%
+\begin{tikzpicture}[font=\tiny, scale=0.85, transform shape]
+  \draw[fill=blue!6, draw=BloqueAzul, rounded corners=2pt] (0,0) rectangle (5,3);
+  \draw[fill=blue!15, draw=BloqueAzul] (0.25,1.65) rectangle (2.3,2.7);
+  \node at (1.275,2.18) {Activos};
+  \draw[fill=blue!10, draw=BloqueAzul] (2.7,2.05) rectangle (4.75,2.7);
+  \node at (3.725,2.38) {Pasivos};
+  \draw[fill=blue!10, draw=BloqueAzul] (2.7,0.8) rectangle (4.75,1.8);
+  \node at (3.725,1.3) {Patrimonio};
+  \node at (2.5,0.35) {Activos = Pasivos + Patrimonio};
+\end{tikzpicture}}
+
+\newcommand{\esquemaResultados}{%
+\begin{tikzpicture}[font=\tiny, scale=0.88, transform shape]
+  \node[draw=BloqueAzul, fill=blue!10, rounded corners=2pt, minimum width=3.2cm] (v) {Ventas netas};
+  \node[draw=BloqueNaranja, fill=orange!10, below=0.32cm of v, minimum width=3.2cm] (c) {- Costo de ventas};
+  \node[draw=BloqueVerde, fill=green!10, below=0.32cm of c, minimum width=3.2cm] (ub) {= Utilidad bruta};
+  \node[draw=BloqueNaranja, fill=orange!10, below=0.32cm of ub, minimum width=3.2cm] (g) {- Gastos e impuesto};
+  \node[draw=BloqueMorado, fill=purple!10, below=0.32cm of g, minimum width=3.2cm] (un) {= Utilidad neta};
+  \draw[-{Latex[length=2mm]}, gray] (v) -- (c);
+  \draw[-{Latex[length=2mm]}, gray] (c) -- (ub);
+  \draw[-{Latex[length=2mm]}, gray] (ub) -- (g);
+  \draw[-{Latex[length=2mm]}, gray] (g) -- (un);
+\end{tikzpicture}}
+
+\newcommand{\lineaHorizontal}{%
+\begin{tikzpicture}[font=\tiny, scale=0.76, transform shape]
+  \draw[-{Latex[length=2.2mm]}, thick, BloqueVerde] (0,0) -- (5.0,0);
+  \fill[BloqueVerde] (0.7,0) circle (2.2pt);
+  \fill[BloqueVerde] (4.1,0) circle (2.2pt);
+  \node[above] at (0.7,0) {2024};
+  \node[above] at (4.1,0) {2025};
+  \node[below, align=center] at (2.4,0) {Variacion\\absoluta y relativa};
+  \draw[thick] (0.7,-0.55) -- (4.1,-0.55);
+\end{tikzpicture}}
+
+\newcommand{\barraVertical}{%
+\begin{tikzpicture}[x=0.045cm,y=0.7cm,font=\tiny]
+  \draw[fill=orange!25, draw=BloqueNaranja] (0,0) rectangle (61.86,1);
+  \draw[fill=green!25, draw=BloqueVerde] (61.86,0) rectangle (100,1);
+  \node at (31,0.5) {Costo 61.86\%};
+  \node at (81,0.5) {Bruta 38.14\%};
+  \draw (0,-0.25) -- (100,-0.25);
+  \node[below] at (0,-0.25) {0\%};
+  \node[below] at (100,-0.25) {100\% ventas};
+\end{tikzpicture}}
+
+\newcommand{\cuadroComparativoTikz}{%
+\begin{tikzpicture}[font=\tiny, scale=0.88, transform shape]
+  \node[draw=BloqueVerde, fill=green!8, rounded corners=2pt, align=center, minimum width=2.5cm, minimum height=1.7cm] (h) at (0,0) {Horizontal\\Tiempo\\Tendencia};
+  \node[draw=BloqueNaranja, fill=orange!10, rounded corners=2pt, align=center, minimum width=2.5cm, minimum height=1.7cm] (v) at (3.4,0) {Vertical\\Estructura\\Peso};
+  \node[draw=BloqueMorado, fill=purple!8, rounded corners=2pt, align=center, minimum width=2.7cm] (d) at (1.7,-1.65) {Decisión\\mejor informada};
+  \draw[-{Latex[length=2mm]}, thick, gray] (h) -- (d);
+  \draw[-{Latex[length=2mm]}, thick, gray] (v) -- (d);
+\end{tikzpicture}}
+
+\title[Análisis financiero]{Análisis financiero:\\análisis horizontal y análisis vertical de estados financieros}
+\subtitle{Contabilidad Empresarial - Unidad IV}
+\author{Universidad Nacional del Callao}
+\institute{Facultad de Ciencias Contables}
+\date{\today}

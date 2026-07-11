@@ -1,0 +1,1 @@
+Crear una figura sobre analisis vertical. Representar un estado financiero como una estructura de porcentajes sobre una base comun: total activos o ventas netas. Usar barras apiladas o bloques proporcionales. Estilo academico y limpio.

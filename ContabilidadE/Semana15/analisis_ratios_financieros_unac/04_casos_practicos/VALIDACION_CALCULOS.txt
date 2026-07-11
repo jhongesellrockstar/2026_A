@@ -1,0 +1,30 @@
+VALIDACIÓN DE CÁLCULOS
+
+Razón corriente: calculado 1.60 | esperado 1.60 | OK
+Prueba ácida: calculado 1.00 | esperado 1.00 | OK
+Promedio CxC: calculado 200000.00 | esperado 200000.00 | OK
+Rotación CxC: calculado 6.00 | esperado 6.00 | OK
+Periodo promedio de cobro: calculado 60.00 | esperado 60.00 | OK
+Promedio inventario: calculado 150000.00 | esperado 150000.00 | OK
+Rotación inventarios: calculado 6.00 | esperado 6.00 | OK
+Permanencia inventario: calculado 60.00 | esperado 60.00 | OK
+Endeudamiento: calculado 45.00 | esperado 45.00 | OK
+Deuda-patrimonio: calculado 0.82 | esperado 0.82 | OK
+Margen neto: calculado 9.00 | esperado 9.00 | OK
+ROA: calculado 9.00 | esperado 9.00 | OK
+ROE: calculado 15.00 | esperado 15.00 | OK
+Integrador activo corriente: calculado 540000.00 | esperado 540000.00 | OK
+Integrador total activo: calculado 1200000.00 | esperado 1200000.00 | OK
+Integrador pasivo total: calculado 570000.00 | esperado 570000.00 | OK
+Igualdad contable: calculado 0.00 | esperado 0.00 | OK
+Integrador utilidad bruta: calculado 525000.00 | esperado 525000.00 | OK
+Integrador utilidad operativa: calculado 225000.00 | esperado 225000.00 | OK
+Integrador UAI: calculado 180000.00 | esperado 180000.00 | OK
+Integrador utilidad neta: calculado 126900.00 | esperado 126900.00 | OK
+Integrador razón corriente: calculado 1.80 | esperado 1.80 | OK
+Integrador prueba ácida: calculado 1.20 | esperado 1.20 | OK
+Integrador endeudamiento: calculado 47.50 | esperado 47.50 | OK
+Integrador deuda-patrimonio: calculado 0.90 | esperado 0.90 | OK
+Integrador margen neto: calculado 8.46 | esperado 8.46 | OK
+Integrador ROA simple: calculado 10.58 | esperado 10.58 | OK
+Integrador ROE simple: calculado 20.14 | esperado 20.14 | OK

@@ -1,0 +1,141 @@
+REPORTE DE MEJORA UNIVERSITARIA
+Proyecto: analisis_financiero_unac
+Tema: Analisis financiero: analisis horizontal y analisis vertical de estados financieros
+Curso: Contabilidad Empresarial
+Universidad: Universidad Nacional del Callao
+Unidad: IV - Analisis e interpretacion de estados financieros
+
+1. MEJORAS EN LA PRESENTACION BEAMER
+
+- Se amplio la presentacion de 17 a 26 diapositivas.
+- Se incorporo portada con logo UNAC e integrantes:
+  Caballero Ocrospoma Adriana Nataly
+  Espino Velasquez Emerson Miguel
+  Espinoza Espector Marco Antonio
+  Villanueva Portella Jhon Gesell
+- Se mantuvieron colores por bloque:
+  azul: fundamentos
+  verde: analisis horizontal
+  naranja: analisis vertical
+  morado: cierre y decisiones
+- Se inserto el logo UNAC en el pie de pagina.
+- Se eliminaron marcadores genericos como "Espacio para figura".
+- Se reemplazaron por diagramas reales hechos en TikZ.
+- Se incorporaron graficos con PGFPlots.
+- Se agregaron notas del expositor en cada diapositiva.
+- Se agrego duracion estimada en las diapositivas.
+
+2. FIGURAS Y GRAFICOS INCORPORADOS
+
+Figuras TikZ:
+- Flujo: datos contables -> estados financieros -> analisis -> decision.
+- Esquema del Estado de Situacion Financiera.
+- Esquema del Estado de Resultados.
+- Linea de tiempo del analisis horizontal.
+- Barra 100% para analisis vertical.
+- Cuadro comparativo horizontal vs vertical.
+- Diagramas adicionales de procedimiento, errores, decisiones e Ingenieria de Sistemas.
+
+Graficos PGFPlots:
+- Barras comparativas 2024 vs 2025.
+- Barras porcentuales del analisis vertical.
+
+Tablas:
+- Datos base Empresa ABC.
+- Analisis horizontal.
+- Analisis vertical.
+- Comparacion horizontal vs vertical.
+
+3. CASO PRACTICO EMPRESA ABC
+
+Se mejoro el caso para incluir:
+
+Estado de Resultados:
+- Ventas netas.
+- Costo de ventas.
+- Utilidad bruta.
+- Gastos administrativos.
+- Gastos de ventas.
+- Utilidad operativa.
+- Impuesto a la renta.
+- Utilidad neta.
+
+Estado de Situacion Financiera:
+- Activo corriente.
+- Activo no corriente.
+- Total activo.
+- Pasivo corriente.
+- Pasivo no corriente.
+- Patrimonio.
+- Total pasivo y patrimonio.
+
+Interpretacion incluida:
+- Crecimiento de ventas.
+- Aumento del costo de ventas.
+- Reduccion del margen bruto.
+- Variacion de utilidad neta.
+- Estructura de activos.
+- Peso relativo de pasivos y patrimonio.
+
+4. FUENTES Y CITAS
+
+Se incorporaron referencias conceptuales a:
+- NIC 1 / IAS 1: presentacion y comparabilidad.
+- Marco Conceptual NIIF: utilidad de la informacion financiera para la toma de decisiones.
+- PCGE Peru: relacion con cuentas contables y estados financieros.
+- Contabilidad y finanzas para Dummies, de Oriol Amat, verificado en PDF local.
+- Principios de Contabilidad: Una perspectiva empresarial, de Edwards, Hermanson y Maher, verificado en PDF local.
+- Bibliografia existente en referencias.bib.
+
+No se inventaron autores adicionales. En fuentes con datos incompletos se uso solo informacion verificable.
+
+5. GUION DE EXPOSICION
+
+Se actualizo 06_guion_exposicion con discurso completo para cuatro bloques:
+- Bloque A: Introduccion.
+- Bloque B: Analisis horizontal.
+- Bloque C: Analisis vertical.
+- Bloque D: Aplicacion y cierre.
+
+Cada bloque esta preparado para durar entre 7 y 8 minutos, con una duracion total aproximada de 30 a 35 minutos.
+
+6. DOCUMENTO MAESTRO
+
+Se actualizo 02_documento_maestro para coincidir con la presentacion e incluir:
+- Introduccion.
+- Marco teorico.
+- Estados financieros.
+- Analisis horizontal.
+- Analisis vertical.
+- Caso practico.
+- Interpretacion.
+- Conclusiones.
+- Referencias APA 7.
+
+7. VERIFICACION TECNICA
+
+- main.tex compila correctamente.
+- documento_maestro.tex compila correctamente.
+- La salida se guardo en 08_salida/pdf.
+- main.pdf tiene 26 paginas.
+- documento_maestro.pdf tiene 6 paginas.
+- No aparece "Espacio para figura".
+- No aparece "integrante 1".
+- Todas las formulas principales estan escritas en LaTeX.
+- Las tablas fueron ajustadas para caber en diapositiva.
+- Se mantiene la estructura de carpetas existente.
+
+8. ARCHIVOS PRINCIPALES ACTUALIZADOS
+
+- 03_presentacion_beamer/main.tex
+- 03_presentacion_beamer/preambulo.tex
+- 03_presentacion_beamer/secciones/*.tex
+- 02_documento_maestro/documento_maestro.tex
+- 02_documento_maestro/secciones/*.tex
+- 06_guion_exposicion/*.md
+- 05_tablas_casos/*.csv
+- 07_bibliografia/referencias.bib
+
+9. RESULTADO
+
+La presentacion queda convertida en una exposicion universitaria visual, defendible y lista para exponer, con contenido teorico, caso practico, interpretacion tecnica, graficos, tablas, diagramas y guion oral completo.

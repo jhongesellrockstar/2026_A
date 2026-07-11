@@ -1,0 +1,55 @@
+REPORTE DEL PROYECTO
+
+Estructura creada:
+- 00_LEER_PRIMERO a 10_salida, con subcarpetas para literatura, documento maestro,
+  presentación Beamer, casos prácticos, figuras, tablas, guion, bibliografía y scripts.
+
+Presentación:
+- 39 diapositivas planificadas en Beamer 16:9.
+- Enfoque aproximado: 20 % teoría, 65 % casos y cálculos, 15 % decisiones y cierre.
+- PDF compilado correctamente con 39 páginas.
+
+Documento maestro:
+- 20 páginas compiladas en PDF.
+- Incluye portada, índice, marco conceptual, estados financieros base, casos resueltos,
+  caso integrador, interpretación, decisiones, aplicación en sistemas, conclusiones y referencias.
+
+Casos prácticos:
+- 5 casos: liquidez, gestión, solvencia, rentabilidad e integrador.
+- Todos identificados como casos académicos ficticios elaborados con fines educativos.
+
+Ratios desarrollados:
+- Razón corriente.
+- Prueba ácida.
+- Rotación de cuentas por cobrar.
+- Periodo promedio de cobro.
+- Rotación de inventarios.
+- Permanencia promedio de inventarios.
+- Razón de endeudamiento.
+- Relación deuda-patrimonio.
+- Margen neto.
+- ROA.
+- ROE.
+
+Cálculos validados:
+- Script 09_scripts/verificar_calculos.py recalcula sumas, promedios, divisiones,
+  porcentajes, redondeo a dos decimales e igualdad contable.
+
+Bibliografía utilizada:
+- IFRS Foundation, MEF Perú, SMV, Amat, Horngren, Warren/Reeve/Duchac.
+
+Motor LaTeX:
+- XeLaTeX, con fontspec, babel en español y unicode-math.
+
+Resultado de compilación:
+- Correcto. Se ejecutaron las compilaciones de presentación y documento con XeLaTeX.
+- Se instalaron los paquetes MiKTeX necesarios para TeX Gyre Heros y DejaVu Sans Mono.
+- La validación final con Python confirmó 39 páginas en la presentación, 20 páginas en el documento
+  y extracción de texto con tildes visibles.
+
+PDF finales esperados:
+- 10_salida/pdf/presentacion_ratios_financieros.pdf
+- 10_salida/pdf/documento_maestro_ratios.pdf
+
+Tareas pendientes:
+- Incorporar logo institucional si el archivo oficial se agrega posteriormente a la carpeta del proyecto.

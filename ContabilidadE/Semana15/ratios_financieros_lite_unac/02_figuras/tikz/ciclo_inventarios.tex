@@ -1,0 +1,10 @@
+\begin{tikzpicture}[node distance=0.45cm, every node/.style={draw, rounded corners=2pt, align=center}]
+\node (a) {Compra};
+\node[right=of a] (b) {Almacén};
+\node[below=of b] (c) {Venta};
+\node[left=of c] (d) {Reposición};
+\draw[-{Stealth}] (a)--(b);
+\draw[-{Stealth}] (b)--(c);
+\draw[-{Stealth}] (c)--(d);
+\draw[-{Stealth}] (d)--(a);
+\end{tikzpicture}

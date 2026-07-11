@@ -1,0 +1,120 @@
+REPORTE DE CORRECCION FINAL DE CODIFICACION
+Proyecto: analisis_financiero_unac
+Fecha: 2026-06-30
+
+1. Respaldo creado
+
+Se creo la carpeta:
+- backup_codificacion_previa
+
+Contenido respaldado:
+- 02_documento_maestro
+- 03_presentacion_beamer
+- 04_figuras
+- 06_guion_exposicion
+
+2. Codificacion y motor LaTeX
+
+Se verificaron y reescribieron los archivos .tex, .md, .bib y .csv como UTF-8.
+La compilacion principal fue migrada a XeLaTeX.
+
+Archivos principales actualizados:
+- 03_presentacion_beamer/preambulo.tex
+- 02_documento_maestro/documento_maestro.tex
+- compilar_presentacion.bat
+- compilar_xelatex.bat
+- scripts/verificar_codificacion.py
+
+El preambulo Beamer y el documento maestro usan fontspec, babel en espanol y fuente Arial con fallback a TeX Gyre Heros.
+
+3. Correccion de figura F17
+
+Se elimino el uso de:
+- 04_figuras/png/F17_Flujo_ERP_Dashboard.png
+
+Fue reemplazado por una figura TikZ nativa escalable mediante:
+- \flujoERPdashboard
+
+Diapositivas/secciones modificadas:
+- 03_presentacion_beamer/secciones/02_intro_analisis_financiero.tex
+- 03_presentacion_beamer/secciones/05_aplicacion_cierre.tex
+
+La figura TikZ corrige los textos:
+- Flujo de informacion financiera automatizada
+- Decision
+- metricas
+
+4. Correcciones academicas de texto
+
+Se corrigieron tildes y redaccion visible en:
+- Titulos de la presentacion
+- Titulos del documento maestro
+- Introduccion
+- Marco teorico
+- Estados financieros
+- Analisis horizontal
+- Analisis vertical
+- Caso practico
+- Interpretacion del caso
+- Aplicacion empresarial
+- Aplicacion en Ingenieria de Sistemas
+- Conclusiones
+
+Se mantuvo el formato contable:
+- S/ 100,000.00
+- Porcentajes con dos decimales
+
+5. Verificacion automatizada
+
+Script creado:
+- scripts/verificar_codificacion.py
+
+Resultado:
+- OK: no se encontraron patrones problematicos de codificacion
+
+Patrones revisados:
+- informaci?n
+- Decisi?n
+- m?tricas
+- Â¾
+- caracteres de reemplazo
+- restos mojibake
+
+6. Compilacion final
+
+Motor usado:
+- XeLaTeX
+
+PDFs generados:
+- 08_salida/pdf/main.pdf
+- 08_salida/pdf/documento_maestro.pdf
+
+Integridad verificada:
+- main.pdf: 39 paginas
+- documento_maestro.pdf: 9 paginas
+
+7. Verificacion sobre PDF
+
+Se extrajo texto de los PDF con pdftotext:
+- 08_salida/compilacion_log/main_pdftotext.txt
+- 08_salida/compilacion_log/documento_maestro_pdftotext.txt
+
+No se encontraron:
+- "Duracion estimada" visible
+- "Duración estimada" visible
+- informaci?n
+- Decisi?n
+- m?tricas
+- F17_Flujo_ERP_Dashboard
+- caracteres corruptos definidos en la verificacion
+
+8. Evidencia visual renderizada
+
+Se renderizaron paginas clave del PDF final:
+- 08_salida/compilacion_log/render_check/slide_01-01.png
+- 08_salida/compilacion_log/render_check/slide_06-06.png
+- 08_salida/compilacion_log/render_check/slide_37-37.png
+
+9. Resultado final
+
+La presentacion y el documento maestro quedan compilados con XeLaTeX, sin uso visible de "Duracion estimada", sin dependencia de la imagen F17 con texto incrustado y sin patrones problematicos de codificacion en fuentes ni en texto extraido de PDF.

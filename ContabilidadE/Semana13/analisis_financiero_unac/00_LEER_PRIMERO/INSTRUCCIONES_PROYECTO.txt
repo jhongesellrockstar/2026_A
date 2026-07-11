@@ -1,0 +1,62 @@
+PROYECTO: Analisis financiero UNAC
+Curso: Contabilidad Empresarial
+Tema: Analisis financiero: analisis horizontal y analisis vertical de estados financieros
+
+OBJETIVO GENERAL
+Preparar una exposicion universitaria de al menos 30 minutos, alineada con la Unidad IV del silabo de Contabilidad Empresarial de la Universidad Nacional del Callao: analisis e interpretacion de estados financieros, analisis horizontal, analisis vertical y ratios financieros.
+
+FLUJO DE TRABAJO SUGERIDO
+1. Reunir fuentes academicas y normativas en 01_literatura.
+   - Guardar el silabo en 01_literatura/silabo.
+   - Guardar libros o capitulos autorizados en 01_literatura/libros_recomendados.
+   - Guardar normas contables, PCGE, NIIF y documentos regulatorios en 01_literatura/normas_contables.
+   - Registrar articulos y enlaces en 01_literatura/notas_fuentes.md.
+
+2. Desarrollar el contenido base en 02_documento_maestro.
+   - Usar documento_maestro.tex como documento integrador.
+   - Escribir cada tema en su archivo correspondiente dentro de secciones.
+   - Mantener el documento maestro como respaldo teorico de la exposicion.
+
+3. Preparar la presentacion en 03_presentacion_beamer.
+   - main.tex es el archivo principal.
+   - preambulo.tex contiene tema, colores, comandos y configuracion.
+   - Las secciones estan organizadas por bloques tematicos, no por integrantes.
+   - Colores por bloque:
+     azul: introduccion
+     verde: analisis horizontal
+     naranja: analisis vertical
+     morado: aplicacion y cierre
+
+4. Construir figuras cientificas en 04_figuras.
+   - Guardar prompts de figuras en 04_figuras/prompts_figuras.
+   - Exportar versiones finales en png, pdf o svg segun necesidad.
+   - La presentacion compila aunque las imagenes aun no existan.
+
+5. Trabajar tablas y casos en 05_tablas_casos.
+   - Usar los CSV como base auditable.
+   - Usar caso_empresa_abc.xlsx para formulas, comparaciones y ejemplos.
+   - Mantener las cifras consistentes entre documento, presentacion y guion.
+
+6. Preparar el guion oral en 06_guion_exposicion.
+   - Cada bloque debe incluir objetivo, ideas clave, transiciones y tiempo estimado.
+   - Para una exposicion de 30 minutos, se sugiere:
+     introduccion: 5 minutos
+     analisis horizontal: 8 minutos
+     analisis vertical: 8 minutos
+     aplicacion y cierre: 9 minutos
+
+7. Gestionar bibliografia en 07_bibliografia/referencias.bib.
+   - Completar datos bibliograficos antes de la entrega final.
+   - Verificar ediciones, editoriales, autores y anos.
+
+8. Compilar la presentacion.
+   - Ejecutar compilar_presentacion.bat desde la raiz del proyecto.
+   - La salida PDF debe quedar en 08_salida/pdf.
+   - Los logs de compilacion deben quedar en 08_salida/compilacion_log.
+
+PROXIMOS PASOS ACADEMICOS
+- Revisar el silabo oficial y ajustar objetivos especificos.
+- Completar marco teorico con definiciones, formulas y citas.
+- Incorporar un caso numerico completo con estado de situacion financiera y estado de resultados.
+- Agregar ratios financieros como complemento interpretativo de la Unidad IV.
+- Ensayar el guion por bloques para controlar el tiempo total.

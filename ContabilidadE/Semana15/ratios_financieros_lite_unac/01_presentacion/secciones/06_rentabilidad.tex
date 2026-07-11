@@ -1,0 +1,31 @@
+\begin{frame}{Caso 5. Margen neto, ROA y ROE}
+\smallcase
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.62\textwidth}
+\casehead{Enunciado.} Tecnología Empresarial Peruana S.A.C. desea evaluar la utilidad generada por ventas, activos y patrimonio.
+
+\casehead{Datos.} Ventas netas = \soles{1,500,000.00}; utilidad neta = \soles{135,000.00}; activo promedio = \soles{1,500,000.00}; patrimonio promedio = \soles{900,000.00}.
+
+\casehead{Operación.}
+\[
+\text{Margen neto}=\frac{\soles{135,000.00}}{\soles{1,500,000.00}}\times100=9.00\text{ \pct}
+\]
+\[
+\text{ROA}=\frac{\soles{135,000.00}}{\soles{1,500,000.00}}\times100=9.00\text{ \pct}
+\]
+\[
+\text{ROE}=\frac{\soles{135,000.00}}{\soles{900,000.00}}\times100=15.00\text{ \pct}
+\]
+\casehead{Respuesta.} Margen neto = 9.00 \pct; ROA = 9.00 \pct; ROE = 15.00 \pct.
+
+\casehead{Interpretación.} Por cada \soles{100.00} vendidos obtiene \soles{9.00} de utilidad neta. La diferencia entre ROA y ROE debe analizarse con el endeudamiento.
+
+\column{0.33\textwidth}
+\centering
+\begin{tikzpicture}[node distance=0.35cm, every node/.style={draw, rounded corners=3pt, align=center, minimum width=3cm, font=\small}]
+\node[fill=rentabilidad!10] (a) {Margen neto\\ventas};
+\node[fill=rentabilidad!15, below=of a] (b) {ROA\\activos};
+\node[fill=rentabilidad!20, below=of b] (c) {ROE\\patrimonio};
+\end{tikzpicture}
+\end{columns}
+\end{frame}

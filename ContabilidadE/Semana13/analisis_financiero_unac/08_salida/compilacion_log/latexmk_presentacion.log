@@ -1,0 +1,14 @@
+
+Sorry, but latexmk did not succeed for the following reason:
+
+  MiKTeX could not find the script engine 'perl' which is required to execute 'latexmk'.
+
+Remedy:
+
+  Make sure 'perl' is installed on your system.
+
+The log file hopefully contains the information to get MiKTeX going again:
+
+  C:\Users\ACER\AppData\Local\MiKTeX\miktex\log\latexmk.log
+
+For more information, visit: https://miktex.org/kb/fix-script-engine-not-found

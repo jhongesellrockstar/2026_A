@@ -1,0 +1,34 @@
+\begin{frame}{Caso 4. Endeudamiento y deuda-patrimonio}
+\smallcase
+\begin{columns}[T,totalwidth=\textwidth]
+\column{0.58\textwidth}
+\casehead{Enunciado.} Industrial Callao S.A.C. desea conocer qué proporción de sus activos está financiada por terceros y cuánto representa la deuda frente al patrimonio.
+
+\casehead{Datos.} Activo total = \soles{2,000,000.00}; pasivo total = \soles{900,000.00}; patrimonio = \soles{1,100,000.00}.
+
+\casehead{Operación.}
+\[
+\text{Endeudamiento}=\frac{\soles{900,000.00}}{\soles{2,000,000.00}}\times100=45.00\text{ \pct}
+\]
+\[
+\text{Deuda-patrimonio}=\frac{\soles{900,000.00}}{\soles{1,100,000.00}}=0.82
+\]
+\casehead{Respuesta.} Endeudamiento = 45.00 \pct; deuda-patrimonio = 0.82.
+
+\casehead{Interpretación.} El 45.00 \pct{} de activos está financiado con terceros; por cada \soles{1.00} de patrimonio existen \soles{0.82} de deuda.
+
+\column{0.37\textwidth}
+\centering
+\begin{tikzpicture}
+\fill[solvencia!80] (0,0) rectangle (1.8,0.65);
+\fill[gestion!70] (1.8,0) rectangle (4.0,0.65);
+\draw (0,0) rectangle (4.0,0.65);
+\node[font=\scriptsize, text=white, align=center] at (0.9,0.33) {Pasivo\\45.00 \pct};
+\node[font=\scriptsize, text=white, align=center] at (2.9,0.33) {Patrimonio\\55.00 \pct};
+\node[font=\small, align=center] at (2,-0.65) {Activos = Pasivos + Patrimonio};
+\end{tikzpicture}
+\vspace{1em}
+
+\scriptsize No se concluye si es favorable o desfavorable sin comparar con sector, costo financiero y capacidad de pago.
+\end{columns}
+\end{frame}

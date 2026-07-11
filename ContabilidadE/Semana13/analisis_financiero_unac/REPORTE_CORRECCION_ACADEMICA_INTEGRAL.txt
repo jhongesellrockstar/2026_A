@@ -1,0 +1,91 @@
+REPORTE DE CORRECCION ACADEMICA INTEGRAL
+Proyecto: analisis_financiero_unac
+Tema: Analisis financiero: analisis horizontal y analisis vertical de estados financieros
+Curso: Contabilidad Empresarial - Universidad Nacional del Callao
+Unidad: IV - Analisis e interpretacion de estados financieros
+
+1. OBJETIVO DE LA CORRECCION
+
+Se corrigio integralmente la presentacion Beamer para mejorar coherencia academica, relacion entre titulo, texto e imagen, redaccion formal, ortografia visible, conclusiones y utilidad como material de estudio para una exposicion aproximada de 30 minutos.
+
+2. CAMBIOS PRINCIPALES EN LA PRESENTACION
+
+- Se mantuvieron 26 diapositivas.
+- Se mantuvieron logo UNAC, integrantes, colores por bloque y pie institucional.
+- Se mantuvieron las figuras PNG F01-F16.
+- Se reemplazo la diapositiva "Proposito de la exposicion" por "Objetivos de la exposicion".
+- Se reemplazo "Ruta de aprendizaje" por "Secuencia tematica de la exposicion".
+- Se corrigieron titulos para que respondan directamente al contenido.
+- Se mejoro la redaccion academica de cada diapositiva.
+- Se evitaron frases pobres o demasiado genericas.
+- Se reforzo la coherencia entre texto e imagen.
+- Se redujo el uso de figuras genericas cuando no aportaban al titulo.
+- Se mantuvieron formulas y caso Empresa ABC.
+- Se desarrollaron conclusiones por eje: estados financieros, analisis horizontal, analisis vertical, caso, decisiones e Ingenieria de Sistemas.
+
+3. DIAPOSITIVAS CLAVE CORREGIDAS
+
+- Diapositiva 2: Objetivos de la exposicion.
+- Diapositiva 3: Secuencia tematica de la exposicion con cinco puntos coherentes con la figura.
+- Diapositiva 4: Concepto de analisis financiero.
+- Diapositiva 5: De la contabilidad al diagnostico empresarial.
+- Diapositiva 6: Estados financieros utilizados en el analisis.
+- Diapositiva 7: Estado de Situacion Financiera con ecuacion contable.
+- Diapositiva 8: Estado de Resultados.
+- Diapositiva 9: Relacion entre balance y resultados.
+- Diapositivas 10 a 15: Analisis horizontal con definicion, calculo, procedimiento, caso e interpretacion.
+- Diapositivas 16 a 20: Analisis vertical con definicion, calculo, procedimiento, caso e interpretacion.
+- Diapositivas 21 a 25: Comparacion, errores frecuentes, decisiones, Ingenieria de Sistemas y conclusiones desarrolladas.
+- Diapositiva 26: Referencias APA 7 revisadas.
+
+4. GUION Y GUIA DE ESTUDIO
+
+Se actualizo la guia:
+- 06_guion_exposicion/GUIA_ESTUDIO_GRUPO.md
+
+La guia incluye:
+- Resumen general del tema.
+- Distribucion por bloques.
+- Que debe decir cada expositor.
+- Formulas con explicacion.
+- Caso Empresa ABC paso a paso.
+- Interpretacion horizontal y vertical.
+- Comparacion de metodos.
+- Posibles preguntas de la docente y respuestas cortas.
+- Transiciones entre expositores.
+
+5. DOCUMENTO MAESTRO
+
+Se recompilo el documento maestro y se mantuvo como lectura continua del tema, con:
+- Introduccion.
+- Marco teorico.
+- Estados financieros.
+- Analisis horizontal.
+- Analisis vertical.
+- Caso Empresa ABC.
+- Interpretacion.
+- Aplicacion empresarial.
+- Relacion con Ingenieria de Sistemas.
+- Conclusiones.
+- Referencias APA 7.
+
+6. VERIFICACION FINAL
+
+- 03_presentacion_beamer/main.tex compilo correctamente.
+- 02_documento_maestro/documento_maestro.tex compilo correctamente.
+- main.pdf mantiene 26 diapositivas.
+- documento_maestro.pdf compilo correctamente.
+- No aparece "Proposito de la exposicion" en el PDF.
+- Si aparece "Objetivos de la exposicion" en el codigo fuente de la presentacion.
+- No aparece "Duracion estimada" en el PDF.
+- No aparece "Idea para exponer" en el PDF.
+- No aparece "Guion" en el PDF.
+- No aparece "Texto para expositor" en el PDF.
+- No aparece "Espacio para figura" en el PDF.
+- Las formulas fueron compactadas para evitar desbordes.
+- Las tablas principales se mantienen legibles.
+- Las figuras se mantienen dentro de las diapositivas.
+
+7. RESULTADO
+
+La presentacion final queda formal, coherente, academica y defendible. Puede ser leida por la docente como material universitario y tambien usada por los integrantes como apoyo de estudio para sostener una exposicion de aproximadamente 30 minutos.

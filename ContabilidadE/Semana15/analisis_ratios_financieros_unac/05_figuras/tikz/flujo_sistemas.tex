@@ -1,0 +1,9 @@
+\begin{tikzpicture}[node distance=1cm, every node/.style={draw, rounded corners, align=center}]
+\node (erp) {ERP};
+\node[right=of erp] (bd) {Base de datos};
+\node[right=of bd] (ratios) {Ratios};
+\node[right=of ratios] (dash) {Dashboard};
+\draw[->] (erp) -- (bd);
+\draw[->] (bd) -- (ratios);
+\draw[->] (ratios) -- (dash);
+\end{tikzpicture}

@@ -1,0 +1,44 @@
+REPORTE FINAL
+
+Número de diapositivas:
+- 12 diapositivas.
+
+Ratios incluidos:
+- Razón corriente.
+- Prueba ácida.
+- Rotación de cuentas por cobrar.
+- Periodo promedio de cobro.
+- Rotación de inventarios.
+- Permanencia promedio de inventarios.
+- Endeudamiento.
+- Deuda-patrimonio.
+- Margen neto.
+- ROA.
+- ROE.
+
+Casos resueltos:
+- Caso 1: Liquidez.
+- Caso 2: Gestión de cobranza.
+- Caso 3: Gestión de inventarios.
+- Caso 4: Solvencia.
+- Caso 5: Rentabilidad.
+- Caso integrador: Empresa Peruana ABC S.A.C., caso académico ficticio elaborado con fines educativos.
+
+Resultado de validación matemática:
+- Correcto. El script 04_scripts/verificar_calculos.py validó todos los resultados esperados.
+
+Resultado de validación UTF-8:
+- Correcto. El script 04_scripts/verificar_utf8.py no detectó patrones de mojibake.
+
+Motor de compilación:
+- XeLaTeX. La compilación se realizó correctamente con compilar_xelatex.bat.
+
+Ruta del PDF final:
+- 05_salida/pdf/Ratios_Financieros_Lite_UNAC.pdf
+
+Control final:
+- Máximo de diapositivas cumplido: 12.
+- Código estudiantil verificado: 2515250011.
+- PDF final generado correctamente.
+- Texto extraído del PDF con tildes visibles.
+- No se detectaron textos internos prohibidos.

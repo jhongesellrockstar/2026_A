@@ -1,0 +1,188 @@
+\section{Análisis horizontal}
+
+\begin{frame}{Análisis horizontal: definición}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.45\textwidth}
+    \footnotesize
+    El análisis horizontal compara una misma partida contable entre dos o más periodos.
+
+    \vspace{0.5em}
+    Permite responder cuánto cambió una cuenta respecto al periodo base y si ese cambio es favorable o requiere revisión.
+    \tiempo{0.7 minutos}
+    \column{0.51\textwidth}
+    \figpng[0.66\textheight]{F04_Analisis_Horizontal_Linea_Tiempo.png}
+  \end{columns}
+  \note{Definir análisis horizontal.}
+\end{frame}
+
+\begin{frame}{Utilidad del análisis horizontal}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.45\textwidth}
+    \begin{itemize}
+      \item Detectar crecimiento.
+      \item Reconocer disminuciones.
+      \item Identificar tendencias.
+      \item Evaluar señales de alerta.
+    \end{itemize}
+    \micro{Su valor está en explicar la evolución de las partidas y no solo en mostrar que aumentaron o disminuyeron.}
+    \tiempo{0.7 minutos}
+    \column{0.51\textwidth}
+    \figpng[0.62\textheight]{F07_Interpretacion_Horizontal.png}
+  \end{columns}
+  \note{Explicar utilidad del horizontal.}
+\end{frame}
+
+\begin{frame}{Fórmulas del análisis horizontal}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.46\textwidth}
+    \[
+      VA = V_{actual} - V_{base}
+    \]
+    \[
+      VP = \frac{VA}{V_{base}} \times 100
+    \]
+    \begin{itemize}
+      \item VA: variación absoluta.
+      \item VP: variación porcentual.
+    \end{itemize}
+    \tiempo{0.8 minutos}
+    \column{0.50\textwidth}
+    \figpng[0.64\textheight]{F05_Formula_Analisis_Horizontal.png}
+  \end{columns}
+  \note{Explicar fórmulas.}
+\end{frame}
+
+\begin{frame}{Ejemplo básico de cálculo horizontal}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.48\textwidth}
+    \footnotesize
+    Una empresa desea comparar sus ventas entre dos periodos para medir el crecimiento comercial.
+    \vspace{0.35em}
+    \begin{tabular}{lr}
+      \toprule
+      Concepto & Monto \\
+      \midrule
+      Ventas 2024 & S/ 100,000.00 \\
+      Ventas 2025 & S/ 120,000.00 \\
+      Variación absoluta & S/ 20,000.00 \\
+      Variación porcentual & 20.00 \% \\
+      \bottomrule
+    \end{tabular}
+    \micro{Las ventas aumentaron S/ 20,000.00, equivalentes al 20.00 \% del periodo base.}
+    \tiempo{0.8 minutos}
+    \column{0.48\textwidth}
+    \figpng[0.58\textheight]{F05_Formula_Analisis_Horizontal.png}
+  \end{columns}
+  \note{Explicar ejemplo básico.}
+\end{frame}
+
+\begin{frame}{Ejemplo aplicado: variación de costo cloud}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.42\textwidth}
+    \footnotesize
+    Una empresa de servicios digitales contrata infraestructura cloud para alojar su plataforma.
+    \vspace{0.25em}
+    \begin{itemize}
+      \item Costo 2024: S/ 8,000.00.
+      \item Costo 2025: S/ 12,000.00.
+      \item Variación: S/ 4,000.00 y 50.00 \%.
+    \end{itemize}
+    \micro{Si los ingresos no crecieron en la misma proporción, debe revisarse arquitectura, proveedor o plan contratado.}
+    \tiempo{0.8 minutos}
+    \column{0.54\textwidth}
+    \figpng[0.66\textheight]{F18_Ejemplo_Cloud_Horizontal.png}
+  \end{columns}
+  \note{Ejemplo cloud.}
+\end{frame}
+
+\begin{frame}{Procedimiento del análisis horizontal}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.46\textwidth}
+    \begin{enumerate}
+      \item Seleccionar partida.
+      \item Elegir periodo base.
+      \item Calcular variación absoluta.
+      \item Calcular variación porcentual.
+      \item Interpretar resultado.
+    \end{enumerate}
+    \tiempo{0.8 minutos}
+    \column{0.50\textwidth}
+    \figpng[0.62\textheight]{F04_Analisis_Horizontal_Linea_Tiempo.png}
+  \end{columns}
+  \note{Explicar procedimiento horizontal.}
+\end{frame}
+
+\begin{frame}{Caso Empresa ABC: datos para análisis horizontal}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.52\textwidth}
+    \scriptsize
+    \begin{tabular}{lrr}
+      \toprule
+      Partida & 2024 & 2025 \\
+      \midrule
+      Ventas netas & S/ 180,000.00 & S/ 215,000.00 \\
+      Costo ventas & S/ 108,000.00 & S/ 133,000.00 \\
+      Utilidad bruta & S/ 72,000.00 & S/ 82,000.00 \\
+      Utilidad neta & S/ 21,855.00 & S/ 25,027.00 \\
+      \bottomrule
+    \end{tabular}
+    \micro{Estas partidas permiten observar crecimiento comercial, comportamiento del costo y evolución de utilidad.}
+    \tiempo{0.8 minutos}
+    \column{0.44\textwidth}
+    \figpng[0.58\textheight]{F06_Barras_Comparativas_2024_2025.png}
+  \end{columns}
+  \note{Presentar datos ABC.}
+\end{frame}
+
+\begin{frame}{Caso Empresa ABC: cálculo horizontal}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.48\textwidth}
+    \scriptsize
+    \begin{tabular}{lrrr}
+      \toprule
+      Partida & 2024 & 2025 & Var. \% \\
+      \midrule
+      Ventas & S/ 180,000.00 & S/ 215,000.00 & 19.44 \% \\
+      Costo & S/ 108,000.00 & S/ 133,000.00 & 23.15 \% \\
+      U. bruta & S/ 72,000.00 & S/ 82,000.00 & 13.89 \% \\
+      U. neta & S/ 21,855.00 & S/ 25,027.00 & 14.51 \% \\
+      \bottomrule
+    \end{tabular}
+    \tiempo{0.8 minutos}
+    \column{0.48\textwidth}
+    \figpng[0.62\textheight]{F06_Barras_Comparativas_2024_2025.png}
+  \end{columns}
+  \note{Explicar cálculo horizontal del caso.}
+\end{frame}
+
+\begin{frame}{Caso Empresa ABC: interpretación horizontal}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.46\textwidth}
+    \footnotesize
+    Las ventas aumentan 19.44 \%, pero el costo de ventas aumenta 23.15 \%.
+
+    \vspace{0.5em}
+    Esto indica que el crecimiento comercial no se convierte totalmente en eficiencia operativa, porque el costo avanza con mayor intensidad.
+    \tiempo{0.8 minutos}
+    \column{0.50\textwidth}
+    \figpng[0.64\textheight]{F07_Interpretacion_Horizontal.png}
+  \end{columns}
+  \note{Interpretar caso horizontal.}
+\end{frame}
+
+\begin{frame}{Decisión empresarial derivada del análisis horizontal}
+  \begin{columns}[T,onlytextwidth]
+    \column{0.48\textwidth}
+    \begin{itemize}
+      \item Revisar proveedores y costos.
+      \item Evaluar precios y productividad.
+      \item Mejorar procesos operativos.
+      \item Configurar alertas en dashboards.
+    \end{itemize}
+    \micro{Si el costo crece más rápido que las ventas, la gerencia debe actuar antes de que se deteriore la rentabilidad.}
+    \tiempo{0.7 minutos}
+    \column{0.48\textwidth}
+    \figpng[0.62\textheight]{F14_Decisiones_Empresariales.png}
+  \end{columns}
+  \note{Decisión derivada horizontal.}
+\end{frame}

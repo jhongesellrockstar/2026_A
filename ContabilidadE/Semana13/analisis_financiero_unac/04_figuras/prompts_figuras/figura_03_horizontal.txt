@@ -1,0 +1,1 @@
+Crear una figura sobre analisis horizontal de estados financieros. Mostrar una linea de tiempo con dos periodos, variacion absoluta y variacion relativa. Incluir flechas de crecimiento o disminucion. Estilo tecnico, claro y universitario.
