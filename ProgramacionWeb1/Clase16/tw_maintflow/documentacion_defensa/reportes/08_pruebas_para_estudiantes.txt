@@ -1,0 +1,2 @@
+PRÁCTICA
+Localizar controlador/modelo/vista; seguir /clientes; explicar CRUD y FK; ejecutar JOIN; probar admin, recepción y técnico; provocar 403 y 404; crear cliente y orden; probar trigger dentro de transacción y rollback; explicar resultado.

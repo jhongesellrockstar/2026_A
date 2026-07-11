@@ -1,0 +1,1 @@
+Aplicación PHP 8 MVC sin frameworks ni Composer. Front controller en public/index.php, router propio, PDO y vistas reutilizables. Capas desacopladas para una sustentación educativa.

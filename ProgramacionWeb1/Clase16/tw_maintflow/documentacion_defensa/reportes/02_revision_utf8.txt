@@ -1,0 +1,7 @@
+REVISIÓN UTF-8 - RESULTADO FINAL
+Archivos corregidos: public/index.php (header Content-Type UTF-8), app/views/layouts/header.php (meta UTF-8), database/tw_maintflow.sql (SET NAMES y conversión explícita de 12 tablas) y database/correccion_utf8.sql.
+Base de datos: bd_tw_maintflow usa utf8mb4/utf8mb4_unicode_ci; las 12 tablas fueron verificadas con esa intercalación.
+Cadenas normalizadas: Almacén 2, Frigorífico, Mecánica, Electricidad, Refrigeración, Supervisión y Técnico asignado.
+Archivos revisados: 77 archivos PHP/SQL/TXT/CSS/JS, sin BOM y sin patrones mojibake.
+Resultado visual: las capturas reales y las respuestas HTTP muestran tildes y eñes correctamente.
+Confirmación: Frigorífico y Almacén 2 se muestran correctamente en el módulo Sedes.

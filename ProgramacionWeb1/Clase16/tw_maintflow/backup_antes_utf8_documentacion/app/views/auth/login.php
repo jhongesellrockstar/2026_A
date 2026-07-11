@@ -1,0 +1,2 @@
+<section class="login"><form method="post" class="panel"><span class="eyebrow">ACCESO SEGURO</span><h1>Bienvenido</h1><?php if($error):?><div class="alert"><?=htmlspecialchars($error)?></div><?php endif;?><label>Usuario<input name="username" required maxlength="50" autocomplete="username"></label><label>Contraseña<input type="password" name="password" required autocomplete="current-password"></label><button class="btn">Ingresar</button><small>Demo: admin / admin123</small></form></section>
+

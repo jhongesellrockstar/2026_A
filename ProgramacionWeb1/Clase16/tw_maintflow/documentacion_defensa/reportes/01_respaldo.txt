@@ -1,0 +1,5 @@
+REPORTE DE RESPALDO - TW MAINTFLOW
+Fecha: 11 de julio de 2026
+Ruta: C:\xampp\htdocs\tw_maintflow\backup_antes_utf8_documentacion
+Elementos respaldados antes de modificar el proyecto: app, public, database, README_INSTALACION.txt y README_ESTRUCTURA_MVC.txt.
+El respaldo es una copia independiente y no altera la aplicación en ejecución.

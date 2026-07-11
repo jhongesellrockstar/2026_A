@@ -1,0 +1,3 @@
+MVC REAL
+Entrada: public/index.php. Router: app/core/Router.php. Base controladores: Controller.php y CrudController.php. Modelos: Model.php, CrudModel.php y modelos de dominio. Vistas: app/views. Seguridad: Session.php y Auth.php. Flujo /clientes: Router -> ClienteController::index -> CrudModel::all -> shared/list.php.
+Observación honesta: Cliente.php hereda CrudModel y no redefine métodos; la reutilización está centralizada.

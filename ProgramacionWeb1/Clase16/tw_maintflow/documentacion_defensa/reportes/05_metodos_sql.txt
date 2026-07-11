@@ -1,0 +1,5 @@
+OBJETOS SQL REALES
+tr_detalle_stock: implementado, AFTER INSERT en detalle_orden; descuenta stock y recalcula costo.
+sp_cerrar_orden(IN p_id): implementado; establece estado 5 y fecha_cierre NOW().
+fn_total_orden(p_id): implementada; retorna mano de obra más subtotales.
+Riesgo pendiente: el trigger no bloquea stock negativo. Propuesta: BEFORE INSERT con SIGNAL cuando cantidad supera stock.

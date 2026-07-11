@@ -1,0 +1,1 @@
+Base bd_tw_maintflow con 12 tablas, claves foráneas e índices únicos. Jerarquía principal: cliente -> sede -> equipo -> orden -> detalle. Roles -> usuarios -> técnicos. Repuestos -> detalles/movimientos.

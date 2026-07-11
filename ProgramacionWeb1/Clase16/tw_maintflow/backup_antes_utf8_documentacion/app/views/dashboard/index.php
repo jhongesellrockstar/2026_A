@@ -1,0 +1,2 @@
+<h1>Panel operativo</h1><p class="muted">Resumen general de mantenimiento.</p><section class="cards"><?php foreach(['clientes'=>'Clientes','equipos'=>'Equipos','pendientes'=>'Pendientes','proceso'=>'En proceso','cerradas'=>'Cerradas','tecnicos'=>'Técnicos activos','stock_bajo'=>'Stock bajo','costo_total'=>'Costo total S/'] as $k=>$label):?><article class="card"><span><?=$label?></span><strong><?=htmlspecialchars((string)$m[$k])?></strong></article><?php endforeach;?></section>
+

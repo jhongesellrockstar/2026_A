@@ -1,0 +1,15 @@
+FRAGMENTOS REALES EXPLICADOS
+1 public/index.php: carga config/database, autoload, sesión, header UTF-8 y App.
+2 Router.php: limpia URL, usa mapa cerrado, decide acción, valida callable y devuelve 404.
+3 Controller.php: renderiza header-vista-footer; redirect termina ejecución; id valida entero.
+4 Model.php: obtiene PDO compartido.
+5 Auth.php: user/check/requireLogin/requireRole.
+6 AuthController.php: Usuario::authenticate, password_verify indirecto, regeneración de sesión y logout.
+7 ClienteController.php: declara tabla, PK, carpeta, etiqueta y campos permitidos; hereda CRUD.
+8 Cliente.php: hereda CrudModel; la implementación reutilizada evita duplicación.
+9 views/shared/list.php: recorre datos, usa htmlspecialchars y acciones según rol.
+10 database.php: DSN incluye dbname y charset=utf8mb4; excepciones y prepares reales.
+11 OrdenServicio.php: JOIN para listado; create y updateWork usan prepare/execute.
+12 tw_maintflow.sql: tr_detalle_stock resta cantidad y recalcula total tras INSERT.
+
+Idea clave: el proyecto usa un Cliente muy delgado y centraliza CRUD en CrudModel/CrudController. En defensa debe explicarse la implementación real, no afirmar que Cliente contiene SQL propio.

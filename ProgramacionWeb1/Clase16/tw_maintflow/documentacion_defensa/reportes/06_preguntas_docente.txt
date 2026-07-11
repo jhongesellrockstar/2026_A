@@ -1,0 +1,1 @@
+Las 40 preguntas y respuestas se encuentran en el capítulo 19 del TEX. Prioridad de estudio: MVC y flujo real; autenticación/roles; relaciones y FK; CRUD; trigger/procedimiento/función; prepared statements; utf8mb4; 403 vs 404; GROUP BY vs HAVING.

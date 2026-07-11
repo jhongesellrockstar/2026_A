@@ -1,0 +1,1 @@
+TW MaintFlow: PHP 8 MVC educativo, PDO, MariaDB, 12 tablas, tres roles, dashboard, CRUD, órdenes y reportes. UTF-8 reforzado mediante utf8mb4 en DSN/base/tablas, meta UTF-8 y Content-Type. Material: TEX, PDF, ocho diagramas, quince capturas y reportes de estudio.

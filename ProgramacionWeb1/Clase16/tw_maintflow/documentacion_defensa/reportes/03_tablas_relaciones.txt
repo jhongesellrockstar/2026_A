@@ -1,0 +1,2 @@
+12 TABLAS VERIFICADAS
+roles 1-N usuarios; clientes 1-N sedes; sedes 1-N equipos; categorias_equipo 1-N equipos; usuarios 1-0..1 tecnicos; tecnicos 1-N ordenes_servicio; equipos 1-N ordenes_servicio; estados_orden 1-N ordenes_servicio; ordenes_servicio 1-N detalle_orden; repuestos 1-N detalle_orden; repuestos 1-N movimientos_repuesto; usuarios 1-N movimientos_repuesto.

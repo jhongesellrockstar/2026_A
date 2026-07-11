@@ -1,0 +1,159 @@
+\documentclass[11pt,a4paper]{report}
+\usepackage{fontspec}\usepackage[spanish,es-nodecimaldot]{babel}\usepackage{geometry}\usepackage{graphicx}\usepackage{float}\usepackage{xcolor}\usepackage{hyperref}\usepackage{listings}\usepackage{longtable}\usepackage{booktabs}\usepackage{tikz}\usepackage{enumitem}\usepackage{fancyhdr}\usepackage{dirtree}\usepackage{caption}
+\geometry{margin=2.4cm}\setmainfont{TeX Gyre Pagella}\setsansfont{TeX Gyre Heros}\definecolor{navy}{HTML}{08243A}\definecolor{cyan}{HTML}{129E98}\definecolor{codebg}{HTML}{F2F5F7}
+\hypersetup{colorlinks=true,linkcolor=navy,urlcolor=cyan}\pagestyle{fancy}\fancyhf{}\lhead{TW MaintFlow}\rhead{Guía de defensa}\cfoot{\thepage}
+\lstset{basicstyle=\ttfamily\small,backgroundcolor=\color{codebg},frame=single,breaklines=true,showstringspaces=false,keywordstyle=\color{navy}\bfseries,commentstyle=\color{cyan}}
+\newcommand{\figura}[3]{\begin{figure}[H]\centering\includegraphics[width=#1\textwidth]{../#2}\caption{#3}\label{fig:#2}\end{figure}}
+\begin{document}
+\begin{titlepage}\pagecolor{navy}\color{white}\centering\vspace*{1.2cm}{\Large UNIVERSIDAD NACIONAL DEL CALLAO\par}\vspace{.4cm}{\large Facultad de Ingeniería Industrial y de Sistemas\par Escuela Profesional de Ingeniería de Sistemas\par}\vfill{\Huge\bfseries TW MaintFlow\par}\vspace{.5cm}{\Large Sistema web MVC para gestión de mantenimiento y órdenes de servicio\par}\vfill\begin{tabular}{rl}Curso:&Programación Web I - ISEE405\\Docente:&Mg. Junior Grados Espinoza\\Estudiante:&Jhon Gesell Villanueva Portella\\Código:&2515250011\\Material compartido con:&Maricielo\\Año:&2026\end{tabular}\vfill{\large Callao, Perú\par}\end{titlepage}\nopagecolor\color{black}
+\tableofcontents\listoffigures\listoftables
+\chapter{Resumen del proyecto}
+TW MaintFlow resuelve la dispersión de información en organizaciones que mantienen equipos industriales. Centraliza clientes, sedes, equipos, técnicos, órdenes, repuestos, usuarios y reportes. Sus usuarios son administración, recepción y personal técnico. El alcance académico usa datos sintéticos y demuestra trazabilidad, control de inventario y separación MVC con HTML5, CSS3, JavaScript, PHP, MariaDB y XAMPP.
+\chapter{Tecnologías usadas}
+HTML5 estructura formularios y tablas; CSS3 aporta diseño responsive; JavaScript confirma desactivaciones y valida cantidades; PHP procesa rutas, sesiones y reglas; PDO ejecuta sentencias preparadas; MariaDB persiste 12 entidades; Apache sirve la aplicación; XAMPP reúne el entorno y phpMyAdmin administra la base. \texttt{password\_hash} genera hashes y \texttt{password\_verify} los comprueba sin almacenar contraseñas en texto plano.
+\chapter{Teoría mínima de MVC}
+MVC divide responsabilidades. El Modelo conoce datos y consultas; la Vista presenta HTML; el Controlador coordina petición, permisos, modelo y respuesta. Frente a PHP estructurado mezclado, mejora mantenibilidad, reutilización y pruebas: cambiar el diseño no obliga a reescribir SQL y cambiar una consulta no exige modificar la vista.
+\figura{.95}{figuras/03_componentes_mvc.png}{Responsabilidades de los componentes MVC. Fuente: elaboración propia.}
+\chapter{Arquitectura real del proyecto}
+\begin{lstlisting}
+tw_maintflow/
+|-- app/{config,core,controllers,models,views}
+|-- public/
+|-- database/
+|-- storage/
+`-- documentacion_defensa/
+\end{lstlisting}
+\texttt{app/config} contiene configuración y PDO; \texttt{core} contiene App, Router, Controller, Model, Session y Auth; \texttt{controllers} coordina casos de uso; \texttt{models} contiene persistencia; \texttt{views} genera la interfaz; \texttt{public} es el punto expuesto; \texttt{database} instala y consulta MariaDB.
+\figura{.95}{figuras/01_arquitectura_general.png}{Arquitectura general. Fuente: elaboración propia.}
+\chapter{Flujo de una petición}
+El navegador solicita una ruta; Apache aplica \texttt{.htaccess}; \texttt{public/index.php} carga configuración y autoload; Router separa controlador y acción; el controlador valida sesión/rol; instancia un modelo; PDO consulta MariaDB; el controlador entrega datos a la vista; la vista genera HTML y el navegador lo representa.
+\figura{.95}{figuras/02_flujo_mvc.png}{Ejemplo real de la ruta clientes. Fuente: elaboración propia.}
+\chapter{Base de datos}
+\begin{longtable}{p{3.2cm}p{2.2cm}p{4.2cm}p{4cm}}\toprule Tabla&PK&FK principales&Propósito\\\midrule\endhead
+roles&id\_rol&--&Perfiles de autorización\\usuarios&id\_usuario&id\_rol&Credenciales y datos personales\\clientes&id\_cliente&--&Empresas atendidas\\sedes&id\_sede&id\_cliente&Locales de clientes\\categorias\_equipo&id\_categoria&--&Clasificación de activos\\equipos&id\_equipo&id\_sede, id\_categoria&Activos mantenibles\\tecnicos&id\_tecnico&id\_usuario&Perfil técnico\\estados\_orden&id\_estado&--&Catálogo de estados\\ordenes\_servicio&id\_orden&id\_equipo, id\_tecnico, id\_estado&Cabecera del servicio\\detalle\_orden&id\_detalle&id\_orden, id\_repuesto&Actividad y consumo\\repuestos&id\_repuesto&--&Inventario\\movimientos\_repuesto&id\_movimiento&id\_repuesto, id\_usuario&Kardex\\\bottomrule\end{longtable}
+Ejemplos: una sede ``Frigorífico'', el equipo EQ-009 y una orden correctiva. Todos son sintéticos.
+\chapter{Relaciones principales}
+Un rol tiene usuarios; un cliente tiene sedes; una sede tiene equipos; una categoría clasifica equipos; un usuario puede originar un técnico; técnicos, equipos y estados se relacionan con órdenes; una orden tiene detalles; repuestos aparecen en detalles y movimientos; el usuario identifica al responsable del movimiento.
+\figura{.98}{figuras/04_modelo_relacional.png}{Modelo relacional simplificado. Fuente: elaboración propia.}
+\chapter{Módulos funcionales}
+El inicio presenta el producto; login autentica; dashboard resume indicadores; clientes, sedes, equipos, técnicos y repuestos usan CRUD; órdenes registran y actualizan trabajo; usuarios y reportes son administrativos; logout destruye la sesión. Los errores 403, 404 y 500 distinguen falta de permiso, ruta inexistente y fallo interno.
+\chapter{Roles y permisos}
+Administrador: CRUD general, usuarios y reportes. Recepción: clientes, sedes, equipos y creación/consulta de órdenes. Técnico: consulta órdenes y registra estado, diagnóstico, solución y observaciones. La interfaz oculta opciones y Auth vuelve a validar en servidor.
+\figura{.98}{figuras/07_roles_permisos.png}{Matriz de permisos implementada. Fuente: elaboración propia.}
+\chapter{CRUD}
+CRUD significa Create, Read, Update y Delete. El proyecto prefiere desactivación lógica. En clientes, \texttt{/clientes} ejecuta \texttt{ClienteController::index}; \texttt{CrudModel::all} lee; la vista lista; \texttt{/clientes/form} presenta formulario; POST a \texttt{/clientes/save} filtra campos permitidos y ejecuta INSERT o UPDATE preparado; finalmente redirige.
+\chapter{Autenticación y sesiones}
+\texttt{Session::start} inicia sesión. AuthController recibe usuario y contraseña, Usuario busca un usuario activo y \texttt{password\_verify} compara el hash. Al éxito se regenera el ID y se guarda id, nombre y rol. \texttt{requireLogin} protege rutas y \texttt{requireRole} responde 403. Logout vacía datos, elimina cookie y destruye sesión.
+\figura{.95}{figuras/05_flujo_login.png}{Flujo de autenticación. Fuente: elaboración propia.}
+\chapter{Órdenes de servicio}
+Recepción selecciona equipo, técnico, estado, tipo, prioridad, fecha y falla. El técnico actualiza diagnóstico, solución y estado. La orden posee detalles con actividad, repuesto, cantidad, precio y subtotal generado. El costo total combina mano de obra y detalles; al estado 5 se registra fecha de cierre.
+\figura{.95}{figuras/06_flujo_orden_servicio.png}{Ciclo de una orden. Fuente: elaboración propia.}
+\chapter{Trigger, procedimiento y función}
+\begin{table}[H]\centering\begin{tabular}{llll}\toprule Objeto&Implementado&Propósito&Archivo\\\midrule tr\_detalle\_stock&Sí&Descontar stock y recalcular total&tw\_maintflow.sql\\sp\_cerrar\_orden&Sí&Cerrar orden y fechar&tw\_maintflow.sql\\fn\_total\_orden&Sí&Calcular total por id&tw\_maintflow.sql\\\bottomrule\end{tabular}\caption{Objetos SQL comprobados en el script real.}\end{table}
+El trigger es AFTER INSERT sobre \texttt{detalle\_orden}; si hay repuesto y cantidad positiva, resta stock y recalcula costo. Su aporte es consistencia automática; su riesgo es permitir stock negativo porque no existe validación previa. La prueba insertó una unidad en transacción: 18 pasó a 17 y luego se hizo rollback.
+\begin{lstlisting}[language=SQL]
+CREATE TRIGGER tr_detalle_stock AFTER INSERT ON detalle_orden
+FOR EACH ROW BEGIN
+ IF NEW.id_repuesto IS NOT NULL AND NEW.cantidad>0 THEN
+  UPDATE repuestos SET stock_actual=stock_actual-NEW.cantidad
+  WHERE id_repuesto=NEW.id_repuesto;
+ END IF;
+END
+\end{lstlisting}
+\figura{.95}{figuras/08_trigger_stock.png}{Flujo del trigger. Fuente: elaboración propia.}
+\chapter{Consultas SQL importantes}
+\texttt{consultas\_demo.sql} contiene INNER JOIN para unir órdenes, equipos y estados; LEFT JOIN para conservar técnicos sin órdenes; COUNT y GROUP BY para totales; SUM para consumo/costo; AVG para costo promedio; HAVING filtra grupos; ORDER BY ordena costos; BETWEEN filtra fechas; y \texttt{stock\_actual <= stock\_minimo} detecta alertas.
+\begin{lstlisting}[language=SQL]
+SELECT es.nombre_estado, COUNT(*) total
+FROM ordenes_servicio o
+JOIN estados_orden es ON es.id_estado=o.id_estado
+GROUP BY es.id_estado;
+\end{lstlisting}
+\chapter{Seguridad básica}
+Se emplean hashes, prepared statements, \texttt{htmlspecialchars}, validación de sesión y rol, IDs con \texttt{FILTER\_VALIDATE\_INT}, lista blanca de tablas/campos, confirmación JavaScript y datos sintéticos. Mejora pendiente: token CSRF y reglas de validación más profundas.
+\chapter{Fragmentos de código explicados}
+\section*{Punto de entrada: public/index.php}
+\begin{lstlisting}[language=PHP]
+require_once dirname(__DIR__).'/app/config/config.php';
+require_once APP_ROOT.'/app/config/database.php';
+spl_autoload_register(function(string $class): void { /* carga clases */ });
+Session::start();
+header('Content-Type: text/html; charset=UTF-8');
+(new App())->run();
+\end{lstlisting}
+Carga configuración, registra clases, abre sesión, declara UTF-8 y delega a App.
+\section*{Router y controlador base}
+\begin{lstlisting}[language=PHP]
+$parts = array_values(array_filter(explode('/', $path)));
+$class = $map[$segment].'Controller';
+$action = $parts[1] ?? 'index';
+(new $class)->$action();
+\end{lstlisting}
+El mapa impide instanciar clases arbitrarias. Controller extrae datos, incluye header/vista/footer y ofrece redirección.
+\section*{Modelo, Auth y conexión}
+\begin{lstlisting}[language=PHP]
+abstract class Model {
+ protected PDO $db;
+ public function __construct(){ $this->db=Database::connection(); }
+}
+// DSN real: mysql:host=localhost;dbname=bd_tw_maintflow;charset=utf8mb4
+\end{lstlisting}
+Todos los modelos heredan la misma conexión. Auth comprueba sesión y roles antes de ejecutar casos de uso.
+\section*{Clientes y órdenes}
+ClienteController configura tabla, PK, carpeta y campos; hereda el flujo de CrudController. Cliente hereda CrudModel. La vista compartida escapa cada valor. OrdenServicio incluye JOIN, opciones, creación y actualización técnica con sentencias preparadas. Los doce fragmentos ampliados están en \texttt{codigo/fragmentos\_explicados.txt}.
+\chapter{Diagramas}
+Los ocho diagramas anteriores muestran arquitectura, flujo MVC, componentes, relaciones, autenticación, ciclo de orden, roles y trigger. Se generaron como PNG legibles y se conservan en \texttt{documentacion\_defensa/figuras}.
+\chapter{Capturas reales del sistema}
+\foreach \n/\t in {01_inicio/Inicio público,02_login/Login,03_dashboard_admin/Dashboard administrativo,04_clientes/Clientes,05_sedes_utf8_corregido/Sedes con UTF-8,06_equipos/Equipos,07_tecnicos/Técnicos,08_ordenes/Órdenes,09_detalle_orden/Detalle de orden,10_repuestos/Repuestos,11_usuarios/Usuarios,12_reportes/Reportes,13_error_403/Error 403,14_error_404/Error 404,15_phpmyadmin_tablas/Tablas en phpMyAdmin}{\figura{.92}{capturas/\n.png}{\t. Fuente: captura real de TW MaintFlow.}}
+\chapter{Preguntas posibles del docente}
+\begin{enumerate}[leftmargin=*]
+\item ¿Qué es MVC? Separación entre datos, presentación y coordinación.
+\item ¿Modelo vs. controlador? El modelo persiste; el controlador dirige el caso de uso.
+\item ¿Por qué no hay SQL en vistas? Para desacoplar presentación y datos.
+\item ¿Qué hace Router? Traduce URL a controlador y acción permitidos.
+\item ¿Qué es sesión? Estado de usuario conservado en el servidor.
+\item ¿Cómo se validan roles? Con \texttt{Auth::requireRole}.
+\item ¿Qué hace password\_verify? Compara contraseña con hash.
+\item ¿Qué es PK? Identificador único de una fila.
+\item ¿Qué es FK? Restricción que referencia otra tabla.
+\item ¿Por qué 12 tablas? Para normalizar las entidades del dominio.
+\item ¿Cliente-sede? Uno a muchos.
+\item ¿Sede-equipo? Uno a muchos.
+\item ¿Equipo-orden? Uno a muchos.
+\item ¿Orden-detalle? Uno a muchos.
+\item ¿Cómo funciona el trigger? Después del detalle resta stock y recalcula costo.
+\item ¿Riesgo del trigger? No impide stock negativo.
+\item ¿Procedimiento almacenado? Rutina SQL invocable; aquí cierra una orden.
+\item ¿Función SQL? Rutina que retorna valor; aquí retorna total.
+\item ¿Por qué son opcionales? MVC funciona sin objetos almacenados.
+\item ¿Prepared statement? SQL compilado con parámetros separados.
+\item ¿Cómo evita inyección? No concatena valores dentro de SQL.
+\item ¿Ruta inexistente? Router responde 404.
+\item ¿403 vs. 404? Prohibido vs. no encontrado.
+\item ¿Cómo se descuenta stock? Trigger AFTER INSERT.
+\item ¿Cómo se calcula costo? Mano de obra más suma de subtotales.
+\item ¿Por qué utf8mb4? Representa Unicode completo y español correctamente.
+\item ¿GET vs. POST? GET consulta; POST envía cambios.
+\item ¿Qué es CRUD? Crear, leer, actualizar y eliminar/desactivar.
+\item ¿GROUP BY? Agrupa filas para agregados.
+\item ¿WHERE vs. HAVING? Filtra filas antes y grupos después.
+\item ¿INNER JOIN? Devuelve coincidencias.
+\item ¿LEFT JOIN? Conserva todas las filas izquierdas.
+\item ¿Qué hace htmlspecialchars? Escapa HTML para reducir XSS.
+\item ¿Qué hace session\_regenerate\_id? Cambia ID tras login.
+\item ¿Qué es PDO? API uniforme de acceso a bases.
+\item ¿Qué hace .htaccess? Reescribe rutas hacia index.php.
+\item ¿Fallback de rutas? \texttt{index.php?url=clientes/index}.
+\item ¿Qué patrón usa public/index.php? Front Controller.
+\item ¿Cómo se cierra sesión? Vacía sesión, cookie y destruye estado.
+\item ¿Mejora prioritaria? CSRF, validación y control de stock previo.
+\end{enumerate}
+\chapter{Guion de exposición de siete minutos}
+\begin{enumerate}\item[0:00] Problema: información dispersa de mantenimiento.\item[0:40] Solución y módulos.\item[1:20] Tecnologías XAMPP/PHP/MariaDB.\item[2:00] MVC y flujo de una ruta.\item[3:00] Doce tablas y relaciones.\item[3:50] Login y tres roles.\item[4:40] Ciclo de orden.\item[5:30] Trigger, procedimiento y función.\item[6:10] Dashboard/reportes.\item[6:40] Cumplimiento, seguridad y mejoras.\end{enumerate}
+\chapter{Práctica guiada}
+Jhon y Maricielo deben localizar ClienteController, Cliente/CrudModel y la vista compartida; seguir \texttt{/clientes}; explicar CRUD y una FK; ejecutar un JOIN; probar cada login; provocar 403 con técnico y 404 con una ruta inventada; crear un cliente y una orden; insertar un detalle en transacción y comprobar el descuento de stock.
+\chapter{Glosario}
+\begin{description}[style=nextline]\item[MVC] Modelo-Vista-Controlador.\item[CRUD] Operaciones de persistencia.\item[Router] Resolutor de rutas.\item[Controller] Coordinador.\item[Model] Acceso a datos.\item[View] Presentación.\item[Session] Estado de navegación.\item[Authentication] Verificación de identidad.\item[Authorization] Verificación de permisos.\item[Trigger] Acción automática SQL.\item[Procedure] Rutina SQL sin retorno obligatorio.\item[Function] Rutina SQL con retorno.\item[Primary key] Clave primaria.\item[Foreign key] Clave foránea.\item[JOIN] Unión de tablas.\item[Hash] Representación irreversible.\item[SQL Injection] Inyección de código SQL.\item[UTF-8] Codificación Unicode.\item[utf8mb4] Juego completo UTF-8 en MariaDB.\end{description}
+\chapter{Conclusiones}
+El proyecto cumple una arquitectura MVC educativa, 12 tablas relacionadas y ejecución en XAMPP. Controladores, modelos y vistas están separados; sesiones y roles protegen rutas; UTF-8 se aplica de extremo a extremo. El trabajo integra conceptos del curso y deja como mejoras CSRF, validación avanzada, auditoría, control preventivo de stock y pruebas automatizadas.
+\end{document}

@@ -1,0 +1,1 @@
+administrador: acceso total. recepcion: altas/edición de activos y creación de órdenes. tecnico: consulta y actualización técnica de órdenes. Credenciales demo documentadas en README_INSTALACION.txt.

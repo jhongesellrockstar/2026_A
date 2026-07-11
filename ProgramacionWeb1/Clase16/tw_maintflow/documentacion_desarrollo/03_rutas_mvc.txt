@@ -1,0 +1,1 @@
+Públicas: / y /auth/login. Protegidas: /dashboard, /clientes, /sedes, /equipos, /tecnicos, /ordenes, /repuestos. Administrador: /usuarios y /reportes. Fallback: index.php?url=controlador/accion.

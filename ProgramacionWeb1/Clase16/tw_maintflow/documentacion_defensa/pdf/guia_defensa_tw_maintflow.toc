@@ -1,0 +1,24 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Resumen del proyecto}{4}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Tecnologías usadas}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Teoría mínima de MVC}{6}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Arquitectura real del proyecto}{7}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Flujo de una petición}{8}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Base de datos}{9}{chapter.6}%
+\contentsline {chapter}{\numberline {7}Relaciones principales}{10}{chapter.7}%
+\contentsline {chapter}{\numberline {8}Módulos funcionales}{11}{chapter.8}%
+\contentsline {chapter}{\numberline {9}Roles y permisos}{12}{chapter.9}%
+\contentsline {chapter}{\numberline {10}CRUD}{13}{chapter.10}%
+\contentsline {chapter}{\numberline {11}Autenticación y sesiones}{14}{chapter.11}%
+\contentsline {chapter}{\numberline {12}Órdenes de servicio}{15}{chapter.12}%
+\contentsline {chapter}{\numberline {13}Trigger, procedimiento y función}{16}{chapter.13}%
+\contentsline {chapter}{\numberline {14}Consultas SQL importantes}{18}{chapter.14}%
+\contentsline {chapter}{\numberline {15}Seguridad básica}{19}{chapter.15}%
+\contentsline {chapter}{\numberline {16}Fragmentos de código explicados}{20}{chapter.16}%
+\contentsline {chapter}{\numberline {17}Diagramas}{21}{chapter.17}%
+\contentsline {chapter}{\numberline {18}Capturas reales del sistema}{22}{chapter.18}%
+\contentsline {chapter}{\numberline {19}Preguntas posibles del docente}{30}{chapter.19}%
+\contentsline {chapter}{\numberline {20}Guion de exposición de siete minutos}{32}{chapter.20}%
+\contentsline {chapter}{\numberline {21}Práctica guiada}{33}{chapter.21}%
+\contentsline {chapter}{\numberline {22}Glosario}{34}{chapter.22}%
+\contentsline {chapter}{\numberline {23}Conclusiones}{36}{chapter.23}%

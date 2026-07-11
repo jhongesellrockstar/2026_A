@@ -1,0 +1,2 @@
+GUION 7 MINUTOS
+0:00 problema; 0:40 solución; 1:20 tecnologías; 2:00 MVC; 3:00 base de datos; 3:50 login/roles; 4:40 orden; 5:30 objetos SQL; 6:10 reportes; 6:40 conclusiones y mejoras.

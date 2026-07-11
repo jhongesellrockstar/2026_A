@@ -1,0 +1,2 @@
+document.querySelectorAll('.confirm').forEach(a=>a.addEventListener('click',e=>{if(!confirm('¿Confirma desactivar este registro?'))e.preventDefault()}));document.querySelector('.menu')?.addEventListener('click',()=>document.querySelector('.side')?.classList.toggle('open'));document.querySelectorAll('input[type=number]').forEach(i=>i.addEventListener('input',()=>i.setCustomValidity(+i.value<0?'Debe ser positivo':'')));
+

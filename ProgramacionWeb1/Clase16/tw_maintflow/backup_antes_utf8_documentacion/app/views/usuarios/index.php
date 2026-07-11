@@ -1,0 +1,2 @@
+<h1>Usuarios y roles</h1><div class="table-wrap"><table><tr><th>ID</th><th>Usuario</th><th>Nombre</th><th>Correo</th><th>Rol</th><th>Estado</th></tr><?php foreach($rows as $r):?><tr><td><?=$r['id_usuario']?></td><td><?=$r['username']?></td><td><?=htmlspecialchars($r['nombres'].' '.$r['apellidos'])?></td><td><?=$r['correo']?></td><td><span class="badge"><?=$r['nombre_rol']?></span></td><td><?=$r['estado']?'Activo':'Inactivo'?></td></tr><?php endforeach;?></table></div>
+

@@ -1,0 +1,2 @@
+<aside class="side"><nav><a href="<?=BASE_URL?>/dashboard">▦ Dashboard</a><a href="<?=BASE_URL?>/clientes">Clientes</a><a href="<?=BASE_URL?>/sedes">Sedes</a><a href="<?=BASE_URL?>/equipos">Equipos</a><a href="<?=BASE_URL?>/tecnicos">Técnicos</a><a href="<?=BASE_URL?>/ordenes">Órdenes</a><a href="<?=BASE_URL?>/repuestos">Repuestos</a><?php if(Auth::user()['rol']==='administrador'):?><a href="<?=BASE_URL?>/usuarios">Usuarios</a><a href="<?=BASE_URL?>/reportes">Reportes</a><?php endif;?><a href="<?=BASE_URL?>/auth/logout">Cerrar sesión</a></nav></aside>
+

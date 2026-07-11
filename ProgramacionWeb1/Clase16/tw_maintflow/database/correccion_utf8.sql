@@ -1,0 +1,24 @@
+-- Corrección no destructiva de textos UTF-8 conocidos.
+USE bd_tw_maintflow;
+SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER DATABASE bd_tw_maintflow CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE roles CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE usuarios CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE clientes CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE sedes CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE categorias_equipo CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE equipos CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE tecnicos CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE estados_orden CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE ordenes_servicio CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE detalle_orden CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE repuestos CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+ALTER TABLE movimientos_repuesto CONVERT TO CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+UPDATE sedes SET nombre_sede='Almacén 2' WHERE id_sede=2;
+UPDATE sedes SET nombre_sede='Frigorífico' WHERE id_sede=8;
+UPDATE tecnicos SET especialidad='Mecánica' WHERE id_tecnico=1;
+UPDATE tecnicos SET especialidad='Electricidad' WHERE id_tecnico=2;
+UPDATE tecnicos SET especialidad='Refrigeración' WHERE id_tecnico=3;
+UPDATE tecnicos SET especialidad='Supervisión' WHERE id_tecnico=4;
+UPDATE roles SET descripcion='Registro y consulta', nombre_rol='recepcion' WHERE id_rol=2;
+UPDATE estados_orden SET descripcion='Técnico asignado' WHERE id_estado=2;

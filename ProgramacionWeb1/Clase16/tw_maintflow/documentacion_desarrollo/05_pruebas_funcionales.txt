@@ -1,0 +1,1 @@
+Lista de verificación: importación SQL, conexión PDO, login/password_verify, autorización 403, rutas/404, dashboard, clientes/equipos, creación/consulta de orden, actualización técnica, reportes, logout y sintaxis php -l.

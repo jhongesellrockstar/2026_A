@@ -1,0 +1,1 @@
+Alcance futuro: formularios enriquecidos con selectores dependientes; carga de evidencias; exportación PDF/Excel; paginación; token CSRF; recuperación de contraseña; auditoría completa y pruebas automatizadas.

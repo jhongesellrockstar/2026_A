@@ -1,0 +1,2 @@
+1. Mostrar public/index.php como único punto de entrada. 2. Explicar cómo Router elige controlador/acción. 3. Abrir ClienteController: valida rol y delega al modelo. 4. Abrir CrudModel: PDO/prepared statements. 5. Abrir la vista: solo HTML y datos escapados. 6. Demostrar login por rol, CRUD, orden y dashboard. 7. Mostrar las 12 tablas y relaciones en phpMyAdmin.
+

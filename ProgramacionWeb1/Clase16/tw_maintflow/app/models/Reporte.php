@@ -1,0 +1,3 @@
+<?php
+class Reporte extends Model {public function data():array{return ['estados'=>$this->db->query('SELECT e.nombre_estado etiqueta,COUNT(o.id_orden) total FROM estados_orden e LEFT JOIN ordenes_servicio o ON o.id_estado=e.id_estado GROUP BY e.id_estado')->fetchAll(),'tecnicos'=>$this->db->query('SELECT CONCAT(u.nombres," ",u.apellidos) etiqueta,COUNT(o.id_orden) total FROM tecnicos t JOIN usuarios u ON u.id_usuario=t.id_usuario LEFT JOIN ordenes_servicio o ON o.id_tecnico=t.id_tecnico GROUP BY t.id_tecnico')->fetchAll(),'bajo'=>$this->db->query('SELECT * FROM repuestos WHERE stock_actual<=stock_minimo')->fetchAll()];}}
+
