@@ -1,0 +1,234 @@
+Universidad Nacional del Callao
+Facultad de Ingeniería Industrial y de Sistemas
+Escuela Profesional de Ingeniería de Sistemas
+
+Partes importantes del código fuente
+TW HydroData
+Programación Web I - ISEE405
+Curso:
+Docente:
+Estudiante:
+Código:
+Proyecto:
+Marca:
+Año:
+
+Programación Web I - ISEE405
+GRADOS ESPINOZA HERBERT JUNIOR
+Jhon Gesell Villanueva Portella
+2515250011
+TW HydroData
+Tecprog World / TW INNOVA
+2026
+
+Callao, Perú
+
+Índice
+1. Introducción
+
+2
+
+2. Organización general del proyecto
+
+2
+
+3. Arquitectura usada
+
+2
+
+4. Archivos principales
+
+2
+
+5. Layout reutilizable
+
+2
+
+6. Seguridad y sesiones
+
+3
+
+7. Base de datos
+
+3
+
+8. Conexión a MySQL
+
+4
+
+9. Consultas públicas
+
+5
+
+10.Descargas CSV
+
+5
+
+11.Módulos CRUD
+
+6
+
+12.Validaciones
+
+9
+
+13.Estilos
+
+9
+
+14.Reportes
+
+9
+
+15.Fragmentos de código importantes
+
+10
+
+16.Capturas operativas
+
+11
+
+17.Conclusiones técnicas
+
+13
+
+1
+
+1.
+
+Introducción
+
+Este documento explica los componentes técnicos más importantes de TW HydroData.
+El sistema fue desarrollado sin framework pesado, usando PHP estructurado, MySQL/MariaDB,
+HTML, CSS y JavaScript básico. La organización modular permite comprender fácilmente
+la funcionalidad del sistema.
+
+2.
+
+Organización general del proyecto
+Listing 1. Árbol resumido del proyecto
+
+hidroaforo_web/
+assets/css/estilos.css
+assets/js/validaciones.js
+assets/img/tw_hydrodata/
+includes/header.php, menu.php, footer.php, auth.php
+cuencas/ rios/ estaciones/ equipos/
+campanas/ aforos_liquidos/ aforos_solidos/
+usuarios/ reportes/ descargar/
+index.php, login.php, logout.php, dashboard.php
+conexion.php, database.sql, verificar_instalacion.php
+
+3.
+
+Arquitectura usada
+
+El sistema no utiliza MVC formal ni framework. Usa una arquitectura modular con
+archivos de presentación, includes reutilizables, conexión centralizada, módulos CRUD,
+consultas SQL y control de sesiones. Esta arquitectura es apropiada para Programación
+Web I porque permite observar directamente el flujo entre formulario, PHP y MySQL.
+
+4.
+
+Archivos principales
+Archivo
+Función
+index.php
+Portada pública y acceso a consultas.
+dashboard.php
+Panel privado con indicadores.
+conexion.php
+Conexión MySQL y funciones auxiliares.
+verificar_instalacion.php
+Verifica base y tablas.
+login.php
+Valida usuario y clave.
+logout.php
+Cierra la sesión activa.
+
+5.
+
+Layout reutilizable
+
+Los archivos includes/header.php, includes/menu.php y includes/footer.php
+reducen repetición y mantienen una interfaz uniforme. El encabezado integra el logo, el
+nombre TW HydroData, el estado de sesión y el menú público/privado.
+
+2
+
+6.
+
+Seguridad y sesiones
+
+El archivo includes/auth.php contiene funciones de control de sesión y rol. El sistema
+inicia sesión con session_start, valida claves con password_verify y restringe rutas
+privadas con requiere_login y requiere_rol.
+Listing 2. Control básico de rol
+function requiere_rol($roles)
+{
+requiere_login();
+if (!in_array(usuario_rol(), $roles)) {
+header("Location: /hidroaforo_web/dashboard.php?error=permiso");
+exit;
+}
+}
+
+Figura 1. Fragmento del archivo auth.php. Fuente: elaboración propia mediante ejecución
+local en XAMPP.
+
+7.
+
+Base de datos
+
+database.sql crea la base bd_hidroaforo_web, tablas técnicas, roles, usuarios y archivos de descarga. Las claves foráneas vinculan cuencas, ríos, estaciones, campañas y
+3
+
+aforos.
+
+Figura 2. Fragmento de database.sql. Fuente: elaboración propia mediante ejecución local
+en XAMPP.
+
+8.
+
+Conexión a MySQL
+
+conexion.php centraliza servidor, usuario, clave y base de datos. También define funciones de limpieza y validación numérica.
+Listing 3. Conexión mysqli simplificada
+$conexion = mysqli_connect($servidor, $usuario, $clave, $base_datos);
+if (!$conexion) {
+die("Error de conexion a MySQL: " . mysqli_connect_error());
+}
+mysqli_set_charset($conexion, "utf8mb4");
+
+4
+
+Figura 3. Fragmento del archivo conexion.php. Fuente: elaboración propia mediante ejecución local en XAMPP.
+
+9.
+
+Consultas públicas
+
+Los archivos consulta_estaciones.php, consulta_campanas.php, consulta_aforos_liquidos.ph
+y consulta_aforos_solidos.php usan consultas JOIN para mostrar información relacionada sin requerir login.
+Listing 4. Consulta JOIN de estaciones
+SELECT e.*, r.nombre_rio, c.nombre_cuenca
+FROM estaciones e
+INNER JOIN rios r ON e.id_rio = r.id_rio
+INNER JOIN cuencas c ON r.id_cuenca = c.id_cuenca
+ORDER BY e.codigo_estacion;
+
+10.
+
+Descargas CSV
+
+Los scripts de la carpeta descargar envian cabeceras HTTP de tipo CSV y escriben
+filas con fputcsv. Esto convierte datos SQL en archivos descargables.
+Listing 5. Cabeceras de descarga CSV
+header("Content-Type: text/csv; charset=utf-8");
+header("Content-Disposition: attachment; filename=tw_hydrodata_aforos_liquidos.csv");
+$salida = fopen("php://output", "w");
+fputcsv($salida, ["fecha", "cuenca", "rio", "estacion", "caudal_m3s"]);
+
+5
+
+

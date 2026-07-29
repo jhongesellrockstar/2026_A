@@ -1,0 +1,628 @@
+UNIVERSIDAD NACIONAL DEL CALLAO
+Facultad de Ingeniería Industrial y de Sistemas
+Escuela Profesional de Ingeniería de Sistemas
+
+MANUAL DE USO DEL SOFTWARE
+TW MAINTFLOW
+
+Curso:
+
+Programación Web I - ISEE405
+
+Docente:
+
+GRADOS ESPINOZA HERBERT JUNIOR
+
+Integrantes:
+Código:
+
+HUANCCO SALVATIERRA MARICIELO
+VILLANUEVA PORTELLA JHON GESELL
+2515250011
+
+Año:
+
+2026
+
+Callao, Perú
+
+TW MaintFlow
+
+Manual de uso
+
+Índice
+1. Objetivo del manual
+
+2
+
+2. Descripción del sistema
+
+2
+
+3. Requisitos previos
+
+2
+
+4. Instalación
+
+2
+
+5. Estructura de usuarios
+5.1. Administrador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.2. Recepción . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+5.3. Técnico . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+4
+4
+4
+4
+
+6. Inicio de sesión
+
+4
+
+7. Cierre de sesión
+
+5
+
+8. Uso del dashboard
+
+5
+
+9. Módulo de clientes
+
+7
+
+10. Módulo de sedes
+
+8
+
+11. Módulo de equipos
+
+9
+
+12. Módulo de categorías
+
+10
+
+13. Módulo de técnicos
+
+11
+
+14. Módulo de órdenes de servicio
+14.1. Creación . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.2. Asignación . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.3. Prioridad . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.4. Diagnóstico y solución . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+14.5. Estado y cierre . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+11
+11
+11
+11
+11
+12
+
+15. Detalle de orden
+
+13
+
+16. Módulo de repuestos
+
+13
+
+17. Movimientos de stock
+
+14
+
+18. Gestión de usuarios
+
+15
+
+19. Reportes
+
+15
+
+20. Validaciones
+
+16
+
+21. Restricciones por rol
+
+16
+
+1
+
+TW MaintFlow
+
+Manual de uso
+
+22. Error 403
+
+17
+
+23. Error 404
+
+17
+
+24. Problemas frecuentes
+
+18
+
+25. Evidencias para exposición
+
+18
+
+26. Conclusiones del manual
+
+19
+
+2
+
+TW MaintFlow
+
+Manual de uso
+
+1. Objetivo del manual
+Orientar la instalación y el uso de TW MaintFlow por parte de administradores, personal de recepción y técnicos. Los pasos se basan en la versión funcional tw_maintflow_simple,
+probada en Windows 11 con XAMPP.
+
+2. Descripción del sistema
+TW MaintFlow administra clientes, sedes, equipos, técnicos, órdenes de servicio, repuestos, usuarios y reportes. Las opciones visibles cambian según el rol. La aplicación
+conserva la trazabilidad del equipo atendido, la falla informada, el responsable, el diagnóstico, la solución, los repuestos y el costo.
+
+3. Requisitos previos
+Windows 10 u 11.
+XAMPP con Apache, PHP y MySQL/MariaDB.
+phpMyAdmin habilitado.
+Navegador moderno (Chrome, Edge o equivalente).
+Puerto 80 disponible para Apache y puerto 3306 para MariaDB, salvo configuración distinta.
+
+4. Instalación
+1. Copiar la carpeta tw_maintflow_simple dentro de C:\xampp\htdocs.
+2. Abrir el panel XAMPP e iniciar Apache y MySQL.
+3. Abrir http://localhost/phpmyadmin/.
+4. Seleccionar Importar y cargar C:\xampp\htdocs\tw_maintflow_simple\database.sql.
+5. Confirmar que existe bd_tw_maintflow con doce tablas.
+6. Abrir http://localhost/tw_maintflow_simple/.
+Nota: La configuración incluida usa el usuario MariaDB root sin contraseña,
+configuración habitual del XAMPP local. Si el equipo utiliza otra credencial,
+debe actualizarse config.php.
+
+3
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 1: Apache y MySQL activos en XAMPP.
+
+Figura 2: Base bd_tw_maintflow importada en phpMyAdmin.
+
+Credenciales de demostración
+Rol
+
+Usuario
+
+Contraseña
+
+Uso principal
+
+Administrador
+Recepción
+
+admin
+recepcion
+
+admin123
+recepcion123
+
+Acceso total
+Registro operativo
+
+4
+
+TW MaintFlow
+
+Manual de uso
+
+Rol
+
+Usuario
+
+Contraseña
+
+Uso principal
+
+Técnico
+
+tecnico
+
+tecnico123
+
+Técnico adicional
+
+tecnico2 o tecnico3
+
+tecnico123
+
+Atención de órdenes
+Pruebas de asignación
+
+5. Estructura de usuarios
+5.1. Administrador
+Consulta y gestiona todos los módulos. Es el único rol autorizado para usuarios y
+reportes.
+
+5.2. Recepción
+Registra clientes, sedes, equipos y órdenes, y asigna técnicos. No administra usuarios, reportes, repuestos ni técnicos.
+
+5.3. Técnico
+Consulta las órdenes asignadas a su cuenta. Puede registrar diagnóstico, solución,
+observaciones, estado y actividades; no accede a catálogos administrativos.
+
+6. Inicio de sesión
+1. En la portada, seleccionar Abrir el sistema o Ingresar.
+2. Escribir el usuario en minúsculas.
+3. Escribir la contraseña respetando mayúsculas y minúsculas.
+4. Pulsar Ingresar.
+5. Verificar que el encabezado muestre el nombre y el rol correctos.
+Si las credenciales no coinciden, el formulario muestra Usuario o contraseña incorrectos.
+
+5
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 3: Pantalla de acceso del sistema.
+
+7. Cierre de sesión
+Seleccionar Cerrar sesión en el menú lateral. El sistema vacía la sesión, destruye la
+cookie correspondiente y regresa al login. No debe cerrarse únicamente la pestaña en
+equipos compartidos.
+
+8. Uso del dashboard
+El dashboard muestra seis indicadores: clientes activos, equipos, técnicos activos,
+órdenes, repuestos con stock bajo y costo acumulado. El menú lateral contiene solo las
+opciones autorizadas.
+
+6
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 4: Dashboard del administrador.
+
+Figura 5: Dashboard con sesión de recepción.
+
+7
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 6: Dashboard restringido del técnico.
+
+9. Módulo de clientes
+Listar y buscar visualmente
+Ingresar a Clientes. La tabla presenta razón social, RUC, contacto, teléfono, correo,
+dirección y estado.
+
+Crear
+1. Pulsar + Nuevo cliente.
+2. Completar razón social y RUC; añadir datos de contacto.
+3. Pulsar Guardar.
+4. Confirmar el mensaje Cliente guardado y el registro en la tabla.
+
+Editar o desactivar
+Usar Editar para modificar datos. La desactivación requiere confirmación y conserva
+el registro para mantener relaciones históricas.
+
+8
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 7: Listado real de clientes.
+
+Figura 8: Formulario para un nuevo cliente.
+
+10. Módulo de sedes
+Cada sede pertenece a un cliente. Para crearla, seleccionar + Nueva sede, elegir el
+cliente y completar nombre, dirección, distrito, provincia y departamento. La tabla
+muestra la razón social asociada.
+
+9
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 9: Sedes vinculadas con sus clientes.
+
+11. Módulo de equipos
+El módulo registra activos físicos. Para crear un equipo:
+1. Pulsar + Nuevo equipo.
+2. Elegir sede y categoría.
+3. Escribir código único, nombre, marca, modelo y número de serie.
+4. Indicar fecha de adquisición, estado operativo y observaciones.
+5. Guardar y verificar el registro.
+
+10
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 10: Listado real de equipos de ingeniería.
+
+Figura 11: Formulario de alta de equipo.
+
+12. Módulo de categorías
+Las categorías se almacenan en categorias_equipo y alimentan la lista del formulario de equipos. La versión actual no incorpora una pantalla CRUD independiente para
+categorías. Si se requiere ampliar el catálogo durante la exposición, se debe hacer en la
+base o implementar previamente un controlador, modelo, vista y ruta específicos; no
+se recomienda editarlo durante una demostración.
+
+11
+
+TW MaintFlow
+
+Manual de uso
+
+13. Módulo de técnicos
+El administrador puede listar, crear, editar y desactivar técnicos. Un técnico se vincula con una cuenta de usuario de rol tecnico; además se registran especialidad, teléfono
+y fecha de ingreso.
+
+Figura 12: Listado de técnicos activos y sus especialidades.
+
+14. Módulo de órdenes de servicio
+14.1. Creación
+Administrador o recepción seleccionan + Nueva orden, eligen equipo, técnico y estado, indican mantenimiento preventivo o correctivo, prioridad, fecha programada, falla
+y costo de mano de obra.
+
+14.2. Asignación
+La asignación se realiza al crear la orden mediante el técnico seleccionado. El técnico
+autenticado verá únicamente las órdenes relacionadas con su usuario.
+
+14.3. Prioridad
+Las prioridades son Baja, Media, Alta y Crítica. Deben reflejar el impacto real para
+que la lista sea útil en la planificación.
+
+14.4. Diagnóstico y solución
+En Ver, el técnico escribe diagnóstico, solución y observaciones. Estos campos no
+deben confundirse: el diagnóstico explica la causa y la solución documenta la intervención.
+12
+
+TW MaintFlow
+
+Manual de uso
+
+14.5. Estado y cierre
+El estado sigue el catálogo Pendiente, Asignada, En proceso, En espera y Cerrada.
+Al finalizar, el usuario autorizado selecciona Cerrada y registra la solución. La base
+también contiene sp_cerrar_orden como operación SQL especial, aunque la interfaz
+usa la actualización del modelo.
+
+Figura 13: Listado de órdenes de servicio.
+
+Figura 14: Formulario para crear una orden.
+
+13
+
+TW MaintFlow
+
+Manual de uso
+
+15. Detalle de orden
+El detalle presenta equipo, técnico, estado, descripción, diagnóstico, solución, observaciones, mano de obra y costo total. La sección de actividades permite indicar descripción, repuesto opcional, cantidad y precio. Al insertar un repuesto, el trigger descuenta
+stock y recalcula el costo.
+
+Figura 15: Detalle de una orden con formularios técnicos.
+
+16. Módulo de repuestos
+El administrador gestiona código, nombre, descripción, unidad de medida, stock
+actual, stock mínimo y precio. Un stock actual menor o igual al mínimo aparece en el
+reporte de alerta.
+
+14
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 16: Catálogo de repuestos y niveles de inventario.
+
+17. Movimientos de stock
+La tabla movimientos_repuesto registra entradas, salidas y ajustes con cantidad,
+motivo, fecha y referencia. La versión seleccionada conserva el historial en base de datos,
+pero no incorpora una pantalla CRUD exclusiva. El consumo asociado a una orden se
+registra en detalle_orden y el trigger actualiza repuestos.stock_actual.
+
+Figura 17: Movimientos reales almacenados en MariaDB.
+
+15
+
+TW MaintFlow
+
+Manual de uso
+
+18. Gestión de usuarios
+Solo el administrador puede acceder. La pantalla lista usuario, nombres, correo, rol
+y estado. Las nuevas contraseñas se almacenan como hash; para retirar acceso se usa
+desactivación lógica.
+
+Figura 18: Gestión de cuentas y roles.
+
+19. Reportes
+El reporte presenta métricas generales, órdenes agrupadas por estado, órdenes por
+técnico y repuestos con stock bajo. Los valores proceden de COUNT, SUM, GROUP BY, INNER
+JOIN y LEFT JOIN.
+
+16
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 19: Reporte operativo accesible al administrador.
+
+20. Validaciones
+Campos requeridos en formularios HTML.
+Conversión de identificadores a enteros y costos a números.
+Rechazo de costos o cantidades negativas.
+Token CSRF en solicitudes POST.
+Confirmación JavaScript antes de acciones sensibles de desactivación.
+Escape HTML mediante e() para datos presentados.
+Restricción de usuario técnico a órdenes asignadas.
+
+21. Restricciones por rol
+Opción
+
+Administrador
+
+Recepción
+
+Técnico
+
+Clientes, sedes y equipos
+Crear órdenes
+Actualizar trabajo técnico
+Técnicos y repuestos
+Usuarios y reportes
+
+Sí
+
+Sí
+
+No
+
+Sí
+Sí
+
+Sí
+No
+
+No
+Sí, asignadas
+
+Sí
+Sí
+
+No
+No
+
+No
+No
+
+17
+
+TW MaintFlow
+
+Manual de uso
+
+22. Error 403
+El error 403 significa que la sesión es válida, pero el rol no tiene permiso. La prueba
+se realizó ingresando como recepción y abriendo Reportes. Debe usarse Volver y continuar con las opciones permitidas.
+
+Figura 20: Respuesta 403 obtenida con una cuenta de recepción.
+
+23. Error 404
+El error 404 indica que la combinación de controlador y acción no existe en rutas.php.
+Revisar la URL o volver al dashboard.
+
+Figura 21: Respuesta 404 ante una ruta inexistente.
+18
+
+TW MaintFlow
+
+Manual de uso
+
+24. Problemas frecuentes
+Problema
+
+Posible causa
+
+Solución
+
+Apache no inicia
+
+Puerto 80/443 ocupado
+
+MySQL no inicia
+
+Puerto 3306 ocupado o datos dañados
+
+Base no importada
+
+Se omitió database.sql
+
+Error de conexión
+
+Credenciales diferentes
+en MariaDB
+Usuario, contraseña o
+cuenta inactiva
+Controlador/acción
+no
+admitidos
+Rol no autorizado
+
+Revisar el log y detener o reconfigurar el servicio que ocupa el
+puerto.
+Revisar mysql_error.log; no reemplazar la carpeta de datos sin
+copia.
+Importar el archivo y confirmar
+las doce tablas.
+Ajustar constantes DB_* en
+config.php.
+Usar credenciales válidas y comprobar usuarios.estado.
+Abrir la URL base y navegar mediante el menú.
+Ingresar con el rol apropiado; no
+modificar manualmente la URL.
+Importar como UTF-8 y conservar mysqli_set_charset.
+Verificar detalle y existencia de
+tr_detalle_stock.
+
+Login incorrecto
+Ruta no encontrada
+Permiso insuficiente
+
+Caracteres UTF-8 in- Importación o conexión
+correctos
+sin utf8mb4
+Stock no actualizado Detalle
+sin
+repuesto/cantidad o trigger
+ausente
+
+25. Evidencias para exposición
+Antes de sustentar se recomienda demostrar esta secuencia:
+1. Mostrar XAMPP activo y bd_tw_maintflow con doce tablas.
+2. Ingresar como administrador y presentar indicadores y módulos.
+3. Crear o editar un cliente sin alterar información crítica.
+4. Mostrar una orden, su técnico, diagnóstico, solución y detalle.
+5. Enseñar el trigger en phpMyAdmin y explicar el descuento de stock.
+6. Cerrar sesión e ingresar como recepción; intentar Reportes y mostrar 403.
+7. Ingresar como técnico y comprobar que solo ve sus órdenes.
+8. Explicar 404, prepared statements y utf8mb4.
+
+19
+
+TW MaintFlow
+
+Manual de uso
+
+Figura 22: Evidencia del trigger en la base de datos activa.
+
+26. Conclusiones del manual
+El uso correcto de TW MaintFlow depende de iniciar los servicios, importar la base
+y respetar el rol asignado. Los módulos siguen una navegación uniforme y las validaciones reducen errores comunes. La versión documentada fue recorrida con las tres cuentas, por lo que las pantallas y restricciones descritas corresponden al comportamiento
+observado.
+
+20
+
+

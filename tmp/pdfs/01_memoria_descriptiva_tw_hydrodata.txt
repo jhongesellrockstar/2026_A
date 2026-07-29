@@ -1,0 +1,307 @@
+Universidad Nacional del Callao
+Facultad de Ingeniería Industrial y de Sistemas
+Escuela Profesional de Ingeniería de Sistemas
+
+Memoria descriptiva del software
+TW HydroData
+Plataforma web para gestión, consulta, publicación y descarga de
+datos hidrométricos e hidrosedimentológicos
+Curso:
+Docente:
+Estudiante:
+Código:
+Proyecto:
+Marca:
+Año:
+
+Programación Web I - ISEE405
+GRADOS ESPINOZA HERBERT JUNIOR
+Jhon Gesell Villanueva Portella
+2515250011
+TW HydroData
+Tecprog World / TW INNOVA
+2026
+
+Callao, Perú
+
+Índice
+1. Introducción
+
+2
+
+2. Fundamento teórico
+2.1. HTML . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2. CSS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.3. JavaScript . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.4. PHP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.5. MySQL/MariaDB . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.6. XAMPP y phpMyAdmin . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.7. Sesiones y roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.8. Archivos CSV . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.9. Datos hidrométricos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.10. Aforo líquido . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.11. Aforo sólido . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.12. Campañas de medición y estaciones . . . . . . . . . . . . . . . . . . . . . .
+
+2
+2
+2
+2
+2
+2
+2
+2
+3
+3
+3
+3
+3
+
+3. Descripción general del software
+
+3
+
+4. Objetivo general
+
+3
+
+5. Objetivos específicos
+
+3
+
+6. Contenido de la interfaz del software
+
+4
+
+7. Base de datos
+
+4
+
+8. Mención de figuras
+
+4
+
+9. Figuras
+
+5
+
+10.Conclusiones
+
+12
+
+11.Recomendaciones
+
+13
+
+1
+
+1.
+
+Introducción
+
+TW HydroData es una plataforma web desarrollada para gestionar, consultar, publicar y descargar datos hidrométricos e hidrosedimentológicos. El sistema fue construido
+para ejecutarse localmente con XAMPP, Apache, PHP estructurado, MySQL/MariaDB
+y phpMyAdmin. Su enfoque combina una presentación pública para consulta abierta con
+un panel privado para usuarios autorizados.
+El proyecto se presenta como una solución de Tecprog World / TW INNOVA orientada
+a consultoras, investigadores, universidades y entidades públicas que requieren organizar
+información de estaciones, campañas de aforo, caudales líquidos y caudales sólidos.
+
+2.
+
+Fundamento teórico
+
+2.1.
+
+HTML
+
+HTML estructura el contenido de las páginas del sistema, formularios, tablas de consulta y secciones informativas.
+
+2.2.
+
+CSS
+
+CSS define la identidad visual del producto, el diseño responsivo, colores, tarjetas,
+tablas, imágenes y distribución de interfaz.
+
+2.3.
+
+JavaScript
+
+JavaScript se utiliza para validaciones básicas en formularios y para el cálculo dinámico
+de caudal líquido.
+
+2.4.
+
+PHP
+
+PHP estructurado procesa formularios, consultas SQL, sesiones, autenticación, roles y
+generación de salidas CSV.
+
+2.5.
+
+MySQL/MariaDB
+
+MySQL/MariaDB almacena cuencas, ríos, estaciones, equipos, campañas, mediciones,
+usuarios, roles y descargas.
+
+2.6.
+
+XAMPP y phpMyAdmin
+
+XAMPP proporciona Apache y MySQL para la ejecución local. phpMyAdmin permite
+administrar visualmente la base de datos.
+
+2.7.
+
+Sesiones y roles
+
+Las sesiones permiten mantener el usuario autenticado. Los roles diferencian visitante
+público, usuario editor y administrador.
+
+2
+
+2.8.
+
+Archivos CSV
+
+CSV permite exportar datos tabulares de aforos líquidos y sólidos para su análisis en
+hojas de cálculo o herramientas externas.
+
+2.9.
+
+Datos hidrométricos
+
+Los datos hidrométricos describen mediciones de ríos, estaciones, secciones y caudales.
+En TW HydroData se organizan por campaña.
+
+2.10.
+
+Aforo líquido
+
+El aforo líquido estima caudal mediante ancho de sección, profundidad media y velocidad media.
+
+2.11.
+
+Aforo sólido
+
+El aforo sólido registra concentración de sedimentos, tipo de muestra, método de laboratorio y caudal sólido.
+
+2.12.
+
+Campañas de medición y estaciones
+
+Una campaña vincula una estación, un operador, un equipo, una fecha y condiciónes
+de medición. La estación representa el punto físico de monitoreo.
+
+3.
+
+Descripción general del software
+
+TW HydroData se divide en dos áreas. El área pública permite consultar estaciones,
+campañas, aforos líquidos, aforos sólidos y descargar CSV. El área privada requiere login
+y permite gestionar datos de dominio técnico. El administrador tiene control total y el
+editor puede alimentar información sin administrar usuarios.
+
+4.
+
+Objetivo general
+
+Desarrollar una plataforma web local, funcional y documentada para gestionar y publicar datos hidrométricos e hidrosedimentológicos mediante PHP estructurado y MySQL.
+
+5.
+
+Objetivos específicos
+Registrar y consultar cuencas, ríos, estaciones y equipos.
+Registrar campañas de aforo con operador, equipo y estación.
+Registrar aforos líquidos y sólidos asociados a campañas.
+Permitir consulta pública de información publicada.
+Generar descargas CSV de datos de aforos.
+
+3
+
+Implementar login, sesiones y roles de usuario.
+Presentar dashboard privado y reportes con consultas JOIN.
+
+6.
+
+Contenido de la interfaz del software
+Módulo
+Inicio público
+
+Descripción
+Presenta TW HydroData, beneficios, indicadores y acceso a consultas.
+Consulta de estaciones Lista estaciones con río, cuenca, altitud y coordenadas.
+Consulta de campañas Muestra campañas de aforo con fecha, estación, equipo
+y condición.
+Aforos líquidos
+Publica mediciones de ancho, profundidad, velocidad y
+caudal.
+Aforos sólidos
+Publica concentración, caudal sólido y tipo de muestra.
+Descargas CSV
+Permite exportar aforos líquidos y sólidos.
+Login
+Valida usuarios demo mediante sesiones y hash de clave.
+Dashboard
+Resume totales del sistema y acciones rapidas.
+Cuencas y ríos
+Gestionan la estructura hidrográfica principal.
+Estaciones
+Administra puntos de medición.
+Equipos
+Gestiona equipos como ADCP o muestreadores.
+Campañas
+Registra eventos de medición en campo.
+Aforos
+Registra mediciones líquidas y sólidas.
+Usuarios
+Vista administrativa de usuarios y roles.
+Reportes
+Consultas JOIN para sustentación de relaciones.
+Verificador
+Comprueba conexión, base de datos y tablas.
+
+7.
+
+Base de datos
+
+La base de datos se denomina bd_hidroaforo_web. Conserva ocho tablas técnicas:
+cuencas, rios, estaciones, operadores, equipos, campanas_aforo, aforos_liquidos
+y aforos_solidos. Además, incorpora roles, usuarios y archivos_descarga para soportar seguridad y publicación de datos.
+Las relaciones principales son: una cuenca contiene ríos; un río contiene estaciones; una
+estación genera campañas; una campaña se asocia con operador y equipo; y una campaña
+produce aforos líquidos y sólidos. Las claves primarias identifican cada tabla y las claves
+foráneas conservan la integridad relacional.
+
+8.
+
+Mención de figuras
+
+1. Portada pública de TW HydroData.
+2. Consulta pública de estaciones.
+3. Consulta pública de campañas.
+4. Consulta pública de aforos líquidos.
+4
+
+5. Consulta pública de aforos sólidos.
+6. Descarga de datos CSV.
+7. Login de usuario.
+8. Dashboard administrador.
+9. Dashboard editor.
+10. Gestión de estaciones.
+11. Registro de campaña de aforo.
+12. Registro de aforo líquido.
+13. Registro de aforo sólido.
+14. Gestión de usuarios.
+15. Verificador de instalación.
+
+9.
+
+Figuras
+
+Figura 1. Portada pública de TW HydroData. Fuente: elaboración propia mediante ejecución local en XAMPP.
+
+5
+
+

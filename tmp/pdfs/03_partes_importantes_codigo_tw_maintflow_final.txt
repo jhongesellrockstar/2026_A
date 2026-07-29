@@ -1,0 +1,1214 @@
+UNIVERSIDAD NACIONAL DEL CALLAO
+Facultad de Ingeniería Industrial y de Sistemas
+Escuela Profesional de Ingeniería de Sistemas
+
+PARTES IMPORTANTES DEL CÓDIGO
+FUENTE
+TW MAINTFLOW
+
+Curso:
+
+Programación Web I - ISEE405
+
+Docente:
+
+GRADOS ESPINOZA HERBERT JUNIOR
+
+Integrantes:
+Código:
+
+HUANCCO SALVATIERRA MARICIELO
+VILLANUEVA PORTELLA JHON GESELL
+2515250011
+
+Año:
+
+2026
+
+Callao, Perú
+
+TW MaintFlow
+
+Partes importantes del código
+
+Índice
+1. Introducción
+
+2
+
+2. Organización general del proyecto
+
+2
+
+3. Arquitectura MVC utilizada
+
+2
+
+4. Archivo principal
+
+3
+
+5. Configuración y conexión
+
+3
+
+6. Router o sistema de rutas
+
+3
+
+7. Controladores
+
+4
+
+8. Modelos
+
+4
+
+9. Vistas
+
+5
+
+10. Autenticación
+
+5
+
+11. Validación de roles
+
+6
+
+12. CRUD completo: clientes
+12.1. Listar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+12.2. Crear y guardar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+12.3. Editar y actualizar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+12.4. Desactivar . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+7
+7
+7
+8
+8
+
+13. Órdenes de servicio
+13.1. Creación y asignación . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13.2. Diagnóstico, solución y cierre . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+13.3. Detalle y repuestos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+8
+8
+9
+9
+
+14. Base de datos
+
+10
+
+15. Trigger
+
+10
+
+16. Procedimiento almacenado
+
+11
+
+17. Función SQL
+
+12
+
+18. Prepared statements
+
+12
+
+19. Validaciones PHP
+
+12
+
+20. Validaciones JavaScript
+
+12
+
+21. Manejo UTF-8
+
+13
+
+22. Consultas JOIN
+
+13
+
+23. Reportes
+
+13
+
+24. Fragmentos de código importantes
+
+14
+
+1
+
+TW MaintFlow
+
+Partes importantes del código
+
+25. Capturas operativas
+
+14
+
+26. Conclusiones técnicas
+
+16
+
+2
+
+TW MaintFlow
+
+Partes importantes del código
+
+1. Introducción
+Este documento selecciona fragmentos reales de la versión tw_maintflow_simple. Cada
+ejemplo identifica el archivo, contiene entre 5 y 25 líneas útiles y explica su responsabilidad. No
+se reproducen archivos completos. El análisis se comprobó contra el grafo del código, la navegación HTTP y la base MariaDB activa.
+
+2. Organización general del proyecto
+tw_maintflow_simple/
+|-- index.php
+|-- config.php
+|-- rutas.php
+|-- controllers/
+|-- models/
+|-- views/
+|-- css/estilos.css
+|-- js/app.js
+|-- database.sql
+`-- consultas_demo.sql
+
+punto de entrada
+constantes y ayudas
+lista blanca de rutas
+9 clases controladoras
+9 clases de datos
+23 vistas y layouts
+presentación
+interacción y validación
+esquema y datos
+consultas académicas
+
+3. Arquitectura MVC utilizada
+Los controladores coordinan la solicitud; los modelos consultan MariaDB y las vistas producen
+HTML. index.php y rutas.php forman el enrutador frontal. La separación es visible en el flujo
+Cliente: ClienteController::index() llama a Cliente::listar() y carga views/clientes.php.
+
+Figura 1: Componentes reales del patrón MVC.
+
+3
+
+TW MaintFlow
+
+Partes importantes del código
+
+4. Archivo principal
+index.php inicia sesión, carga clases, lee controlador y acción, valida la ruta y despacha el
+método. El siguiente recorte también muestra la respuesta 404.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+session_start();
+require __DIR__ . '/config.php';
+foreach (glob(__DIR__ . '/models/*.php') as $archivo) {
+require_once $archivo;
+}
+foreach (glob(__DIR__ . '/controllers/*.php') as $archivo) {
+require_once $archivo;
+}
+$rutas = require __DIR__ . '/rutas.php';
+$controlador = strtolower(trim($_GET['controlador'] ?? 'inicio'));
+$accion = trim($_GET['accion'] ?? 'index');
+if (!isset($rutas[$controlador]) ||
+!in_array($accion, $rutas[$controlador]['acciones'], true)) {
+http_response_code(404);
+require __DIR__ . '/views/error404.php';
+exit();
+}
+$clase = $rutas[$controlador]['clase'];
+$objeto = new $clase();
+$objeto->$accion();
+
+Listing 1: index.php: entrada y despacho
+
+5. Configuración y conexión
+config.php define URL base y constantes de MariaDB. models/Conexion.php activa excepciones estrictas y fija el juego de caracteres.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+public static function obtener(): mysqli
+{
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+$conexion = new mysqli(
+DB_HOST,
+DB_USUARIO,
+DB_PASSWORD,
+DB_NOMBRE
+);
+mysqli_set_charset($conexion, 'utf8mb4');
+return $conexion;
+}
+
+Listing 2: models/Conexion.php: conexión real
+La base configurada es bd_tw_maintflow; en el entorno local se usa root sin contraseña.
+
+6. Router o sistema de rutas
+rutas.php declara qué acciones son válidas. Así no puede invocarse cualquier método desde
+la URL.
+1
+2
+3
+4
+5
+
+return [
+'auth' => [
+'clase' => 'AuthController',
+'acciones' => ['login', 'logout', 'dashboard'],
+],
+
+4
+
+TW MaintFlow
+
+'cliente' => [
+'clase' => 'ClienteController',
+'acciones' => [
+'index', 'crear', 'guardar', 'editar',
+'actualizar', 'desactivar'
+],
+],
+'orden' => [
+'clase' => 'OrdenController',
+'acciones' => [
+'index', 'crear', 'guardar', 'ver',
+'actualizar', 'agregarDetalle'
+],
+],
+
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+
+Partes importantes del código
+
+];
+
+Listing 3: rutas.php: rutas principales
+
+7. Controladores
+
+Los nombres reales son AuthController, ClienteController, SedeController, EquipoControlle
+TecnicoController, OrdenController, RepuestoController, UsuarioController y
+ReporteController.
+El guardado de clientes ilustra una acción breve: verifica permiso y CSRF, delega al modelo,
+registra un mensaje y redirige.
+1
+2
+3
+4
+5
+6
+7
+8
+
+public function guardar(): void
+{
+$this->permiso();
+validar_csrf();
+(new Cliente())->guardar($this->datos());
+mensaje('ok', 'Cliente guardado.');
+redirigir('cliente');
+}
+
+Listing 4: controllers/ClienteController.php: acción guardar
+El controlador de reportes limita la acción al administrador y entrega al layout un arreglo ya
+procesado.
+1
+2
+3
+4
+5
+6
+7
+8
+
+public function index(): void
+{
+exigir_roles(['administrador']);
+mostrar_vista('reportes', [
+'titulo' => 'Reportes',
+'reporte' => (new Reporte())->resumen(),
+]);
+}
+
+Listing 5: controllers/ReporteController.php: reporte
+
+8. Modelos
+Los modelos reales son Conexion, Usuario, Cliente, Sede, Equipo, Tecnico, Orden,
+Repuesto y Reporte. Cada modelo concentra SQL del módulo.
+1
+2
+3
+
+public function listar(): array
+{
+$sql = <<<'SQL'
+
+5
+
+TW MaintFlow
+
+SELECT e.*, s.nombre_sede, c.razon_social,
+ce.nombre_categoria
+FROM equipos e
+INNER JOIN sedes s ON s.id_sede = e.id_sede
+INNER JOIN clientes c ON c.id_cliente = s.id_cliente
+INNER JOIN categorias_equipo ce
+ON ce.id_categoria = e.id_categoria
+ORDER BY e.id_equipo DESC
+SQL;
+return $this->conexion->query($sql)
+->fetch_all(MYSQLI_ASSOC);
+
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+Partes importantes del código
+
+}
+
+Listing 6: models/Equipo.php: listado con relaciones
+
+9. Vistas
+Las vistas reciben variables preparadas por el controlador. El layout reutiliza header.php,
+menu.php y footer.php. El escape se realiza con e().
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+<section class="tarjetas">
+<?php foreach ($tarjetas as $clave => $texto): ?>
+<article>
+<span><?= e($texto) ?></span>
+<strong>
+<?= e($reporte['metricas'][$clave]) ?>
+</strong>
+</article>
+<?php endforeach; ?>
+</section>
+
+Listing 7: views/reportes.php: tarjetas métricas
+
+10. Autenticación
+El login usa POST, valida CSRF, consulta al modelo, regenera la sesión y almacena solo datos
+indispensables.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+validar_csrf();
+$username = trim($_POST['username'] ?? '');
+$usuario = (new Usuario())->validar(
+$username,
+$_POST['password'] ?? ''
+);
+if ($usuario) {
+session_regenerate_id(true);
+$_SESSION['usuario'] = [
+'id' => (int) $usuario['id_usuario'],
+'nombre' => $usuario['nombres'] . ' ' . $usuario['apellidos'],
+'rol' => $usuario['rol'],
+];
+redirigir('auth', 'dashboard');
+}
+$error = 'Usuario o contraseña incorrectos.';
+}
+
+Listing 8: controllers/AuthController.php: autenticación
+La verificación criptográfica se ejecuta en el modelo:
+6
+
+TW MaintFlow
+
+1
+2
+3
+4
+5
+6
+7
+8
+
+Partes importantes del código
+
+public function validar(string $username, string $password): ?array
+{
+$usuario = $this->buscarPorUsername($username);
+return $usuario && password_verify(
+$password,
+$usuario['password_hash']
+) ? $usuario : null;
+}
+
+Listing 9: models/Usuario.php: password_verify
+El cierre vacía la sesión, invalida la cookie y destruye los datos:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+public function logout(): void
+{
+$_SESSION = [];
+if (ini_get('session.use_cookies')) {
+$p = session_get_cookie_params();
+setcookie(session_name(), '', time() - 42000,
+$p['path'], $p['domain'],
+$p['secure'], $p['httponly']);
+}
+session_destroy();
+redirigir('auth', 'login');
+}
+
+Listing 10: controllers/AuthController.php: logout
+
+11. Validación de roles
+La función central exige primero una sesión y luego compara el rol con una lista permitida. Ante
+incumplimiento carga la vista 403.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+function exigir_roles(array $roles): void
+{
+exigir_login();
+if (!in_array(usuario_actual()['rol'], $roles, true)) {
+http_response_code(403);
+require RUTA_PROYECTO . '/views/error403.php';
+exit();
+}
+}
+
+Listing 11: config.php: control de roles
+
+7
+
+TW MaintFlow
+
+Partes importantes del código
+
+Figura 2: Relación entre roles y operaciones autorizadas.
+
+12. CRUD completo: clientes
+12.1. Listar
+1
+2
+3
+4
+5
+6
+7
+
+public function listar(): array
+{
+return $this->conexion
+->query('SELECT * FROM clientes
+ORDER BY id_cliente DESC')
+->fetch_all(MYSQLI_ASSOC);
+}
+
+Listing 12: models/Cliente.php: listar
+
+12.2. Crear y guardar
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+
+public function guardar(array $d): void
+{
+$q = $this->conexion->prepare(
+'INSERT INTO clientes
+(razon_social,ruc,contacto,telefono,correo,direccion)
+VALUES(?,?,?,?,?,?)'
+);
+$q->bind_param('ssssss',
+$d['razon_social'], $d['ruc'], $d['contacto'],
+$d['telefono'], $d['correo'], $d['direccion']
+);
+$q->execute();
+}
+
+Listing 13: models/Cliente.php: insertar preparado
+
+8
+
+TW MaintFlow
+
+Partes importantes del código
+
+12.3. Editar y actualizar
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+public function actualizar(int $id, array $d): void
+{
+$q = $this->conexion->prepare(
+'UPDATE clientes SET razon_social=?,ruc=?,contacto=?,
+telefono=?,correo=?,direccion=? WHERE id_cliente=?'
+);
+$q->bind_param('ssssssi',
+$d['razon_social'], $d['ruc'], $d['contacto'],
+$d['telefono'], $d['correo'], $d['direccion'], $id
+);
+$q->execute();
+}
+
+Listing 14: models/Cliente.php: actualizar
+
+12.4. Desactivar
+1
+2
+3
+4
+5
+6
+7
+8
+
+public function desactivar(int $id): void
+{
+$q = $this->conexion->prepare(
+'UPDATE clientes SET estado=0 WHERE id_cliente=?'
+);
+$q->bind_param('i', $id);
+$q->execute();
+}
+
+Listing 15: models/Cliente.php: desactivación lógica
+
+13. Órdenes de servicio
+13.1. Creación y asignación
+El controlador limita la creación a administrador y recepción, convierte tipos y valida campos
+antes de insertar.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+
+exigir_roles(['administrador', 'recepcion']);
+validar_csrf();
+$datos = [
+'id_equipo' => (int) ($_POST['id_equipo'] ?? 0),
+'id_tecnico' => (int) ($_POST['id_tecnico'] ?? 0),
+'id_estado' => (int) ($_POST['id_estado'] ?? 0),
+'tipo_mantenimiento' => trim(
+$_POST['tipo_mantenimiento'] ?? ''
+),
+'prioridad' => trim($_POST['prioridad'] ?? ''),
+'fecha_programada' =>
+trim($_POST['fecha_programada'] ?? '') ?: null,
+'descripcion_falla' =>
+trim($_POST['descripcion_falla'] ?? ''),
+'costo_mano_obra' =>
+(float) ($_POST['costo_mano_obra'] ?? 0),
+];
+
+Listing 16: controllers/OrdenController.php: datos de creación
+
+9
+
+TW MaintFlow
+
+Partes importantes del código
+
+13.2. Diagnóstico, solución y cierre
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+
+public function actualizar(): void
+{
+exigir_roles(['administrador', 'tecnico']);
+validar_csrf();
+$datos = [
+'id_estado' => (int) ($_POST['id_estado'] ?? 0),
+'diagnostico' => trim($_POST['diagnostico'] ?? ''),
+'solucion' => trim($_POST['solucion'] ?? ''),
+'observaciones' => trim($_POST['observaciones'] ?? ''),
+];
+if ($datos['id_estado'] < 1) {
+throw new RuntimeException('Selecciona un estado.');
+}
+$id = (int) ($_POST['id'] ?? 0);
+(new Orden())->actualizarTrabajo($id, $datos, usuario_actual());
+mensaje('ok', 'Trabajo técnico actualizado.');
+redirigir('orden', 'ver', ['id' => $id]);
+}
+
+Listing 17: controllers/OrdenController.php: actualización técnica
+
+13.3. Detalle y repuestos
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+
+public function agregarDetalle(int $id, array $d, array $usuario): void
+{
+if (!$this->buscar($id, $usuario)) {
+throw new RuntimeException('No puedes modificar esta orden.');
+}
+$idRepuesto = $d['id_repuesto'] ?: null;
+$precio = (float) $d['precio_unitario'];
+$cantidad = (float) $d['cantidad'];
+$q = $this->conexion->prepare(
+'INSERT INTO detalle_orden
+(id_orden,id_repuesto,descripcion_actividad,cantidad,precio_unitario)
+VALUES (?,?,?,?,?)'
+);
+$q->bind_param('iisdd', $id, $idRepuesto,
+$d['descripcion_actividad'], $cantidad, $precio);
+$q->execute();
+// El trigger actualiza stock y costo total.
+}
+
+Listing 18: models/Orden.php: insertar detalle
+
+10
+
+TW MaintFlow
+
+Partes importantes del código
+
+Figura 3: Secuencia funcional de una orden.
+
+14. Base de datos
+1
+2
+3
+4
+5
+6
+
+DROP DATABASE IF EXISTS bd_tw_maintflow;
+CREATE DATABASE bd_tw_maintflow
+CHARACTER SET utf8mb4
+COLLATE utf8mb4_unicode_ci;
+USE bd_tw_maintflow;
+SET NAMES utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+Listing 19: database.sql: creación de la base
+Ejemplo real de tabla con claves primarias y foráneas:
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+CREATE TABLE sedes(
+id_sede INT AUTO_INCREMENT PRIMARY KEY,
+id_cliente INT NOT NULL,
+nombre_sede VARCHAR(120) NOT NULL,
+direccion VARCHAR(180),
+distrito VARCHAR(80),
+provincia VARCHAR(80),
+departamento VARCHAR(80),
+estado TINYINT DEFAULT 1,
+FOREIGN KEY(id_cliente) REFERENCES clientes(id_cliente)
+);
+
+Listing 20: database.sql: sedes y relaciones
+Los INSERT de database.sql proporcionan roles, usuarios con hashes, clientes, sedes, categorías, equipos, técnicos, estados, repuestos, órdenes, detalles y movimientos de prueba.
+
+15. Trigger
+1
+2
+
+CREATE TRIGGER tr_detalle_stock
+AFTER INSERT ON detalle_orden FOR EACH ROW
+
+11
+
+TW MaintFlow
+
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+Partes importantes del código
+
+BEGIN
+IF NEW.id_repuesto IS NOT NULL AND NEW.cantidad > 0 THEN
+UPDATE repuestos
+SET stock_actual = stock_actual - NEW.cantidad
+WHERE id_repuesto = NEW.id_repuesto;
+UPDATE ordenes_servicio
+SET costo_total = costo_mano_obra +
+(SELECT COALESCE(SUM(subtotal),0)
+FROM detalle_orden
+WHERE id_orden = NEW.id_orden)
+WHERE id_orden = NEW.id_orden;
+END IF;
+END
+
+Listing 21: database.sql: tr_detalle_stock
+Evento: INSERT; tabla: detalle_orden; momento: AFTER; acción: descuento y recálculo automático. Su existencia se verificó en MariaDB.
+
+Figura 4: Lógica del trigger de stock.
+
+16. Procedimiento almacenado
+1
+2
+3
+4
+5
+6
+7
+
+CREATE PROCEDURE sp_cerrar_orden(IN p_id INT)
+BEGIN
+UPDATE ordenes_servicio
+SET id_estado = 5,
+fecha_cierre = NOW()
+WHERE id_orden = p_id;
+END
+
+Listing 22: database.sql: sp_cerrar_orden
+El procedimiento existe en la base. La interfaz actual cierra mediante el método PHP de actualización; el procedimiento queda disponible para ejecución SQL controlada.
+
+12
+
+TW MaintFlow
+
+Partes importantes del código
+
+17. Función SQL
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+
+CREATE FUNCTION fn_total_orden(p_id INT)
+RETURNS DECIMAL(10,2) DETERMINISTIC
+BEGIN
+DECLARE t DECIMAL(10,2);
+SELECT costo_mano_obra + COALESCE(
+(SELECT SUM(subtotal)
+FROM detalle_orden WHERE id_orden = p_id), 0)
+INTO t
+FROM ordenes_servicio WHERE id_orden = p_id;
+RETURN t;
+END
+
+Listing 23: database.sql: fn_total_orden
+
+18. Prepared statements
+Las sentencias preparadas separan SQL y valores. prepare() crea la plantilla, bind_param()
+declara tipos y execute() envía datos. Se usan en login, búsquedas por ID, inserciones y actualizaciones, reduciendo la posibilidad de inyección SQL.
+
+19. Validaciones PHP
+El servidor valida método POST, token CSRF, enteros, números no negativos, texto obligatorio
+y pertenencia de la orden al técnico. El token se crea con bytes aleatorios y se compara en tiempo
+constante.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+
+function validar_csrf(): void
+{
+if ($_SERVER['REQUEST_METHOD'] !== 'POST' ||
+!hash_equals(
+$_SESSION['csrf'] ?? '',
+$_POST['csrf'] ?? ''
+)) {
+throw new RuntimeException(
+'La solicitud no es válida. Recarga la página.'
+);
+}
+}
+
+Listing 24: config.php: validación CSRF
+
+20. Validaciones JavaScript
+js/app.js complementa al servidor. Controla el menú, solicita confirmación y evita números
+inferiores al mínimo HTML.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+document.querySelectorAll('form[data-confirmar]').forEach(
+form => form.addEventListener('submit', evento => {
+if (!confirm(form.dataset.confirmar || '¿Deseas continuar?'))
+evento.preventDefault();
+})
+);
+document.querySelectorAll('input[type="number"]').forEach(
+input => input.addEventListener('input', () => {
+if (input.min !== '' && Number(input.value) < Number(input.min))
+
+13
+
+TW MaintFlow
+
+input.setCustomValidity('Ingresa un valor permitido.');
+else input.setCustomValidity('');
+
+10
+11
+
+})
+
+12
+13
+
+Partes importantes del código
+
+);
+
+Listing 25: js/app.js: validaciones de interfaz
+
+21. Manejo UTF-8
+La aplicación combina cabeceras HTML UTF-8, escape con ENT_QUOTES, 'UTF-8', base y
+tablas utf8mb4, y la instrucción real:
+1
+2
+3
+4
+5
+6
+7
+8
+
+$conexion = new mysqli(
+DB_HOST,
+DB_USUARIO,
+DB_PASSWORD,
+DB_NOMBRE
+);
+mysqli_set_charset($conexion, 'utf8mb4');
+return $conexion;
+
+Listing 26: models/Conexion.php: charset
+Las pantallas comprobadas mostraron correctamente Técnicos, Órdenes, Recepción, Almacén y Frigorífico.
+
+22. Consultas JOIN
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+
+SELECT o.*, e.codigo_equipo, e.nombre_equipo,
+es.nombre_estado,
+CONCAT(u.nombres, " ", u.apellidos) tecnico,
+t.id_usuario
+FROM ordenes_servicio o
+INNER JOIN equipos e ON e.id_equipo = o.id_equipo
+INNER JOIN estados_orden es ON es.id_estado = o.id_estado
+LEFT JOIN tecnicos t ON t.id_tecnico = o.id_tecnico
+LEFT JOIN usuarios u ON u.id_usuario = t.id_usuario
+WHERE o.id_orden = ?
+
+Listing 27: models/Orden.php: orden con equipo, estado y técnico
+Los INNER JOIN exigen relación existente; los LEFT JOIN conservan una orden aunque no haya
+técnico o un detalle aunque no tenga repuesto.
+
+23. Reportes
+El modelo Reporte calcula métricas, agrupa órdenes por estado y técnico, y lista stock bajo. El
+fragmento siguiente cuenta órdenes incluso para estados sin registros.
+1
+2
+3
+4
+5
+6
+7
+
+SELECT e.nombre_estado etiqueta,
+COUNT(o.id_orden) total
+FROM estados_orden e
+LEFT JOIN ordenes_servicio o
+ON o.id_estado = e.id_estado
+GROUP BY e.id_estado, e.nombre_estado
+ORDER BY e.orden_visual
+
+Listing 28: models/Reporte.php: órdenes por estado
+14
+
+TW MaintFlow
+
+Partes importantes del código
+
+24. Fragmentos de código importantes
+Archivo
+
+Fragmento
+
+index.php
+
+Router frontal
+
+Importancia
+
+Controla el único punto de entrada y
+el 404.
+config.php
+Sesión, roles, CSRF, es- Reglas transversales de seguridad.
+cape
+models/Conexion.phpConexión utf8mb4
+Consistencia y excepciones SQL.
+AuthController.php Login y logout
+Ciclo completo de autenticación.
+Cliente.php
+CRUD preparado
+Ejemplo académico completo.
+Orden.php
+JOIN, filtro técnico y de- Núcleo del negocio de mantenimientalle
+to.
+Reporte.php
+Agregaciones
+Indicadores para administración.
+database.sql
+Esquema y objetos espe- Reproducción integral de la base.
+ciales
+
+25. Capturas operativas
+
+Figura 5: Login que ejecuta el flujo de autenticación descrito.
+
+15
+
+TW MaintFlow
+
+Partes importantes del código
+
+Figura 6: Resultado visual del CRUD de clientes.
+
+Figura 7: Vista conectada con las consultas de órdenes y detalles.
+
+16
+
+TW MaintFlow
+
+Partes importantes del código
+
+Figura 8: Salida de las consultas agregadas del modelo Reporte.
+
+Figura 9: Objeto SQL verificado en phpMyAdmin.
+
+26. Conclusiones técnicas
+1. El proyecto implementa un MVC directo, apropiado para comprender el recorrido de una
+petición sin depender de un framework.
+2. La lista blanca de rutas, las sesiones, roles, CSRF, hashes y sentencias preparadas cubren los
+controles esenciales del alcance académico.
+3. Los modelos representan correctamente las relaciones entre clientes, sedes, equipos, técnicos,
+órdenes y repuestos.
+
+17
+
+TW MaintFlow
+
+Partes importantes del código
+
+4. El trigger, el procedimiento y la función existen realmente y cumplen finalidades diferenciadas.
+5. El uso de utf8mb4 fue verificado tanto en el código como en las pantallas ejecutadas.
+6. Las mejoras futuras prioritarias son transacciones, pruebas automatizadas, auditoría y pantallas dedicadas para categorías y movimientos.
+
+18
+
+

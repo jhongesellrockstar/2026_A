@@ -1,0 +1,598 @@
+UNIVERSIDAD NACIONAL DEL CALLAO
+Facultad de Ingeniería Industrial y de Sistemas
+Escuela Profesional de Ingeniería de Sistemas
+
+MEMORIA DESCRIPTIVA DEL
+SOFTWARE
+TW MAINTFLOW
+Sistema web MVC para gestión de mantenimiento y
+órdenes de servicio de equipos de ingeniería
+
+Curso:
+
+Programación Web I - ISEE405
+
+Docente:
+
+GRADOS ESPINOZA HERBERT JUNIOR
+
+Integrantes:
+Código:
+
+HUANCCO SALVATIERRA MARICIELO
+VILLANUEVA PORTELLA JHON GESELL
+2515250011
+
+Año:
+
+2026
+
+Callao, Perú
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Índice
+1. Introducción
+
+2
+
+2. Fundamento teórico
+2.1. HTML . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.2. CSS . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.3. JavaScript . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.4. PHP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.5. MySQL/MariaDB . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.6. XAMPP . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.7. phpMyAdmin . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.8. Arquitectura MVC . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.9. Sesiones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.10. Roles . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.11. CRUD . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.12. Claves primarias y foráneas . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.13. Trigger . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.14. Procedimiento almacenado . . . . . . . . . . . . . . . . . . . . . . . . . .
+2.15. Función SQL . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+2
+2
+2
+2
+2
+2
+2
+3
+3
+3
+3
+3
+3
+3
+3
+3
+
+3. Descripción general del software
+
+4
+
+4. Problema identificado
+
+4
+
+5. Justificación
+
+4
+
+6. Objetivo general
+
+4
+
+7. Objetivos específicos
+
+4
+
+8. Arquitectura MVC
+8.1. Modelo . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8.2. Vista . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8.3. Controlador . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8.4. Router . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+8.5. Flujo de una petición . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+5
+5
+5
+5
+5
+5
+
+9. Estructura del proyecto
+
+6
+
+10. Módulos del sistema
+
+6
+
+11. Roles y permisos
+
+7
+
+12. Base de datos
+
+8
+
+13. Métodos especiales de base de datos
+
+9
+
+14. Tecnologías utilizadas
+
+10
+
+15. Capturas del sistema
+
+10
+1
+
+TW MaintFlow
+
+Memoria descriptiva
+
+16. Resultados obtenidos
+
+16
+
+17. Conclusiones
+
+16
+
+18. Recomendaciones
+
+16
+
+2
+
+TW MaintFlow
+
+Memoria descriptiva
+
+1. Introducción
+La gestión de mantenimiento industrial necesita información organizada sobre clientes, sedes, equipos, técnicos, repuestos y órdenes de servicio. Cuando estos datos se
+mantienen en hojas separadas o registros manuales se producen duplicidades, pérdida
+de trazabilidad, asignaciones tardías y diferencias entre el inventario físico y el registrado.
+TW MaintFlow es una aplicación web educativa construida en PHP con arquitectura Modelo–Vista–Controlador (MVC) y una base MariaDB. Centraliza la recepción de
+solicitudes, la asignación de técnicos, el diagnóstico, la solución, el cierre de órdenes
+y el consumo de repuestos. La presente memoria describe exclusivamente la versión
+funcional ubicada en C:\xampp\htdocs\tw_maintflow_simple, verificada el 19 de julio
+de 2026 mediante Apache, MariaDB y navegación real.
+
+2. Fundamento teórico
+2.1. HTML
+HTML define la estructura semántica de formularios, tablas, menús, encabezados y
+mensajes. En el sistema, las vistas PHP producen HTML y escapan los datos dinámicos
+antes de mostrarlos.
+
+2.2. CSS
+CSS controla la distribución, colores, tipografía, tarjetas de indicadores, tablas responsivas y estados visuales. La hoja css/estilos.css establece una identidad técnica
+uniforme.
+
+2.3. JavaScript
+JavaScript añade validación inmediata de números, confirmación de acciones y apertura del menú adaptable. Actúa como ayuda para el usuario; la validación definitiva
+permanece en PHP.
+
+2.4. PHP
+PHP ejecuta la lógica del servidor. Recibe parámetros GET y POST, administra sesiones, selecciona controladores, valida permisos, llama a modelos y carga vistas.
+
+2.5. MySQL/MariaDB
+MariaDB almacena la información de negocio en bd_tw_maintflow. Se utilizan claves primarias, claves foráneas, índices únicos, consultas JOIN y sentencias preparadas.
+
+2.6. XAMPP
+XAMPP proporciona Apache, PHP y MariaDB en Windows 11. La comprobación
+funcional mostró Apache activo en los puertos 80 y 443, y MariaDB en el puerto 3306.
+3
+
+TW MaintFlow
+
+Memoria descriptiva
+
+2.7. phpMyAdmin
+phpMyAdmin permite importar database.sql, inspeccionar tablas y comprobar objetos SQL. Se verificaron doce tablas, un trigger, un procedimiento y una función.
+
+2.8. Arquitectura MVC
+MVC divide la aplicación en modelos de acceso a datos, vistas de presentación y
+controladores de coordinación. Esta separación facilita ubicar errores, explicar responsabilidades y extender módulos.
+
+2.9. Sesiones
+La sesión conserva el identificador, nombre y rol del usuario autenticado. Después
+del login correcto se regenera el identificador con session_regenerate_id(true) para
+reducir el riesgo de fijación de sesión.
+
+2.10. Roles
+Los roles definen qué operaciones puede ejecutar cada persona. El proyecto implementa administrador, recepcion y tecnico; la función exigir_roles() devuelve 403
+ante accesos no autorizados.
+
+2.11. CRUD
+CRUD resume las operaciones crear, leer, actualizar y desactivar. La desactivación
+lógica conserva el historial y evita eliminar registros relacionados.
+
+2.12. Claves primarias y foráneas
+Cada tabla posee una clave primaria numérica. Las claves foráneas conectan, por
+ejemplo, sedes con clientes, equipos con sedes y categorías, órdenes con equipos, técnicos y estados, y detalles con órdenes y repuestos.
+
+2.13. Trigger
+Un trigger se ejecuta automáticamente ante un evento de datos. tr_detalle_stock
+actúa después de insertar un detalle de orden con repuesto: descuenta la cantidad y
+recalcula el costo total.
+
+2.14. Procedimiento almacenado
+Un procedimiento encapsula instrucciones SQL invocables. La base implementa
+sp_cerrar_orden(p_id), que asigna el estado de cierre y registra la fecha.
+
+2.15. Función SQL
+Una función devuelve un valor. fn_total_orden(p_id) suma mano de obra y subtotales de repuestos para una orden.
+4
+
+TW MaintFlow
+
+Memoria descriptiva
+
+3. Descripción general del software
+La finalidad de TW MaintFlow es mantener trazabilidad operativa desde el registro de una necesidad hasta el cierre técnico. Sus usuarios son personal administrador,
+recepción y técnicos. El alcance comprende autenticación, catálogos, órdenes, inventario, usuarios y reportes; no incluye facturación electrónica, notificaciones externas ni
+integración con sensores.
+El flujo principal comienza cuando recepción registra o selecciona un cliente, sede
+y equipo; luego crea una orden, indica tipo, prioridad, fecha y técnico. El técnico consulta únicamente sus órdenes, registra diagnóstico, solución, estado y actividades. El
+administrador supervisa todos los módulos y los indicadores.
+
+4. Problema identificado
+El problema central es la dispersión de información de mantenimiento. Sin un sistema integrado resulta difícil responder qué equipo presenta una falla, quién lo atiende,
+qué repuestos fueron utilizados, cuánto costó el trabajo y si el stock quedó actualizado.
+También se debilita el control de acceso cuando todos los usuarios pueden modificar
+los mismos datos.
+
+5. Justificación
+El proyecto se justifica porque unifica datos relacionados, reduce transcripciones,
+aplica reglas de acceso y genera evidencia consultable. Académicamente permite demostrar formularios web, sesiones, roles, CRUD, consultas preparadas, relaciones SQL,
+objetos almacenados y el patrón MVC dentro de una aplicación funcional.
+
+6. Objetivo general
+Desarrollar e implementar un sistema web MVC que permita gestionar de forma organizada y segura el mantenimiento, los equipos de ingeniería, las órdenes de servicio,
+los técnicos y los repuestos.
+
+7. Objetivos específicos
+1. Centralizar clientes, sedes, categorías, equipos, técnicos y usuarios.
+2. Registrar órdenes preventivas y correctivas con prioridad, responsable y estado.
+3. Permitir que el técnico documente diagnóstico, solución y actividades.
+4. Controlar el acceso mediante autenticación, sesión y roles.
+5. Mantener integridad referencial entre las doce tablas.
+6. Automatizar el descuento de stock y el recálculo del costo.
+7. Presentar indicadores de órdenes, técnicos y repuestos con stock bajo.
+
+5
+
+TW MaintFlow
+
+Memoria descriptiva
+
+8. Arquitectura MVC
+8.1. Modelo
+Los nueve archivos de models/ abren la conexión y ejecutan consultas. Conexion.php
+establece utf8mb4; los demás modelos implementan acceso a clientes, sedes, equipos,
+técnicos, órdenes, repuestos, usuarios y reportes.
+
+8.2. Vista
+Las 23 vistas de views/ contienen formularios, tablas, paneles, mensajes, páginas
+403/404 y el layout formado por cabecera, menú y pie. No abren conexiones SQL.
+
+8.3. Controlador
+Los nueve controladores reciben la acción, validan método, CSRF, datos y rol; llaman
+al modelo y finalmente cargan una vista o redirigen.
+
+8.4. Router
+index.php es el punto de entrada y rutas.php funciona como lista blanca de controladores y acciones. Una combinación inexistente muestra views/error404.php.
+
+8.5. Flujo de una petición
+Una petición recorre navegador → index.php → rutas.php → controlador → modelo → MariaDB, y retorna por controlador → vista → navegador.
+
+Figura 1: Arquitectura MVC verificada de TW MaintFlow.
+
+6
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 2: Flujo de una petición dentro del proyecto.
+
+9. Estructura del proyecto
+tw_maintflow_simple/
+|-- index.php
+|-- config.php
+|-- rutas.php
+|-- database.sql
+|-- consultas_demo.sql
+|-- controllers/
+(9 controladores)
+|-- models/
+(9 modelos)
+|-- views/
+(23 vistas)
+|-- css/estilos.css
+|-- js/app.js
+|-- img/
+`-- documentacion_final/
+|-- latex/
+|-- pdf/
+|-- capturas/
+|-- figuras/
+|-- reportes/
+`-- ENTREGAR_DOCENTE/
+
+10. Módulos del sistema
+Módulo
+
+Función real
+
+Login
+
+Valida usuario activo y contraseña cifrada; crea sesión y redirige al dashboard.
+Muestra cantidades de clientes, equipos, técnicos, órdenes,
+stock bajo y costo total.
+
+Dashboard
+
+7
+
+TW MaintFlow
+
+Módulo
+
+Memoria descriptiva
+
+Función real
+
+Lista, crea, edita y desactiva empresas atendidas.
+Relaciona instalaciones físicas con un cliente.
+Registra código, categoría, sede, marca, modelo, serie y estado operativo.
+Categorías
+Catálogo SQL utilizado como opción del formulario de equipos; no posee pantalla CRUD independiente.
+Técnicos
+Vincula usuarios de rol técnico con especialidad, teléfono y
+fecha de ingreso.
+Órdenes
+Crea, asigna, consulta y actualiza trabajos preventivos o correctivos.
+Detalle
+de Registra actividades, cantidades, precios y repuestos utilizaorden
+dos.
+Repuestos
+Administra código, unidad, stock, mínimo, precio y estado.
+Movimientos
+Historial de entradas, salidas y ajustes almacenado en
+movimientos_repuesto; se inspecciona mediante datos/reportes, sin pantalla CRUD propia.
+Usuarios
+Lista cuentas, crea usuarios y permite desactivarlos.
+Reportes
+Consolida métricas, órdenes por estado y técnico, y stock bajo.
+Logout
+Vacía la sesión, elimina la cookie de sesión y vuelve al login.
+Clientes
+Sedes
+Equipos
+
+11. Roles y permisos
+Rol
+
+Consulta
+
+Administrador
+
+Todos los módulos
+
+Recepción
+
+Técnico
+
+Operaciones
+
+CRUD general, usuarios, repuestos y reportes
+Dashboard, clientes, Crea y edita dasedes, equipos y tos
+operativos;
+órdenes
+crea/asigna
+órdenes
+Dashboard y órdenes Diagnóstico,
+soluasignadas
+ción, estado y detalle
+de su orden
+
+8
+
+Restricciones
+Sin restricción funcional dentro del
+sistema.
+No accede a técnicos, repuestos,
+usuarios ni reportes.
+No administra catálogos ni visualiza órdenes ajenas.
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 3: Matriz de permisos comprobada mediante sesiones reales.
+
+12. Base de datos
+La base activa se denomina bd_tw_maintflow, usa utf8mb4 y contiene datos de prueba coherentes con las pantallas. Las tablas verificadas son:
+1. roles;
+2. usuarios;
+3. clientes;
+4. sedes;
+5. categorias_equipo;
+6. equipos;
+7. tecnicos;
+8. estados_orden;
+9. ordenes_servicio;
+10. detalle_orden;
+11. repuestos;
+12. movimientos_repuesto.
+La integridad referencial impide referencias huérfanas. Los índices únicos protegen
+usuario, RUC, código de equipo y código de repuesto. Las contraseñas se guardan como
+hashes compatibles con password_verify().
+
+9
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 4: Modelo relacional simplificado de las doce tablas.
+
+13. Métodos especiales de base de datos
+Objeto SQL
+
+Implementado Nombre
+
+Trigger
+
+Sí
+
+tr_detalle_stock
+
+Procedimiento
+
+Sí
+
+sp_cerrar_orden
+
+Función
+
+Sí
+
+fn_total_orden
+
+Finalidad
+Después de insertar un detalle, descuenta stock y actualiza el costo total.
+Cambia
+una
+orden
+al estado 5 y registra
+fecha_cierre.
+Retorna mano de obra más
+subtotales de repuestos.
+
+Los tres objetos existen tanto en database.sql como en la instancia MariaDB inspeccionada.
+
+10
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 5: Comportamiento del trigger de inventario.
+
+14. Tecnologías utilizadas
+Windows 11 y XAMPP como entorno local.
+Apache como servidor HTTP y PHP como lenguaje del lado servidor.
+MariaDB/MySQL y phpMyAdmin para persistencia y administración.
+HTML5, CSS3 y JavaScript para interfaz y validación complementaria.
+XeLaTeX para la documentación universitaria.
+
+15. Capturas del sistema
+Las imágenes siguientes fueron obtenidas de la versión seleccionada y de la base
+activa; no son maquetas.
+
+11
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 6: XAMPP con Apache y MySQL activos.
+
+Figura 7: Estructura de bd_tw_maintflow en phpMyAdmin.
+
+12
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 8: Formulario real de inicio de sesión.
+
+Figura 9: Dashboard del administrador con indicadores reales.
+
+13
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 10: Listado de clientes.
+
+Figura 11: Listado de equipos.
+
+14
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 12: Órdenes de servicio registradas.
+
+Figura 13: Detalle operativo de una orden.
+
+15
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 14: Catálogo e inventario de repuestos.
+
+Figura 15: Panel de reportes del administrador.
+
+16
+
+TW MaintFlow
+
+Memoria descriptiva
+
+Figura 16: Trigger tr_detalle_stock verificado en phpMyAdmin.
+
+16. Resultados obtenidos
+La versión funcional respondió HTTP 200 en su URL, autenticó las tres cuentas de
+prueba y mostró caracteres españoles correctamente. El administrador visualizó todos
+los módulos; recepción recibió 403 al intentar abrir reportes; el técnico accedió a un
+panel restringido; y una ruta inexistente devolvió 404. La base activa presentó doce
+tablas y los tres objetos SQL declarados.
+
+17. Conclusiones
+1. TW MaintFlow resuelve el registro integrado de activos, responsables, trabajos e
+inventario en un proyecto MVC entendible.
+2. La separación entre rutas, controladores, modelos y vistas es consistente con el
+objetivo académico.
+3. Las sesiones, roles, CSRF, hashes y sentencias preparadas proporcionan controles
+de seguridad apropiados para el alcance.
+4. La estructura relacional conserva trazabilidad y el trigger automatiza una operación crítica de stock.
+5. Las pruebas reales confirman que la documentación corresponde a la versión ejecutable seleccionada.
+
+18. Recomendaciones
+1. Agregar pruebas automatizadas para autenticación, permisos, CRUD y consumo
+de stock.
+17
+
+TW MaintFlow
+
+Memoria descriptiva
+
+2. Incorporar transacciones en operaciones que modifiquen simultáneamente detalle, stock y costos.
+3. Crear una pantalla específica de movimientos de inventario y mantenimiento de
+categorías.
+4. Separar credenciales de base de datos en variables de entorno para despliegues
+futuros.
+5. Mantener copias de seguridad y registrar auditoría de cambios sensibles.
+6. Continuar verificando utf8mb4 al importar la base en otros equipos.
+
+18
+
+

@@ -1,0 +1,174 @@
+Universidad Nacional del Callao
+Facultad de Ingeniería Industrial y de Sistemas
+Escuela Profesional de Ingeniería de Sistemas
+
+Manual de uso del software
+TW HydroData
+Programación Web I - ISEE405
+Curso:
+Docente:
+Estudiante:
+Código:
+Proyecto:
+Marca:
+Año:
+
+Programación Web I - ISEE405
+GRADOS ESPINOZA HERBERT JUNIOR
+Jhon Gesell Villanueva Portella
+2515250011
+TW HydroData
+Tecprog World / TW INNOVA
+2026
+
+Callao, Perú
+
+Índice
+1. Objetivo del manual
+
+2
+
+2. Descripción del sistema
+
+2
+
+3. Requisitos previos
+
+2
+
+4. Instalación y puesta en marcha
+
+2
+
+5. Acceso público
+
+4
+
+6. Acceso privado
+
+7
+
+7. Uso del usuario visitante
+
+7
+
+8. Uso del usuario editor
+
+7
+
+9. Uso del administrador
+
+9
+
+10.Módulos del sistema
+10.1. Dashboard . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10.2. Cuencas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10.3. ríos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10.4. Estaciones . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10.5. Equipos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10.6. Campañas . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10.7. Aforos líquidos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10.8. Aforos sólidos . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10.9. Usuarios . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+10.10.Reportes . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . . .
+
+10
+10
+10
+10
+11
+12
+13
+14
+15
+16
+16
+
+11.Problemas frecuentes
+
+17
+
+12.Evidencias recomendadas para exposición
+
+18
+
+13.Conclusiones del manual
+
+18
+
+1
+
+1.
+
+Objetivo del manual
+
+Orientar al usuario en la puesta en marcha y uso de TW HydroData, explicando el
+acceso público, el acceso privado, los roles, los módulos de mantenimiento, los reportes y
+las descargas CSV.
+
+2.
+
+Descripción del sistema
+
+TW HydroData es una plataforma web de Tecprog World / TW INNOVA para gestión
+y consulta de datos hidrométricos. Permite visualizar estaciones, campañas, aforos líquidos
+y aforos sólidos, además de descargar información en CSV. El sistema cuenta con login
+para editores y administradores.
+
+3.
+
+Requisitos previos
+Windows 11.
+XAMPP instalado.
+Apache activo.
+MySQL/MariaDB activo.
+phpMyAdmin disponible.
+Navegador web moderno.
+
+4.
+
+Instalación y puesta en marcha
+
+1. Copiar el proyecto en C:\xampp\htdocs\hidroaforo_web.
+2. Abrir XAMPP Control Panel.
+3. Iniciar Apache y MySQL.
+4. Ingresar a http://localhost/phpmyadmin/.
+5. Importar database.sql.
+6. Abrir http://localhost/hidroaforo_web/.
+7. Verificar instalación en http://localhost/hidroaforo_web/verificar_instalacion.
+php.
+
+2
+
+Figura 1. phpMyAdmin con la base de datos del sistema. Fuente: elaboración propia
+mediante ejecución local en XAMPP.
+
+Figura 2. Verificador de instalación del sistema. Fuente: elaboración propia mediante
+ejecución local en XAMPP.
+
+3
+
+5.
+
+Acceso público
+
+El visitante puede usar el menú público para acceder a Inicio, Estaciones, Campañas,
+Aforos líquidos, Aforos sólidos, Descargas, Acerca y Contacto. No requiere usuario ni
+contraseña.
+
+Figura 3. Inicio público de TW HydroData. Fuente: elaboración propia mediante ejecución
+local en XAMPP.
+
+Figura 4. Consulta pública de estaciones. Fuente: elaboración propia mediante ejecución
+local en XAMPP.
+
+4
+
+Figura 5. Consulta pública de campañas. Fuente: elaboración propia mediante ejecución
+local en XAMPP.
+
+Figura 6. Consulta pública de aforos líquidos. Fuente: elaboración propia mediante ejecución local en XAMPP.
+
+5
+
+
